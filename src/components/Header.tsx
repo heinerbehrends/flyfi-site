@@ -55,7 +55,7 @@ export default function Header() {
         <Flex sx={{ flex: "2", justifyContent: "flex-end" }}>
           <TopBarNavItem linkText="faq" linkLocation="/faq" />
           <TopBarNavItem linkText="about" linkLocation="/about" />
-          <TopBarNavItem linkText="contact" linkLocation="/context" />
+          <TopBarNavItem linkText="contact" linkLocation="/contact" />
           <TopBarNavItem linkText="home" linkLocation="/" variant="active" />
         </Flex>
       </Flex>
