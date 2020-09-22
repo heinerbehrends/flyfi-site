@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import { Flex } from "theme-ui"
+import { lighten, darken, saturation } from "@theme-ui/color"
 import { Link } from "gatsby"
 
 type TopBarNavItemProps = {
@@ -16,23 +17,25 @@ export default function TopBarNavItem({
   variant,
 }: TopBarNavItemProps) {
   return (
-    <Flex
+    <Link
       sx={{
-        backgroundColor: `${variant === "active" ? "muted" : "transparent"}`,
-        alignItems: "center",
-        paddingX: "3",
+        textDecoration: "none",
+        color: `${variant === "active" ? "#fff" : "text"}`,
+        fontWeight: variant === "active" ? 600 : 300,
       }}
+      to={linkLocation}
     >
-      <Link
+      <Flex
         sx={{
-          textDecoration: "none",
-          color: `${variant === "active" ? "#fff" : "text"}`,
-          fontWeight: variant === "active" ? 600 : 300,
+          height: "100%",
+          backgroundColor: `${variant === "active" ? "muted" : "transparent"}`,
+          " &:hover": { backgroundColor: "#a1e5e5" },
+          alignItems: "center",
+          paddingX: "3",
         }}
-        to={linkLocation}
       >
         {linkText}
-      </Link>
-    </Flex>
+      </Flex>
+    </Link>
   )
 }

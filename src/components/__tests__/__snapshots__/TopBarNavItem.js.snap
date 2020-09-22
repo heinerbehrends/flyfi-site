@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBarNavItem renders correctly 1`] = `
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: text;
+  font-weight: 300;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: transparent;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-0:hover {
+  background-color: #a1e5e5;
+}
+
+<a
+  className="emotion-1"
+  href="/"
+>
+  <div
+    className="emotion-0"
+  >
+    home
+  </div>
+</a>
+`;
+
+exports[`TopBarNavItem renders the active variant correctly 1`] = `
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: muted;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-0:hover {
+  background-color: #a1e5e5;
+}
+
+<a
+  className="emotion-1"
+  href="/"
+>
+  <div
+    className="emotion-0"
+  >
+    home
+  </div>
+</a>
+`;
