@@ -18,6 +18,7 @@
     "@types/jest": "^26.0.14",
     "@types/react-test-renderer": "^16.9.3",
     "@types/theme-ui": "^0.3.6",
+    "framer-motion": "^2.6.16-alpha.4",
     "gatsby": "^2.24.61",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "react": "^16.12.0",
