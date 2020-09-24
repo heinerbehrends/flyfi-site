@@ -4,14 +4,14 @@ import React from "react"
 import { Link } from "gatsby"
 
 type TopBarNavItemProps = {
-  linkText: string
-  linkLocation: string
+  text: string
+  location: string
   variant?: "active"
 }
 
 export default function TopBarNavItem({
-  linkText,
-  linkLocation,
+  text,
+  location,
   variant,
 }: TopBarNavItemProps) {
   return (
@@ -19,9 +19,14 @@ export default function TopBarNavItem({
       sx={{
         textDecoration: "none",
         color: `${variant === "active" ? "#fff" : "text"}`,
+        fontSize: "3",
         fontWeight: variant === "active" ? 600 : 250,
+        "&:focus": {
+          outline: "none",
+          boxShadow: "focus",
+        },
       }}
-      to={linkLocation}
+      to={location}
     >
       <Flex
         sx={{
@@ -32,7 +37,7 @@ export default function TopBarNavItem({
           paddingX: "3",
         }}
       >
-        {linkText}
+        {text}
       </Flex>
     </Link>
   )

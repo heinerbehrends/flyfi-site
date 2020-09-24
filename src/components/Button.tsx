@@ -8,12 +8,12 @@ export default function Button({ text, location }) {
     <Link
       to={location}
       sx={{
+        display: "inline-block",
         backgroundColor: "muted",
         color: "#fff",
         paddingX: "4",
         paddingY: "3",
-        marginX: "auto",
-        display: "inline-block",
+        marginTop: "0",
         fontFamily: "body",
         fontSize: "3",
         fontWeight: "800",
@@ -21,6 +21,15 @@ export default function Button({ text, location }) {
         border: "none",
         borderRadius: "2",
         boxShadow: "big",
+        transitionProperty: "transform",
+        transitionDuration: "0.25s",
+        "&:hover": {
+          transform: "scale(1.1)",
+        },
+        "&:focus": {
+          outline: "none",
+          boxShadow: "focus",
+        },
       }}
     >
       {text}
