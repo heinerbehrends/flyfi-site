@@ -16,13 +16,13 @@ export default function HeroParagraph() {
           float: "left",
         }}
       ></div>
-      <p sx={{ marginLeft: "4" }}>
-        Ik ben er trots op dat flyfi niet alleen mooie, goed vindbare en
-        supersnelle websites bouwt, maar dat ik deze service ook voor zeer
-        scherpe prijzen aan kan bieden. Ik maak gebruik van de nieuwste open
-        source webtechnologien zodat uw nieuwe webapp ook over een aantal jaren
-        nog helemaal up to date is. <br></br>Met flyfi’s moderne webapps bent u
-        de concurrentie een stap vooruit.
+      <p sx={{ marginLeft: "4", fontSize: "3" }}>
+        <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle
+        websites, maar biedt deze service ook voor zeer scherpe prijzen aan.
+        Hiervoor maken wij gebruik van de nieuwste open source webtechnologiën.
+        <br />
+        Met <i>flyfi’s</i> moderne webapps bent u de concurrentie één stap
+        vooruit.
       </p>
     </div>
   )
