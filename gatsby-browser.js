@@ -1,1 +1,1 @@
-import "typeface-fira-sans"
+require("typeface-fira-sans")
