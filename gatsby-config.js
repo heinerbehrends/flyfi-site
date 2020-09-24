@@ -6,5 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ["gatsby-plugin-theme-ui"],
+  plugins: [
+    "gatsby-plugin-theme-ui",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
+  ],
 }
