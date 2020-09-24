@@ -7,11 +7,19 @@ import TopBarNavItem from "./TopBarNavItem"
 
 export default function Header() {
   return (
-    <Box sx={{ backgroundColor: "primary", boxShadow: "big" }}>
+    <Box
+      sx={{
+        backgroundColor: "primary",
+        boxShadow: "big",
+        position: "fixed",
+        top: "0",
+        width: "100%",
+      }}
+    >
       <Flex
         sx={{
           paddingX: "3",
-          height: "48px",
+          height: "64px",
         }}
       >
         <Flex
@@ -21,12 +29,12 @@ export default function Header() {
             sx={{
               fontWeight: "light",
               fontStyle: "italic",
-              fontSize: "5",
+              fontSize: "40px",
               margin: "1",
             }}
           >
             flyfi
-            <span sx={{ fontSize: "2", fontStyle: "normal" }}>
+            <span sx={{ fontSize: "3", fontStyle: "normal" }}>
               {" "}
               webdevelopment
             </span>
@@ -43,8 +51,8 @@ export default function Header() {
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "background",
-              height: "96px",
-              width: "96px",
+              height: "124px",
+              width: "124px",
               borderRadius: "50%",
               boxShadow: "big",
             }}
@@ -53,10 +61,10 @@ export default function Header() {
           </Flex>
         </Flex>
         <Flex sx={{ flex: "2", justifyContent: "flex-end" }}>
-          <TopBarNavItem linkText="faq" linkLocation="/faq" />
-          <TopBarNavItem linkText="about" linkLocation="/about" />
-          <TopBarNavItem linkText="contact" linkLocation="/contact" />
-          <TopBarNavItem linkText="home" linkLocation="/" variant="active" />
+          <TopBarNavItem text="faq" location="/faq" />
+          <TopBarNavItem text="about" location="/about" />
+          <TopBarNavItem text="contact" location="/contact" />
+          <TopBarNavItem text="home" location="/" variant="active" />
         </Flex>
       </Flex>
     </Box>

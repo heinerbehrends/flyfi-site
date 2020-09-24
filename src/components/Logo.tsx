@@ -7,9 +7,9 @@ export default function Logo() {
       svg={
         <svg
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          width={350.559 / 4}
-          height={257.254 / 4}
-          viewBox="0 0 92.752 68.065"
+          width={350.559}
+          height={257.254}
+          viewBox={`0 0 ${92.752 * 0.95} ${68.065 * 0.95}`}
         >
           <defs>
             <path
