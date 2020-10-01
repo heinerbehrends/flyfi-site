@@ -29,6 +29,7 @@ export default {
     focus: "0 0 0 4px #ff74bf",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 96],
+  breakpoints: ["480px", "576px", "768px"],
   styles: {
     root: {
       fontFamily: "body",

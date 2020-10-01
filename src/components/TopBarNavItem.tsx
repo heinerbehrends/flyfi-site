@@ -15,30 +15,34 @@ export default function TopBarNavItem({
   variant,
 }: TopBarNavItemProps) {
   return (
-    <Link
-      sx={{
-        textDecoration: "none",
-        color: `${variant === "active" ? "#fff" : "text"}`,
-        fontSize: "3",
-        fontWeight: variant === "active" ? 600 : 250,
-        "&:focus": {
-          outline: "none",
-          boxShadow: "focus",
-        },
-      }}
-      to={location}
-    >
-      <Flex
+    <li sx={{ listStyleType: "none" }}>
+      <Link
         sx={{
-          height: "100%",
-          backgroundColor: `${variant === "active" ? "muted" : "transparent"}`,
-          "&:hover": { backgroundColor: "#c0eeee" },
-          alignItems: "center",
-          paddingX: "3",
+          textDecoration: "none",
+          color: `${variant === "active" ? "#fff" : "text"}`,
+          fontSize: ["2", "2", "3", "3"],
+          fontWeight: variant === "active" ? 600 : 250,
+          "&:focus": {
+            outline: "none",
+            boxShadow: "focus",
+          },
         }}
+        to={location}
       >
-        {text}
-      </Flex>
-    </Link>
+        <Flex
+          sx={{
+            height: "100%",
+            backgroundColor: `${
+              variant === "active" ? "muted" : "transparent"
+            }`,
+            "&:hover": { backgroundColor: "#c0eeee" },
+            alignItems: "center",
+            paddingX: ["2", "2", "3", "3"],
+          }}
+        >
+          {text}
+        </Flex>
+      </Link>
+    </li>
   )
 }
