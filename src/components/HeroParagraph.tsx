@@ -15,7 +15,13 @@ export default function HeroParagraph() {
           float: "left",
         }}
       ></div>
-      <p sx={{ marginLeft: "4", fontSize: ["2", "2", "3"] }}>
+      <p
+        sx={{
+          marginLeft: ["0", "0", "0", "4"],
+          marginTop: "3",
+          fontSize: ["2", "2", "3"],
+        }}
+      >
         <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle
         websites, maar biedt deze service ook voor zeer scherpe prijzen aan.
         Hiervoor maken wij gebruik van de nieuwste open source webtechnologiën.

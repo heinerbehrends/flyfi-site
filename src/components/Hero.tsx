@@ -20,9 +20,7 @@ export default function Hero() {
         paddingY: "5",
       }}
     >
-      <Styled.h1
-        sx={{ fontSize: ["5", "6", "6", "7"], marginTop: ["0", "5", "5", "5"] }}
-      >
+      <Styled.h1 sx={{ fontSize: ["5", "6", "6", "7"], marginTop: ["3", "5"] }}>
         Supersnelle webapps voor iedereen
       </Styled.h1>
 
@@ -58,7 +56,7 @@ export default function Hero() {
       </Flex>
       <motion.div style={{ scale: scaleButton }}>
         <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
-          <Button text="NIEUWSGIERIG?" location="/contact" />
+          <Button text="NIEUWSGIERIG?" location="/" />
         </Box>
       </motion.div>
     </Box>
