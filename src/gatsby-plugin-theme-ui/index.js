@@ -38,11 +38,11 @@ export default {
       padding: "0",
     },
     h1: {
-      fontSize: "7",
       textAlign: "center",
       fontWeight: "light",
       lineHeight: "heading",
       marginBlockEnd: 0,
+      paddingX: "1",
     },
   },
 }

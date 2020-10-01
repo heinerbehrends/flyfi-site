@@ -10,6 +10,8 @@ export default function Hero() {
   const { scrollYProgress } = useViewportScroll()
   const xPos = useTransform(scrollYProgress, [0, 0.5], [0, 1200])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const scaleButton = useTransform(scrollYProgress, [0.3, 0.7], [1, 1.25])
+
   return (
     <Box
       sx={{
@@ -18,10 +20,19 @@ export default function Hero() {
         paddingY: "5",
       }}
     >
-      <Styled.h1>Supersnelle webapps voor iedereen</Styled.h1>
+      <Styled.h1
+        sx={{ fontSize: ["5", "6", "6", "7"], marginTop: ["0", "5", "5", "5"] }}
+      >
+        Supersnelle webapps voor iedereen
+      </Styled.h1>
 
       <Flex
-        sx={{ alignItems: "center", justifyContent: "center", marginTop: "3" }}
+        sx={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "3",
+          flexDirection: ["column", "column", "column", "row"],
+        }}
       >
         <motion.div
           animate={{ x: [0, 0, 700] }}
@@ -45,9 +56,11 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </Flex>
-      <Box sx={{ textAlign: "center", marginTop: "5" }}>
-        <Button text="NIEUWSGIERIG?" location="/contact" />
-      </Box>
+      <motion.div style={{ scale: scaleButton }}>
+        <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
+          <Button text="NIEUWSGIERIG?" location="/contact" />
+        </Box>
+      </motion.div>
     </Box>
   )
 }

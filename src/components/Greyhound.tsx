@@ -10,8 +10,8 @@ export default function Greyhound() {
         marginRight: "4",
         borderRadius: "50%",
         backgroundColor: "secondary",
-        width: "300px",
-        height: "300px",
+        width: ["200px", "300px"],
+        height: ["200px", "300px"],
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
@@ -34,7 +34,7 @@ export default function Greyhound() {
           alt="greyhound running at full speed"
           sx={{
             height: "auto",
-            maxWidth: "360px",
+            maxWidth: ["240px", "360px"],
             zIndex: "3",
           }}
         />
@@ -44,7 +44,7 @@ export default function Greyhound() {
             height: "200px",
             backgroundColor: "darkgray",
             position: "relative",
-            top: "-30px",
+            top: ["-20px", "-30px"],
             zIndex: "2",
           }}
         />
