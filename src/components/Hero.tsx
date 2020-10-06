@@ -17,10 +17,10 @@ export default function Hero() {
       sx={{
         maxWidth: "960px",
         marginX: "auto",
-        paddingY: "5",
+        paddingTop: ["3", "3", "5"],
       }}
     >
-      <Styled.h1 sx={{ fontSize: ["5", "6", "6", "7"], marginTop: ["3", "5"] }}>
+      <Styled.h1 sx={{ fontSize: ["5", "6", "6", "7"], marginTop: "5" }}>
         Supersnelle webapps voor iedereen
       </Styled.h1>
 

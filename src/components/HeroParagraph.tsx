@@ -19,6 +19,7 @@ export default function HeroParagraph() {
         sx={{
           marginLeft: ["0", "0", "0", "4"],
           marginTop: "3",
+          marginX: ["3", "0"],
           fontSize: ["2", "2", "3"],
         }}
       >

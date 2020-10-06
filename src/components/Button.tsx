@@ -32,7 +32,7 @@ export default function Button({ text, location }) {
         },
         "&:active": {
           boxShadow: "inset 2px 2px 3px rgba(0, 0, 0, 0.25)",
-          transform: "translate(2px, 2px) scale(1.1)",
+          transform: "scale(1.0)",
         },
       }}
     >

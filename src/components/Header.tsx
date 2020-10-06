@@ -13,6 +13,7 @@ export default function Header() {
         backgroundColor: "primary",
         boxShadow: "big",
         position: "fixed",
+        zIndex: "1",
         top: "0",
         width: "100%",
         paddingX: ["2", "3"],

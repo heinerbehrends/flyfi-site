@@ -36,6 +36,7 @@ export default {
       boxSizing: "border-box",
       margin: "0",
       padding: "0",
+      fill: "#333",
     },
     h1: {
       textAlign: "center",
