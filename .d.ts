@@ -1,5 +1,5 @@
 declare module "*.gif"
-
+declare module "*.jpg"
 declare module "*.svg" {
   import React = require("react")
   export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>
