@@ -12,12 +12,13 @@ export default function Footer() {
         width: "100%",
         backgroundColor: "primary",
         paddingX: "4",
+        paddingY: "5",
         marginTop: "5",
       }}
     >
       <Grid
         sx={{
-          gridTemplateColumns: "1fr 1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fill, minmax(35ch, 1fr))",
           maxWidth: "1280px",
           marginX: "auto",
         }}

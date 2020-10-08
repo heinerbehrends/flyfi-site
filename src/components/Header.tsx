@@ -53,8 +53,8 @@ export default function Header() {
             display: ["none", "inherit"],
             alignItems: "center",
             backgroundColor: "background",
-            height: ["82px", "82px", "124px"],
-            width: ["82px", "82px", "124px"],
+            height: ["82px", "82px", "82px", "124px"],
+            width: ["82px", "82px", "82px", "124px"],
             borderRadius: "50%",
             boxShadow: "big",
           }}
