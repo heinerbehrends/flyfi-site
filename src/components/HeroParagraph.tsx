@@ -25,10 +25,11 @@ export default function HeroParagraph() {
       >
         <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle
         websites, maar biedt deze service ook voor zeer scherpe prijzen aan.
-        Hiervoor maken wij gebruik van de nieuwste open source webtechnologiën.
         <br />
-        Met <i>flyfi’s</i> moderne webapps bent u de concurrentie één stap
-        vooruit.
+        Ik gebruik de nieuwste open source software om het beste van mobiele
+        apps en het web te combineren.
+        {/* Met <i>flyfi’s</i> moderne webapps bent u de concurrentie één stap
+        vooruit. */}
       </p>
     </div>
   )
