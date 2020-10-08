@@ -39,11 +39,18 @@ export default {
       fill: "#333",
     },
     h1: {
-      textAlign: "center",
-      fontWeight: "light",
+      textAlign: "right",
+      fontWeight: "200",
       lineHeight: "heading",
       marginBlockEnd: 0,
       paddingX: "3",
+    },
+    h3: {
+      fontSize: ["4", "5"],
+      color: "text",
+      marginBlockEnd: "0",
+      marginBlockStart: "0",
+      marginX: "3",
     },
   },
 }
