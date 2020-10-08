@@ -16,11 +16,18 @@ export default function TopBarNavItem({
 }: TopBarNavItemProps) {
   return (
     <Link
+      activeStyle={{
+        color: "#fff",
+        fontWeight: 600,
+        backgroundColor: "#59bfbf",
+      }}
       sx={{
         textDecoration: "none",
-        color: `${variant === "active" ? "#fff" : "text"}`,
+        color: "text",
         fontSize: ["2", "2", "3"],
-        fontWeight: variant === "active" ? 600 : 250,
+        fontWeight: 200,
+        backgroundColor: "transparent",
+        "&:hover": { backgroundColor: "#c0eeee", fontWeight: "400" },
         "&:focus": {
           outline: "none",
           boxShadow: "focus",
@@ -31,8 +38,6 @@ export default function TopBarNavItem({
       <Flex
         sx={{
           height: "100%",
-          backgroundColor: `${variant === "active" ? "muted" : "transparent"}`,
-          "&:hover": { backgroundColor: "#c0eeee" },
           alignItems: "center",
           paddingX: ["2", "2", "3"],
         }}
