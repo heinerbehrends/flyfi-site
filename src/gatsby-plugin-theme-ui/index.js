@@ -26,7 +26,7 @@ export default {
   radii: [4, 8, 16, 24],
   shadows: {
     big: "4px 4px 6px rgba(0, 0, 0, 0.25)",
-    focus: "inset 0 0 2px 3px #FFC0E2",
+    focus: "inset 0 0 3px 2px #FFC0E2",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 96],
   breakpoints: ["480px", "576px", "768px"],
