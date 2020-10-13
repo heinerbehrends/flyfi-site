@@ -9,13 +9,14 @@ import HeroParagraph from "./HeroParagraph"
 
 export default function Hero() {
   const { scrollYProgress } = useViewportScroll()
-  const xPos = useTransform(scrollYProgress, [0, 0.1, 0.5], [0, 50, 1200])
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.3], [1, 1, 0])
+  const xPos = useTransform(scrollYProgress, [0, 0.075, 0.15], [0, 50, 1200])
+  const opacity = useTransform(scrollYProgress, [0, 0.075, 0.15], [1, 1, 0])
   const scaleButton = useTransform(scrollYProgress, [0.1, 0.2], [1, 1.25])
 
-  // const [ref, inView] = useInView({
-  //   initialInView: true,
-  // })
+  const [ref, inView] = useInView({
+    initialInView: true,
+  })
+
   return (
     <Box
       sx={{
@@ -28,6 +29,7 @@ export default function Hero() {
         sx={{
           fontSize: ["6", "6", "9vw"],
           marginTop: "5",
+          textShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
           "@media screen and (min-width: 960px)": {
             fontSize: "86.43px",
           },
@@ -45,8 +47,8 @@ export default function Hero() {
         }}
       >
         <motion.div
-          // sx={{ display: `${inView ? "block" : "none"}` }}
-          // ref={ref}
+          sx={{ display: `${inView ? "block" : "none"}` }}
+          ref={ref}
           animate={{ x: [0, 0, 700] }}
           transition={{ times: [0, 0.3, 1], duration: 3, ease: "easeOut" }}
         >
@@ -70,7 +72,7 @@ export default function Hero() {
       </Flex>
       <motion.div style={{ scale: scaleButton }}>
         <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
-          <Button text="NIEUWSGIERIG?" location="/" />
+          <Button text="NIEUWSGIERIG?" location="/contact" />
         </Box>
       </motion.div>
     </Box>
