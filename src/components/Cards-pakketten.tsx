@@ -36,7 +36,7 @@ export default function CardsPakketten() {
       />
       <Card
         sx={cardsPakkettenStyle}
-        heading={"Professioneel Maatwerk"}
+        heading={"Professioneel maatwerk"}
         text={`Voor grotere projecten bieden wij full service maatwerk aan. Hiervoor werken wij samen met marketeers, copy writers en fotografen om een product te ontwikkelen dat optimaal is afgestemd op de behoeftes van uw bedrijf.
         Geanimeerde logo’s of paginaovergangen, een donkere night mode weergave of een service worker, die zorgt dat uw webapp ook offline werkt? Flyfi zorgt ervoor dat uw wensen werkelijkheid worden.`}
         icon={<CustomIcon />}
