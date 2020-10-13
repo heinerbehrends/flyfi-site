@@ -2,7 +2,7 @@
 import { jsx, Styled, Flex, Input } from "theme-ui"
 import React from "react"
 import { useForm } from "react-hook-form"
-import { SystemStyleObject } from "@theme-ui/core"
+import { SystemStyleObject } from "@styled-system/css"
 
 const inputStyles: SystemStyleObject = {
   padding: "3",
@@ -12,12 +12,20 @@ const inputStyles: SystemStyleObject = {
   borderRadius: "3",
   border: "1px solid #333",
   fontSize: ["2", "3"],
-  fontWeight: "200",
+  fontWeight: "300",
   fontFamily: "Fira Sans",
   "&:focus": {
     outline: "none",
     boxShadow: "focus",
   },
+}
+
+function ErrorMessage({ children }) {
+  return (
+    <span sx={{ marginLeft: "4", marginTop: "1", color: "red" }}>
+      {children}
+    </span>
+  )
 }
 
 export default function ContactForm() {
@@ -27,24 +35,23 @@ export default function ContactForm() {
   }
   return (
     <React.Fragment>
-      <Styled.h1 sx={{ marginTop: "6", fontSize: "8vw", textAlign: "center" }}>
-        Contact
-      </Styled.h1>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-        <Flex sx={{ flexDirection: "column" }}>
+        <Flex sx={{ flexDirection: "column", marginTop: "6" }}>
           <input
             type="text"
             autoFocus
             name="Name"
-            placeholder="Uw naam"
+            placeholder="Naam"
             ref={register({ required: true })}
             sx={inputStyles}
           />
-          {errors.Name && <span>Dit is een verplicht veld</span>}
+          {errors.Name && (
+            <ErrorMessage>Dit is een verplicht veld</ErrorMessage>
+          )}
           <input
             type="email"
             name="email"
-            placeholder="Uw e-mail adres"
+            placeholder="E-mail adres"
             ref={register({
               required: "Dit is een verplicht veld",
               pattern: {
@@ -54,7 +61,7 @@ export default function ContactForm() {
             })}
             sx={inputStyles}
           />
-          {errors.email && <span>{errors.email.message}</span>}
+          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
           <textarea
             name="message"
             form="contact-form"
@@ -64,11 +71,13 @@ export default function ContactForm() {
               maxLength: 2000,
             })}
             placeholder="Uw vraag of bericht"
-            rows={8}
+            rows={6}
             sx={inputStyles}
           ></textarea>
           {errors.message && (
-            <span>Het bericht moet tussen 12 en 2000 letters lang zijn</span>
+            <ErrorMessage>
+              Het bericht moet tussen 12 en 2000 letters lang zijn
+            </ErrorMessage>
           )}
           <button type="submit" sx={inputStyles}>
             Verstuur
