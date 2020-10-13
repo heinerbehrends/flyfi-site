@@ -6,24 +6,27 @@ import { useInView } from "react-intersection-observer"
 
 type CardProps = {
   icon?: React.ReactNode
+  cta?: React.ReactNode
   heading: string
   text: string
 }
 
-export default function Card({ icon, heading, text }: CardProps) {
+export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
   const [ref, inView] = useInView()
   return (
     <motion.div
+      {...rest}
       style={{ opacity: 0 }}
       ref={ref}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 2 }}
       sx={{
         padding: ["3", "4"],
-        borderRadius: "3",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <Flex sx={{ alignItems: "center" }}>
+      <Flex sx={{ alignItems: "center", fontSize: "5" }}>
         {icon}
         <Styled.h3
           sx={{
@@ -40,10 +43,12 @@ export default function Card({ icon, heading, text }: CardProps) {
           marginTop: ["3", "4"],
           lineHeight: "body",
           color: "text",
+          whiteSpace: "pre-line",
         }}
       >
         {text}
       </p>
+      {cta}
     </motion.div>
   )
 }
