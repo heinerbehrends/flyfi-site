@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Box, Flex } from "theme-ui"
+import { jsx, Styled, Flex } from "theme-ui"
 import React from "react"
 import MailIcon from "../icons/mail_outline-24px.svg"
 import PhoneIcon from "../icons/phone-24px.svg"
@@ -16,15 +16,20 @@ type ContactItemProps = {
 
 function ContactItem({ icon, text, location }: ContactItemProps) {
   return (
-    <Flex sx={{ alignItems: "center", marginTop: "3" }}>
+    <Flex sx={{ alignItems: "center", marginTop: "2" }}>
       {icon}
       <a
         sx={{
           color: "text",
+          padding: "2",
           marginLeft: "2",
           fontSize: "2",
           textDecoration: "none",
           "&:hover": { textDecoration: "underline" },
+          "&:focus": {
+            outline: "none",
+            boxShadow: "focus",
+          },
         }}
         href={location}
       >
@@ -36,7 +41,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
 
 export default function FooterContact() {
   return (
-    <Box sx={{ marginX: "4" }}>
+    <address sx={{ marginX: "4" }}>
       <Styled.h3 sx={{ textAlign: "left", marginLeft: "0" }}>Connect</Styled.h3>
       <ContactItem
         text={"info@flyfi.nl"}
@@ -72,6 +77,6 @@ export default function FooterContact() {
         }
         icon={<LocationIcon />}
       />
-    </Box>
+    </address>
   )
 }
