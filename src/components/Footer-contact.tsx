@@ -41,7 +41,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
 
 export default function FooterContact() {
   return (
-    <address sx={{ marginX: "4" }}>
+    <address sx={{ marginX: "4", fontStyle: "normal" }}>
       <Styled.h3 sx={{ textAlign: "left", marginLeft: "0" }}>Connect</Styled.h3>
       <ContactItem
         text={"info@flyfi.nl"}
