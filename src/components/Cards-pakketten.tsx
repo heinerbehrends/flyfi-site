@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import Card from "./Card"
 import CustomIcon from "../icons/settings-24px.svg"
@@ -15,8 +15,9 @@ const cardsPakkettenStyle: SystemStyleObject = {
 
 export default function CardsPakketten() {
   return (
-    <Grid
+    <section
       sx={{
+        display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(45ch, 1fr))",
         gap: "3",
         paddingX: ["0", "3", "4"],
@@ -41,6 +42,6 @@ export default function CardsPakketten() {
         icon={<CustomIcon />}
         cta={<PriceButton price={1000} buttonText={"Meer weten?"} />}
       />
-    </Grid>
+    </section>
   )
 }
