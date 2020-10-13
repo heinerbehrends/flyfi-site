@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import React from "react"
+import { Link } from "gatsby"
 import Logo from "./Logo"
 import { Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
@@ -21,26 +22,40 @@ export default function Header() {
       }}
     >
       <Flex sx={{ alignItems: "center", flex: "1 1 auto" }}>
-        <h4
+        <Link
+          to={"/"}
           sx={{
-            fontWeight: "light",
-            fontStyle: "italic",
-            fontSize: ["5", "5", "40px"],
-            margin: "1",
+            textDecoration: "none",
+            color: "text",
+            paddingY: "1",
+            paddingX: "3",
+            "&:focus": {
+              outline: "none",
+              boxShadow: "focus",
+            },
           }}
         >
-          flyfi
-          <span
+          <h4
             sx={{
-              fontSize: "3",
-              fontStyle: "normal",
-              display: ["none", "none", "none", "inline"],
+              fontWeight: "light",
+              fontStyle: "italic",
+              fontSize: ["5", "5", "40px"],
+              margin: "1",
             }}
           >
-            {" "}
-            web development
-          </span>
-        </h4>
+            flyfi
+            <span
+              sx={{
+                fontSize: "3",
+                fontStyle: "normal",
+                display: ["none", "none", "none", "inline"],
+              }}
+            >
+              {" "}
+              web development
+            </span>
+          </h4>
+        </Link>
       </Flex>
       <Flex
         sx={{
