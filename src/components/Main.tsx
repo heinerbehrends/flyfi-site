@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import { useInView } from "react-intersection-observer"
-import { motion, useViewportScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
@@ -25,7 +25,6 @@ export default function Main() {
     triggerOnce: true,
   })
 
-  console.log(inView)
   return (
     <React.Fragment>
       <motion.h2
@@ -53,10 +52,11 @@ export default function Main() {
           paddingX: ["3", "3", "4", "5"],
           paddingY: "3",
           fontWeight: "900",
+          whiteSpace: "pre-line",
         }}
       >
-        Wist u dat 53% van alle bezoekers afhaken als een site langer dan 3
-        seconden laadt?
+        Wist u dat 53% van alle bezoekers afhaken <br></br>als een site langer
+        dan 3 seconden laadt?
       </motion.h3>
       <motion.h2
         ref={ref3}
@@ -81,7 +81,7 @@ export default function Main() {
           fontWeight: "900",
         }}
       >
-        Profiteer nu van onze pakketten
+        Maatwerk of starterspakket?
       </motion.h2>
       <CardsPakketten />
     </React.Fragment>
