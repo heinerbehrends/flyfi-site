@@ -39,10 +39,14 @@ function ErrorMessage({ children }) {
 }
 
 export default function ContactForm(props) {
-  const { register, handleSubmit, watch, errors } = useForm()
+  const { register, handleSubmit, errors, formState } = useForm({
+    mode: "onChange",
+    shouldFocusError: true,
+  })
   function onSubmit(data) {
-    console.log(data)
+    alert(JSON.stringify(data))
   }
+  console.log(formState)
   return (
     <form id="contact-form" onSubmit={handleSubmit(onSubmit)} {...props}>
       <Flex sx={{ flexDirection: "column" }}>
@@ -82,9 +86,7 @@ export default function ContactForm(props) {
           sx={inputStyles}
         ></textarea>
         {errors.message && (
-          <ErrorMessage>
-            Het bericht moet tussen 12 en 2000 letters lang zijn
-          </ErrorMessage>
+          <ErrorMessage>Het bericht is te kort of te lang</ErrorMessage>
         )}
         <button type="submit" sx={buttonStyles}>
           Verstuur
