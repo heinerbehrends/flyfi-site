@@ -14,10 +14,20 @@ const inputStyles: SystemStyleObject = {
   fontSize: ["2", "3"],
   fontWeight: "300",
   fontFamily: "Fira Sans",
+  boxShadow: "big",
   "&:focus": {
     outline: "none",
     boxShadow: "focus",
   },
+}
+
+const buttonStyles: SystemStyleObject = {
+  ...inputStyles,
+  backgroundColor: "muted",
+  color: "#fff",
+  fontWeight: "700",
+  fontSize: "4",
+  textTransform: "uppercase",
 }
 
 function ErrorMessage({ children }) {
@@ -28,62 +38,58 @@ function ErrorMessage({ children }) {
   )
 }
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   const { register, handleSubmit, watch, errors } = useForm()
   function onSubmit(data) {
     console.log(data)
   }
   return (
-    <React.Fragment>
-      <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-        <Flex sx={{ flexDirection: "column", marginTop: "6" }}>
-          <input
-            type="text"
-            autoFocus
-            name="Name"
-            placeholder="Naam"
-            ref={register({ required: true })}
-            sx={inputStyles}
-          />
-          {errors.Name && (
-            <ErrorMessage>Dit is een verplicht veld</ErrorMessage>
-          )}
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail adres"
-            ref={register({
-              required: "Dit is een verplicht veld",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Ongeldige e-mail adres",
-              },
-            })}
-            sx={inputStyles}
-          />
-          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-          <textarea
-            name="message"
-            form="contact-form"
-            ref={register({
-              required: true,
-              minLength: 12,
-              maxLength: 2000,
-            })}
-            placeholder="Uw vraag of bericht"
-            rows={6}
-            sx={inputStyles}
-          ></textarea>
-          {errors.message && (
-            <ErrorMessage>
-              Het bericht moet tussen 12 en 2000 letters lang zijn
-            </ErrorMessage>
-          )}
-          <button type="submit" sx={inputStyles}>
-            Verstuur
-          </button>
-        </Flex>
-      </form>
-    </React.Fragment>
+    <form id="contact-form" onSubmit={handleSubmit(onSubmit)} {...props}>
+      <Flex sx={{ flexDirection: "column" }}>
+        <input
+          type="text"
+          autoFocus
+          name="Name"
+          placeholder="Naam"
+          ref={register({ required: true })}
+          sx={inputStyles}
+        />
+        {errors.Name && <ErrorMessage>Dit is een verplicht veld</ErrorMessage>}
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail adres"
+          ref={register({
+            required: "Dit is een verplicht veld",
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "Ongeldige e-mail adres",
+            },
+          })}
+          sx={inputStyles}
+        />
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        <textarea
+          name="message"
+          form="contact-form"
+          ref={register({
+            required: true,
+            minLength: 12,
+            maxLength: 2000,
+          })}
+          placeholder="Uw vraag of bericht"
+          rows={6}
+          sx={inputStyles}
+        ></textarea>
+        {errors.message && (
+          <ErrorMessage>
+            Het bericht moet tussen 12 en 2000 letters lang zijn
+          </ErrorMessage>
+        )}
+        <button type="submit" sx={buttonStyles}>
+          Verstuur
+        </button>
+      </Flex>
+    </form>
   )
 }
