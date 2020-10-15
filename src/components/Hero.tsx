@@ -11,7 +11,6 @@ export default function Hero() {
   const { scrollYProgress } = useViewportScroll()
   const xPos = useTransform(scrollYProgress, [0, 0.075, 0.15], [0, 50, 1200])
   const opacity = useTransform(scrollYProgress, [0, 0.075, 0.15], [1, 1, 0])
-  const scaleButton = useTransform(scrollYProgress, [0.1, 0.2], [1, 1.25])
 
   const [ref, inView] = useInView({
     initialInView: true,
@@ -59,11 +58,9 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </Flex>
-      <motion.div style={{ scale: scaleButton }}>
-        <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
-          <Button text="NIEUWSGIERIG?" location="/contact" />
-        </Box>
-      </motion.div>
+      <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
+        <Button text="NIEUWSGIERIG?" location="/contact" />
+      </Box>
     </Box>
   )
 }
