@@ -26,28 +26,30 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
         flexDirection: "column",
       }}
     >
-      <Flex sx={{ alignItems: "center", fontSize: "5" }}>
-        {icon}
-        <Styled.h3
+      <div>
+        <Flex sx={{ alignItems: "center", fontSize: "5" }}>
+          {icon}
+          <Styled.h3
+            sx={{
+              marginLeft: icon ? "3" : "0",
+            }}
+          >
+            {heading}
+          </Styled.h3>
+        </Flex>
+        <p
           sx={{
-            marginLeft: icon ? "3" : "0",
+            marginBlockEnd: "0",
+            marginBlockStart: "0",
+            marginTop: ["3", "4"],
+            lineHeight: "body",
+            color: "text",
+            whiteSpace: "pre-line",
           }}
         >
-          {heading}
-        </Styled.h3>
-      </Flex>
-      <p
-        sx={{
-          marginBlockEnd: "0",
-          marginBlockStart: "0",
-          marginTop: ["3", "4"],
-          lineHeight: "body",
-          color: "text",
-          whiteSpace: "pre-line",
-        }}
-      >
-        {text}
-      </p>
+          {text}
+        </p>
+      </div>
       {cta}
     </motion.div>
   )
