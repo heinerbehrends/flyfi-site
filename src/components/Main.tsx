@@ -6,6 +6,15 @@ import { motion } from "framer-motion"
 import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
+import { SystemStyleObject } from "@styled-system/css"
+
+const h2Style: SystemStyleObject = {
+  marginTop: "5",
+  marginBottom: "4",
+  fontSize: ["5", "6"],
+  marginX: ["3", "3", "4", "5"],
+  fontWeight: "900",
+}
 
 export default function Main() {
   const [ref, inView] = useInView({
@@ -27,20 +36,11 @@ export default function Main() {
 
   return (
     <React.Fragment>
-      <motion.h2
-        ref={ref}
-        animate={{ x: inView ? 0 : -800 }}
-        sx={{
-          marginTop: ["5"],
-          fontSize: ["5", "6"],
-          marginX: ["3", "3", "4", "5"],
-          fontWeight: "900",
-        }}
-      >
+      <motion.h2 ref={ref} animate={{ x: inView ? 0 : -800 }} sx={h2Style}>
         De voordelen van <i>flyfi</i> webapps {inView}
       </motion.h2>
       <CardsVoordelen />
-      <motion.h3
+      <motion.blockquote
         ref={ref2}
         animate={{ opacity: inView2 ? 1 : 0 }}
         sx={{
@@ -57,30 +57,12 @@ export default function Main() {
       >
         Wist u dat 53% van alle bezoekers afhaken <br></br>als een site langer
         dan 3 seconden laadt?
-      </motion.h3>
-      <motion.h2
-        ref={ref3}
-        animate={{ x: inView3 ? 0 : -800 }}
-        sx={{
-          marginTop: ["5"],
-          fontSize: ["5", "6"],
-          marginX: ["3", "3", "4", "5"],
-          fontWeight: "900",
-        }}
-      >
+      </motion.blockquote>
+      <motion.h2 ref={ref3} animate={{ x: inView3 ? 0 : -800 }} sx={h2Style}>
         Hoe kan ik u helpen?
       </motion.h2>
       <CardsTypes />
-      <motion.h2
-        ref={ref4}
-        animate={{ x: inView4 ? 0 : -800 }}
-        sx={{
-          marginTop: ["5"],
-          fontSize: ["5", "6"],
-          marginX: ["3", "3", "4", "5"],
-          fontWeight: "900",
-        }}
-      >
+      <motion.h2 ref={ref4} animate={{ x: inView4 ? 0 : -800 }} sx={h2Style}>
         Maatwerk of starterspakket?
       </motion.h2>
       <CardsPakketten />
