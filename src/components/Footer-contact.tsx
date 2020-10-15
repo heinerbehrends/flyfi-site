@@ -16,33 +16,36 @@ type ContactItemProps = {
 
 function ContactItem({ icon, text, location }: ContactItemProps) {
   return (
-    <Flex sx={{ alignItems: "center", marginTop: "2" }}>
-      {icon}
-      <a
-        sx={{
-          color: "text",
-          padding: "2",
-          marginLeft: "2",
-          fontSize: "2",
-          textDecoration: "none",
-          "&:hover": { textDecoration: "underline" },
-          "&:focus": {
-            outline: "none",
-            boxShadow: "focus",
-          },
-        }}
-        href={location}
-      >
-        {text}
-      </a>
-    </Flex>
+    <a
+      sx={{
+        display: "block",
+        color: "text",
+        fontSize: "2",
+        marginLeft: "-16px",
+        textDecoration: "none",
+        "&:hover": { textDecoration: "underline" },
+        "&:focus": {
+          outline: "none",
+          boxShadow: "focus",
+        },
+      }}
+      href={location}
+    >
+      <Flex sx={{ alignItems: "center", padding: "3" }}>
+        {icon}
+
+        <p sx={{ marginLeft: "2" }}>{text}</p>
+      </Flex>
+    </a>
   )
 }
 
 export default function FooterContact() {
   return (
     <address sx={{ marginX: "4", fontStyle: "normal" }}>
-      <Styled.h3 sx={{ textAlign: "left", marginLeft: "0" }}>Connect</Styled.h3>
+      <Styled.h3 sx={{ textAlign: "left", marginLeft: "0", marginBottom: "2" }}>
+        Connect
+      </Styled.h3>
       <ContactItem
         text={"info@flyfi.nl"}
         location={"mailto:info@flyfi.nl"}
