@@ -20,23 +20,12 @@ export default function Hero() {
   return (
     <Box
       sx={{
+        paddingTop: ["3", "4", "4", "5"],
         maxWidth: "960px",
         marginX: "auto",
-        paddingTop: ["3", "3", "5"],
       }}
     >
-      <Styled.h1
-        sx={{
-          fontSize: ["6", "6", "9vw"],
-          marginTop: "5",
-          textShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
-          "@media screen and (min-width: 960px)": {
-            fontSize: "86.43px",
-          },
-        }}
-      >
-        Supersnelle webapps voor iedereen
-      </Styled.h1>
+      <Styled.h1>Supersnelle webapps voor iedereen</Styled.h1>
 
       <Flex
         sx={{
