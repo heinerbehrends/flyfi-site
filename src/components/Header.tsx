@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
-import LogoSVG from "./Logo2"
+import Logo from "./Logo"
 import { Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
 
@@ -76,7 +76,7 @@ export default function Header() {
             boxShadow: "big",
           }}
         >
-          <LogoSVG />
+          <Logo />
         </Flex>
       </Flex>
       <nav
