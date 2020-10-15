@@ -5,9 +5,9 @@ import Main from "../components/Main"
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Hero />
       <Main />
-    </Layout>
+    </>
   )
 }

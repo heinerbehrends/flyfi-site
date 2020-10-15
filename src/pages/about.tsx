@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx, Styled, Box } from "theme-ui"
 import React from "react"
-import Layout from "../components/Layout"
 
 export default function About() {
   return (
-    <Layout>
+    <React.Fragment>
       <Styled.h1 sx={{ textAlign: "center", paddingTop: ["3", "4", "4", "5"] }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
@@ -61,6 +60,6 @@ export default function About() {
           Marocco.
         </Styled.p>
       </Box>
-    </Layout>
+    </React.Fragment>
   )
 }

@@ -1,15 +1,17 @@
-import React, { useEffect } from "react"
-import Walkway from "walkway.js"
+import React from "react"
+// import Walkway from "walkway.js"
 
 export default function Logo() {
-  useEffect(() => {
-    const animatedLogo = new Walkway({
-      selector: "#logo",
-      duration: "2000",
-      easing: "easeInOut",
-    })
-    animatedLogo.draw()
-  })
+  // useEffect(() => {
+  //   if (window) {
+  //     const animatedLogo = new Walkway({
+  //       selector: "#logo",
+  //       duration: "2000",
+  //       easing: "easeInOut",
+  //     })
+  //     animatedLogo.draw()
+  //   }
+  // })
   return (
     <svg
       id="logo"
