@@ -11344,13 +11344,6 @@ react-test-renderer@^16.13.1:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-react-walkway@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-walkway/-/react-walkway-2.0.1.tgz#b7c9ee4cf1547f78d6c948694cf4953f9e9192e2"
-  integrity sha512-k/FI1HJjPPnJcWgQ6TFW0wbnW3fGK6JjaDya5jSm3DUylJfK449h9waKZH5UcMovA81qG3nP/ky7AOcqUr/VFQ==
-  dependencies:
-    walkway.js "0.0.9"
-
 react@^16.12.0, react@^16.8.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -13868,7 +13861,7 @@ walker@^1.0.7, walker@~1.0.5:
   dependencies:
     makeerror "1.0.x"
 
-walkway.js@0.0.9:
+walkway.js@^0.0.9:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/walkway.js/-/walkway.js-0.0.9.tgz#95db2a27af827b2265b0198e169d88139d1b5037"
   integrity sha1-ldsqJ6+CeyJlsBmOFp2IE50bUDc=
