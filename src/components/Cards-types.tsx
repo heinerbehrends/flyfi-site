@@ -21,7 +21,7 @@ export default function CardsTypes() {
       sx={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(45ch, 1fr))",
-        gap: "3",
+        gap: "4",
         paddingX: ["0", "3", "4"],
         maxWidth: "1280px",
         marginX: "auto",
