@@ -29,7 +29,7 @@ export default function PriceButton({ price, buttonText }: priceButtonProps) {
           boxShadow: "big",
         }}
       >
-        <div sx={{ marginBottom: "-8px" }}>vanaf</div>
+        <div sx={{ marginBottom: "-4px" }}>vanaf</div>
         <div sx={{ fontSize: "5", fontWeight: "700" }}>€{price}</div>
       </Flex>
       <Button text={buttonText} location="/contact"></Button>
