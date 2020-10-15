@@ -48,7 +48,12 @@ export default function ContactForm(props) {
   }
   console.log(formState)
   return (
-    <form id="contact-form" onSubmit={handleSubmit(onSubmit)} {...props}>
+    <form
+      netlify
+      id="contact-form"
+      onSubmit={handleSubmit(onSubmit)}
+      {...props}
+    >
       <Flex sx={{ flexDirection: "column" }}>
         <input
           type="text"
