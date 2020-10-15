@@ -27,7 +27,7 @@ export default function TopBarNavItem({
         fontSize: ["2", "2", "3"],
         fontWeight: 200,
         backgroundColor: "transparent",
-        "&:hover": { backgroundColor: "#c0eeee", fontWeight: "400" },
+        "&:hover": { backgroundColor: "#c0eeee" },
         "&:focus": {
           outline: "none",
           boxShadow: "focus",
