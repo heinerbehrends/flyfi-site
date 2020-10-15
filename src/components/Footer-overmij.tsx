@@ -10,7 +10,7 @@ export default function FooterOverMij() {
         <img sx={{ borderRadius: "50%" }} src={portret} />
         <Styled.h3 sx={{ fontSize: "5", marginLeft: "3" }}>Over mij</Styled.h3>
       </Flex>
-      <p sx={{ lineHeight: "body" }}>
+      <p sx={{ lineHeight: "body", marginTop: "3" }}>
         Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik
         streef er altijd na om een mooi resultaat neer te zetten, als ontwerper
         en programmeur, maar ook als veelzijdige muzikant en als faire

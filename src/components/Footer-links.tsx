@@ -10,9 +10,8 @@ function FooterLink({ text, location }) {
         display: "block",
         color: "text",
         fontSize: "3",
-        padding: "2",
-        marginLeft: "-8px",
-        marginTop: "2",
+        padding: "3",
+        marginLeft: "-16px",
         fontWeight: "500",
         textDecoration: "none",
         "&:hover": { textDecoration: "underline" },
@@ -31,7 +30,9 @@ function FooterLink({ text, location }) {
 export default function FooterLinks() {
   return (
     <nav sx={{ marginX: "4" }}>
-      <Styled.h3 sx={{ textAlign: "left", marginLeft: "0" }}>Links</Styled.h3>
+      <Styled.h3 sx={{ textAlign: "left", marginLeft: "0", marginBottom: "2" }}>
+        Links
+      </Styled.h3>
       <FooterLink location={"/contact"} text={"Contact"} />
       <FooterLink location={"/about"} text={"Over mij"} />
       <FooterLink location={"/faq"} text={"FAQ"} />
