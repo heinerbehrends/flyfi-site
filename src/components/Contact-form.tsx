@@ -49,7 +49,7 @@ export default function ContactForm(props) {
   console.log(formState)
   return (
     <form
-      netlify
+      data-netlify="true"
       id="contact-form"
       onSubmit={handleSubmit(onSubmit)}
       {...props}

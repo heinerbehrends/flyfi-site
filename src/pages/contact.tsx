@@ -3,11 +3,10 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ContactForm from "../components/Contact-form"
 import ContactIcons from "../components/Contact-icons"
-import Layout from "../components/Layout"
 
 export default function Contact() {
   return (
-    <Layout>
+    <React.Fragment>
       <Styled.h1
         sx={{
           textAlign: "center",
@@ -51,6 +50,6 @@ export default function Contact() {
         <ContactForm />
         <ContactIcons />
       </section>
-    </Layout>
+    </React.Fragment>
   )
 }
