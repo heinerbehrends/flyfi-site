@@ -2,11 +2,12 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "./Logo"
+import LogoSVG from "./Logo2"
 import { Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
 
 export default function Header() {
+  console.log("hi")
   return (
     <header
       sx={{
@@ -18,6 +19,7 @@ export default function Header() {
         top: "0",
         width: "100%",
         paddingX: ["2", "3"],
+        marginBottom: "4",
         height: "64px",
       }}
     >
@@ -74,7 +76,7 @@ export default function Header() {
             boxShadow: "big",
           }}
         >
-          <Logo />
+          <LogoSVG />
         </Flex>
       </Flex>
       <nav
