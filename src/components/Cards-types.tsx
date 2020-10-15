@@ -9,6 +9,7 @@ import PortfolioIcon from "../icons/work_outline-24px.svg"
 import { SystemStyleObject } from "@styled-system/css"
 
 export const cardBorderStyle: SystemStyleObject = {
+  borderWidth: "2px",
   borderColor: "secondary",
   borderStyle: "dashed",
   borderRadius: "3",
