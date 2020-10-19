@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx, Box, Flex } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 import React from "react"
-import * as greyhound from "../gifs/greyhound-loop-transparent.gif"
+import greyhoundMp4 from "../videos/greyhound-loop.mp4"
+import greyhoundWebm from "../videos/greyhound-loop.webm"
 
 export default function Greyhound() {
   return (
@@ -9,7 +10,6 @@ export default function Greyhound() {
       sx={{
         marginRight: "4",
         borderRadius: "50%",
-        backgroundColor: "secondary",
         width: ["200px", "300px"],
         height: ["200px", "300px"],
         alignItems: "center",
@@ -26,28 +26,18 @@ export default function Greyhound() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
-          top: "100px",
         }}
       >
-        <img
-          src={greyhound}
-          alt="greyhound running at full speed"
-          sx={{
-            height: "auto",
-            maxWidth: ["240px", "360px"],
-            zIndex: "3",
-          }}
-        />
-        <Box
-          sx={{
-            width: "300px",
-            height: "200px",
-            backgroundColor: "darkgray",
-            position: "relative",
-            top: ["-20px", "-30px"],
-            zIndex: "2",
-          }}
-        />
+        <video
+          sx={{ maxWidth: ["240px", "360px"] }}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={greyhoundMp4} type={"video/mp4"}></source>
+          <source src={greyhoundWebm} type={"video/webm"}></source>
+        </video>
       </Flex>
     </Flex>
   )
