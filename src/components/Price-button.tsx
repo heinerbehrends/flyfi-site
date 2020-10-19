@@ -4,11 +4,33 @@ import React from "react"
 import Button from "./Button"
 
 type priceButtonProps = {
-  price: number
   buttonText: string
 }
+type priceProps = {
+  price: number
+}
 
-export default function PriceButton({ price, buttonText }: priceButtonProps) {
+function Price({ price }: priceProps) {
+  return (
+    <Flex
+      sx={{
+        flexDirection: "column",
+        backgroundColor: "secondary",
+        borderRadius: "48px",
+        width: "96px",
+        height: "96px",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "big",
+      }}
+    >
+      <div sx={{ marginBottom: "-4px" }}>vanaf</div>
+      <div sx={{ fontSize: "5", fontWeight: "700" }}>€{price}</div>
+    </Flex>
+  )
+}
+
+export default function PriceButton({ buttonText }: priceButtonProps) {
   return (
     <Flex
       sx={{
@@ -17,21 +39,6 @@ export default function PriceButton({ price, buttonText }: priceButtonProps) {
         justifyContent: "space-around",
       }}
     >
-      <Flex
-        sx={{
-          flexDirection: "column",
-          backgroundColor: "secondary",
-          borderRadius: "48px",
-          width: "96px",
-          height: "96px",
-          alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "big",
-        }}
-      >
-        <div sx={{ marginBottom: "-4px" }}>vanaf</div>
-        <div sx={{ fontSize: "5", fontWeight: "700" }}>€{price}</div>
-      </Flex>
       <Button text={buttonText} location="/contact"></Button>
     </Flex>
   )
