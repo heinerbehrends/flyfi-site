@@ -15,18 +15,22 @@ export const cardBorderStyle: SystemStyleObject = {
   borderRadius: "3",
 }
 
+export const cardSectionStyle: SystemStyleObject = {
+  display: "grid",
+  gridTemplateColumns: [
+    "repeat(auto-fill, minmax(30ch, 1fr))",
+    "repeat(auto-fill, minmax(45ch, 1fr))",
+  ],
+  gap: "4",
+  paddingX: ["3"],
+  maxWidth: "1280px",
+  marginX: "auto",
+  marginTop: "4",
+}
+
 export default function CardsTypes() {
   return (
-    <section
-      sx={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(45ch, 1fr))",
-        gap: "4",
-        paddingX: ["0", "3", "4"],
-        maxWidth: "1280px",
-        marginX: "auto",
-      }}
-    >
+    <section sx={cardSectionStyle}>
       <Card
         sx={cardBorderStyle}
         heading={"Marketing site"}

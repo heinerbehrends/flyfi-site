@@ -7,6 +7,7 @@ import PlayIcon from "../icons/play_circle_outline-24px.svg"
 import PriceButton from "./Price-button"
 import { cardBorderStyle } from "./Cards-types"
 import { SystemStyleObject } from "@styled-system/css"
+import { cardSectionStyle } from "./Cards-types"
 
 const cardsPakkettenStyle: SystemStyleObject = {
   ...cardBorderStyle,
@@ -15,16 +16,7 @@ const cardsPakkettenStyle: SystemStyleObject = {
 
 export default function CardsPakketten() {
   return (
-    <section
-      sx={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(45ch, 1fr))",
-        gap: "4",
-        paddingX: ["0", "3", "4"],
-        maxWidth: "1280px",
-        marginX: "auto",
-      }}
-    >
+    <section sx={cardSectionStyle}>
       <Card
         sx={cardsPakkettenStyle}
         heading={"Onze starterspakketten"}

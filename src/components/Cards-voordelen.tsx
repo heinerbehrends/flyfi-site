@@ -2,16 +2,17 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import Card from "./Card"
+import { cardSectionStyle } from "./Cards-types"
 
 export default function CardsVoordelen() {
   return (
     <section
       sx={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(35ch, 1fr))",
-        paddingX: ["0", "3", "4"],
-        maxWidth: "1280px",
-        marginX: "auto",
+        ...cardSectionStyle,
+        gridTemplateColumns: [
+          "repeat(auto-fill, minmax(30ch, 1fr))",
+          "repeat(auto-fill, minmax(35ch, 1fr))",
+        ],
       }}
     >
       <Card
