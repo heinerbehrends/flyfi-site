@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
@@ -7,14 +7,6 @@ import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
 import { SystemStyleObject } from "@styled-system/css"
-
-const h2Style: SystemStyleObject = {
-  marginTop: "5",
-  marginBottom: "4",
-  fontSize: ["5", "6"],
-  marginX: ["3", "3", "4", "5"],
-  fontWeight: "900",
-}
 
 export default function Main() {
   const [ref, inView] = useInView({
@@ -36,9 +28,11 @@ export default function Main() {
 
   return (
     <React.Fragment>
-      <motion.h2 ref={ref} animate={{ x: inView ? 0 : -800 }} sx={h2Style}>
-        De voordelen van <i>flyfi</i> webapps {inView}
-      </motion.h2>
+      <motion.div ref={ref} animate={{ x: inView ? 0 : -800 }}>
+        <Styled.h2>
+          De voordelen van <i>flyfi</i> webapps {inView}
+        </Styled.h2>
+      </motion.div>
       <CardsVoordelen />
       <motion.blockquote
         ref={ref2}
@@ -58,13 +52,13 @@ export default function Main() {
         Wist u dat 53% van alle bezoekers afhaken <br></br>als een site langer
         dan 3 seconden laadt?
       </motion.blockquote>
-      <motion.h2 ref={ref3} animate={{ x: inView3 ? 0 : -800 }} sx={h2Style}>
-        Hoe kan ik u helpen?
-      </motion.h2>
+      <motion.div ref={ref3} animate={{ x: inView3 ? 0 : -800 }}>
+        <Styled.h2>Hoe kan ik u helpen?</Styled.h2>
+      </motion.div>
       <CardsTypes />
-      <motion.h2 ref={ref4} animate={{ x: inView4 ? 0 : -800 }} sx={h2Style}>
-        Maatwerk of starterspakket?
-      </motion.h2>
+      <motion.div ref={ref4} animate={{ x: inView4 ? 0 : -800 }}>
+        <Styled.h2>Maatwerk of starterspakket?</Styled.h2>
+      </motion.div>
       <CardsPakketten />
     </React.Fragment>
   )
