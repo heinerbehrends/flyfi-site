@@ -11,11 +11,9 @@ export default function Hero() {
   const { scrollYProgress } = useViewportScroll()
   const xPos = useTransform(scrollYProgress, [0, 0.075, 0.15], [0, 50, 1200])
   const opacity = useTransform(scrollYProgress, [0, 0.075, 0.15], [1, 1, 0])
-
   const [ref, inView] = useInView({
     initialInView: true,
   })
-
   return (
     <Box
       sx={{
@@ -37,13 +35,14 @@ export default function Hero() {
         <motion.div
           sx={{ display: `${inView ? "block" : "none"}` }}
           ref={ref}
-          animate={{ x: [0, 0, 700] }}
+          animate={{ x: [0, 0, 800] }}
           transition={{ times: [0, 0.3, 1], duration: 3, ease: "easeOut" }}
         >
           <motion.div style={{ x: xPos }}>
             <Greyhound />
           </motion.div>
         </motion.div>
+        {inView ? null : <Greyhound sx={{ position: "static" }} />}
         <motion.div
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
@@ -58,7 +57,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </Flex>
-      <Box sx={{ textAlign: "center", marginTop: ["3", "5"] }}>
+      <Box sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
         <Button text="NIEUWSGIERIG?" location="/contact" />
       </Box>
     </Box>
