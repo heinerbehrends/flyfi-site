@@ -17,8 +17,8 @@ const iconLinkStyles: SystemStyleObject = {
   svg: {
     fill: "#59bfbf",
     filter: "drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25))",
-    height: ["80px", "120px"],
-    width: ["80px", "120px"],
+    height: ["90px"],
+    width: ["90px"],
   },
 }
 

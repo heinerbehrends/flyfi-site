@@ -23,14 +23,14 @@ export default function Header() {
         height: "64px",
       }}
     >
-      <Flex sx={{ alignItems: "center", flex: "1 1 auto" }}>
+      <Flex sx={{ alignItems: "center", height: "100%", flex: "1 1 auto" }}>
         <Link
           to={"/"}
           sx={{
             textDecoration: "none",
             color: "text",
-            paddingY: "1",
-            paddingX: "3",
+            paddingX: ["1", "2", "3"],
+            paddingY: "2",
             "&:focus": {
               outline: "none",
               boxShadow: "focus",

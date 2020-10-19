@@ -4,7 +4,7 @@ import React from "react"
 import greyhoundMp4 from "../videos/greyhound-loop.mp4"
 import greyhoundWebm from "../videos/greyhound-loop.webm"
 
-export default function Greyhound() {
+export default function Greyhound(props) {
   return (
     <Flex
       sx={{
@@ -16,9 +16,10 @@ export default function Greyhound() {
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        right: "700px",
+        right: "800px",
         boxShadow: "big",
       }}
+      {...props}
     >
       <Flex
         sx={{

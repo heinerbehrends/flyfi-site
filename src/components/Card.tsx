@@ -19,7 +19,7 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
       style={{ opacity: 0 }}
       ref={ref}
       animate={{ opacity: inView ? 1 : 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1.5 }}
       sx={{
         padding: ["3", "4"],
         display: "flex",
