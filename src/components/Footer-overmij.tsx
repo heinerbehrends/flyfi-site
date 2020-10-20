@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 export default function FooterOverMij() {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query FooterQuery {
       file(relativePath: { eq: "portret-01-small.jpg" }) {
         childImageSharp {
           id
@@ -17,7 +17,6 @@ export default function FooterOverMij() {
       }
     }
   `)
-  console.log(data.file.childImageSharp.fixed)
   return (
     <Box sx={{ marginX: ["0", "4"] }}>
       <Flex sx={{ alignItems: "center" }}>
