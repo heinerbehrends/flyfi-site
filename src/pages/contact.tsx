@@ -12,7 +12,6 @@ export default function Contact() {
           textAlign: "center",
           paddingTop: ["3", "4", "4", "5"],
           fontSize: ["6", "6", "9vw"],
-          textShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
           "@media screen and (min-width: 960px)": {
             fontSize: "86.43px",
           },
