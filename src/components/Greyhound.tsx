@@ -16,7 +16,6 @@ export default function Greyhound(props) {
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        right: "800px",
         boxShadow: "big",
       }}
       {...props}

@@ -9,11 +9,17 @@ import HeroParagraph from "./HeroParagraph"
 
 export default function Hero() {
   const { scrollYProgress } = useViewportScroll()
-  const xPos = useTransform(scrollYProgress, [0, 0.075, 0.15], [0, 50, 1200])
+  const xPos = useTransform(
+    scrollYProgress,
+    [0, 0.075, 0.15],
+    [-800, -750, 400]
+  )
+  const xPos2 = useTransform(scrollYProgress, [0, 0.075, 0.15], [0, 50, 1200])
   const opacity = useTransform(scrollYProgress, [0, 0.075, 0.15], [1, 1, 0])
   const [ref, inView] = useInView({
     initialInView: true,
   })
+
   return (
     <Box
       sx={{
@@ -36,16 +42,20 @@ export default function Hero() {
           sx={{ display: `${inView ? "block" : "none"}` }}
           ref={ref}
           animate={{ x: [0, 0, 800] }}
-          transition={{ times: [0, 0.3, 1], duration: 3, ease: "easeOut" }}
+          transition={{ times: [0, 0.3, 1], duration: 2, ease: "easeOut" }}
         >
           <motion.div style={{ x: xPos }}>
             <Greyhound />
           </motion.div>
         </motion.div>
-        {inView ? null : <Greyhound sx={{ position: "static" }} />}
+        {inView ? null : (
+          <motion.div style={{ x: xPos2 }}>
+            <Greyhound />
+          </motion.div>
+        )}
         <motion.div
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           sx={{
             maxWidth: "400px",
             lineHeight: "body",

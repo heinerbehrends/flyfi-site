@@ -39,6 +39,8 @@ export default {
       margin: "0",
       padding: "0",
       fill: "#333",
+      maxWidth: "100vw",
+      "overflow-x": "hidden",
     },
     h1: {
       fontSize: ["6", "6", "9vw"],
