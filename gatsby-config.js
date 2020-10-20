@@ -7,9 +7,9 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    "gatsby-plugin-theme-ui",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-theme-ui",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
