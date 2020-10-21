@@ -6,8 +6,6 @@ import { SystemStyleObject } from "@styled-system/css"
 
 const inputStyles: SystemStyleObject = {
   padding: "3",
-  marginX: "4",
-  marginTop: "4",
   maxWidth: ["280px", "400px"],
   borderRadius: "3",
   border: "1px solid #333",
@@ -15,6 +13,7 @@ const inputStyles: SystemStyleObject = {
   fontWeight: "300",
   fontFamily: "Fira Sans",
   boxShadow: "big",
+  transition: "background-color 1.5s ease-in",
   "&:focus": {
     outline: "none",
     boxShadow: "focus",
@@ -27,26 +26,44 @@ const buttonStyles: SystemStyleObject = {
   color: "#fff",
   fontWeight: "700",
   fontSize: "4",
+  marginTop: "4",
   textTransform: "uppercase",
 }
 
 function ErrorMessage({ children }) {
   return (
-    <span sx={{ marginLeft: "4", marginTop: "1", color: "red" }}>
+    <span sx={{ marginLeft: "3", marginTop: "1", color: "red" }}>
       {children}
     </span>
   )
 }
 
+type labelProps = {
+  for: string
+  children: any
+}
+
+function Label(props: labelProps) {
+  return (
+    <label
+      htmlFor={props.for}
+      sx={{ marginLeft: "3", marginTop: "4", marginBottom: "1" }}
+    >
+      {props.children}
+    </label>
+  )
+}
+
 export default function ContactForm(props) {
   const { register, handleSubmit, errors, formState } = useForm({
-    mode: "onChange",
+    mode: "onBlur",
     shouldFocusError: true,
   })
   function onSubmit(data) {
     alert(JSON.stringify(data))
   }
-  console.log(formState)
+  const { dirtyFields, isSubmitting, isSubmitSuccessful } = formState
+
   return (
     <form
       data-netlify="true"
@@ -55,15 +72,22 @@ export default function ContactForm(props) {
       {...props}
     >
       <Flex sx={{ flexDirection: "column" }}>
+        <Label for="name">Naam</Label>
         <input
           type="text"
           autoFocus
-          name="Name"
+          name="name"
           placeholder="Naam"
-          ref={register({ required: true })}
-          sx={inputStyles}
+          ref={register({ required: true, minLength: 2, maxLength: 30 })}
+          sx={{
+            ...inputStyles,
+            backgroundColor: `${
+              dirtyFields.name && !errors.name ? "#dbffe4" : "inherit"
+            }`,
+          }}
         />
-        {errors.Name && <ErrorMessage>Dit is een verplicht veld</ErrorMessage>}
+        {errors.name && <ErrorMessage>Dit is een verplicht veld</ErrorMessage>}
+        <Label for="email">E-mail</Label>
         <input
           type="email"
           name="email"
@@ -75,9 +99,15 @@ export default function ContactForm(props) {
               message: "Ongeldige e-mail adres",
             },
           })}
-          sx={inputStyles}
+          sx={{
+            ...inputStyles,
+            backgroundColor: `${
+              dirtyFields.email && !errors.email ? "#dbffe4" : "#fff"
+            }`,
+          }}
         />
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        <Label for="message">Bericht</Label>
         <textarea
           name="message"
           form="contact-form"
@@ -88,7 +118,12 @@ export default function ContactForm(props) {
           })}
           placeholder="Uw vraag of bericht"
           rows={6}
-          sx={inputStyles}
+          sx={{
+            ...inputStyles,
+            backgroundColor: `${
+              dirtyFields.message && !errors.message ? "#dbffe4" : "#fff"
+            }`,
+          }}
         ></textarea>
         {errors.message && (
           <ErrorMessage>Het bericht is te kort of te lang</ErrorMessage>
@@ -96,6 +131,11 @@ export default function ContactForm(props) {
         <button type="submit" sx={buttonStyles}>
           Verstuur
         </button>
+        {isSubmitSuccessful ? (
+          <span sx={{ color: "green", marginLeft: "3", marginTop: "1" }}>
+            U bericht is verstuurd
+          </span>
+        ) : null}
       </Flex>
     </form>
   )
