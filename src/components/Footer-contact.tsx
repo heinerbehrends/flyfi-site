@@ -47,7 +47,7 @@ export default function FooterContact() {
       <Link
         sx={{
           textDecoration: "none",
-          "&:hover": { textDecoration: "underline" },
+          "&:hover": { textDecoration: "underline", color: "text" },
         }}
         to={"/contact"}
       >
