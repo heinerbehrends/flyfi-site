@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Box, Flex } from "theme-ui"
+import { jsx, Styled, Box, Grid } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
 
@@ -9,21 +9,27 @@ export default function About() {
       <Styled.h1 sx={{ textAlign: "center", paddingTop: ["3", "4", "4", "5"] }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
-      <Flex sx={{ alignItems: "center", justifyContent: "center" }}>
+      <Grid
+        sx={{
+          gridTemplateColumns: "repeat(auto-fill, minmax(50ch, 1fr))",
+          paddingTop: ["3", "3", "4", "5", "6"],
+          justifyContent: "center",
+        }}
+      >
         <ImageStack />
         <Box
           sx={{
-            maxWidth: "400px",
-            marginTop: "4",
+            paddingX: ["80px", "4", "5"],
+            paddingTop: ["4", "4", "4", "4", "0"],
           }}
         >
           <Styled.h4>Waar ik vandaan kom</Styled.h4>
           <Styled.p>
             Met mijn achtergrond als theatervormgever en muzikant is het niet
             verrassend dat creativiteit een van de competenties en drijfveren
-            van flyfi is. In het verleden heb ik als vormgever, muzikant en
-            kunstenaar aan projecten gewerkt met Wubbo Okkels en Wim T.
-            Schippers, voorstelling ontwikkeld voor Noorderzon en het NNT en
+            van <em>flyfi</em> is. In het verleden heb ik als vormgever,
+            muzikant en kunstenaar aan projecten gewerkt met Wubbo Okkels en Wim
+            T. Schippers, voorstelling ontwikkeld voor Noorderzon en het NNT en
             tentoongesteld in o.a. Galerie Sign en op de alternatieve kunstbeurs
             Kunstvlaai.
           </Styled.p>
@@ -62,7 +68,7 @@ export default function About() {
             uitstapje naar bvb. India of Marocco.
           </Styled.p>
         </Box>
-      </Flex>
+      </Grid>
     </React.Fragment>
   )
 }
