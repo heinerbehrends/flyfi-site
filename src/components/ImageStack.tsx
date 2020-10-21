@@ -34,6 +34,10 @@ export default function ImageStack() {
           transform: `rotate(${options.rotate}deg)`,
           zIndex: `${onTop === options.id ? 1 : 0}`,
           height: "fit-content",
+          boxShadow: "big",
+          filter: `${
+            onTop === options.id ? "brightness(100%)" : "brightness(60%)"
+          }`,
         }}
         onClick={() => setOnTop(options.id)}
         onMouseEnter={() => setOnTop(options.id)}
@@ -82,7 +86,7 @@ export default function ImageStack() {
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
 
         gridTemplateRows: "repeat(auto-fill, 1fr)",
-        minWidth: ["280px", "320px", "400px", "400px"],
+        minWidth: ["280px", "320px", "400px", "480px"],
       }}
     >
       <ImageStackItem
@@ -165,19 +169,19 @@ export default function ImageStack() {
           columnEnd: 11,
           rowStart: 7,
           rowEnd: 10,
-          rotate: 3,
+          rotate: -3,
           id: 7,
         }}
       />
       <ImageStackItem
         options={{
           pictures: zomor,
-          alt: "Voetbalteam Zomor",
+          alt: "Mijn voetbalteam",
           columnStart: 1,
           columnEnd: 11,
           rowStart: 8,
           rowEnd: 12,
-          rotate: -3,
+          rotate: 2,
           id: 8,
         }}
       />

@@ -19,10 +19,9 @@ export default function About() {
         <ImageStack />
         <Box
           sx={{
-            paddingX: ["4", "4", "auto"],
-            paddingRight: ["4", "0", "0", "4"],
+            paddingX: "5",
             paddingTop: ["4", "4", "4", "4", "0"],
-            maxWidth: ["420px", "560px"],
+            maxWidth: ["420px", "480px"],
           }}
         >
           <Styled.h4>De wortels</Styled.h4>
