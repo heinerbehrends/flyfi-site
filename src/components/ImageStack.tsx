@@ -18,6 +18,7 @@ type stackItemProps = {
     rowEnd: number
     rotate: number
     pictures: any
+    alt: string
   }
 }
 
@@ -35,7 +36,7 @@ export default function ImageStack() {
         }}
         onClick={() => setOnTop(options.id)}
       >
-        <Img fluid={options.pictures} />
+        <Img fluid={options.pictures} alt={options.alt} />
       </div>
     )
   }
@@ -66,24 +67,28 @@ export default function ImageStack() {
   const nodes = data.allFile.edges
   const gideon = filterByName(nodes, "CosmicSpringGideon.jpg")
   const koelkast = filterByName(nodes, "Koelkast.jpg")
-
   const examen = filterByName(nodes, "Examen.jpg")
   const herfst = filterByName(nodes, "Herfst.jpg")
   const toBeOrNotToBe = filterByName(nodes, "to-be-kast-nnt.jpg")
+  const hetDakje = filterByName(nodes, "HetDakje.jpg")
+  const theBuzz = filterByName(nodes, "The-Buzz-Winterwelvaart-01.jpg")
+  const zomor = filterByName(nodes, "zomor-kampioenen-7.jpg")
+  const horumersiel = filterByName(nodes, "Horumersiel.jpg")
+  console.log(nodes)
   return (
     <Grid
       sx={{
-        gridTemplateColumns:
-          "auto auto auto auto auto auto auto auto auto auto",
-        gridTemplateRows: "auto auto auto auto auto auto auto auto auto auto",
-        minWidth: "400px",
+        gridTemplateColumns: "repeat(auto-fill, 1fr)",
+        gridTemplateRows: "repeat(auto-fill, 1fr)",
+        paddingX: ["4", "4", "4", "5", "6"],
       }}
     >
       <ImageStackItem
         options={{
           pictures: koelkast,
-          columnStart: 1,
-          columnEnd: 6,
+          alt: "Tentoonstelling Galerie Sign",
+          columnStart: 5,
+          columnEnd: 11,
           rowStart: 1,
           rowEnd: 6,
           rotate: 3,
@@ -93,8 +98,9 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: examen,
-          columnStart: 2,
-          columnEnd: 7,
+          alt: "Eindexamen Academie Minerva",
+          columnStart: 4,
+          columnEnd: 10,
           rowStart: 2,
           rowEnd: 7,
           rotate: -2,
@@ -104,10 +110,11 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: gideon,
+          alt: "Optreden met Cosmic Spring",
           columnStart: 2,
-          columnEnd: 8,
+          columnEnd: 11,
           rowStart: 3,
-          rowEnd: 8,
+          rowEnd: 6,
           rotate: 4,
           id: 3,
         }}
@@ -115,8 +122,9 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: herfst,
+          alt: "Familiefoto met herfstbladeren",
           columnStart: 1,
-          columnEnd: 8,
+          columnEnd: 10,
           rowStart: 4,
           rowEnd: 8,
           rotate: -2,
@@ -126,12 +134,61 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: toBeOrNotToBe,
-          columnStart: 3,
-          columnEnd: 8,
-          rowStart: 5,
+          alt: "Decorbouw Hamlet voor NNT",
+          columnStart: 6,
+          columnEnd: 12,
+          rowStart: 3,
           rowEnd: 10,
-          rotate: 2,
-          id: 4,
+          rotate: -4,
+          id: 5,
+        }}
+      />
+      <ImageStackItem
+        options={{
+          pictures: hetDakje,
+          alt: "Aankleding stadschouwburg voor NNT",
+          columnStart: 1,
+          columnEnd: 10,
+          rowStart: 6,
+          rowEnd: 10,
+          rotate: 5,
+          id: 6,
+        }}
+      />
+      <ImageStackItem
+        options={{
+          pictures: theBuzz,
+          alt: "Bandfoto The Buzz",
+          columnStart: 2,
+          columnEnd: 11,
+          rowStart: 8,
+          rowEnd: 10,
+          rotate: 3,
+          id: 7,
+        }}
+      />
+      <ImageStackItem
+        options={{
+          pictures: zomor,
+          alt: "Voetbalteam Zomor",
+          columnStart: 1,
+          columnEnd: 11,
+          rowStart: 9,
+          rowEnd: 12,
+          rotate: -3,
+          id: 8,
+        }}
+      />
+      <ImageStackItem
+        options={{
+          pictures: horumersiel,
+          alt: "Vakantiefoto Noordzeekust",
+          columnStart: 5,
+          columnEnd: 12,
+          rowStart: 5,
+          rowEnd: 12,
+          rotate: 1,
+          id: 9,
         }}
       />
     </Grid>
