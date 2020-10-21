@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Box, Grid } from "theme-ui"
+import { jsx, Styled, Box, Flex } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
 
@@ -9,21 +9,23 @@ export default function About() {
       <Styled.h1 sx={{ textAlign: "center", paddingTop: ["3", "4", "4", "5"] }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
-      <Grid
+      <Flex
         sx={{
-          gridTemplateColumns: "repeat(auto-fill, minmax(50ch, 1fr))",
           paddingTop: ["3", "3", "4", "5", "6"],
           justifyContent: "center",
+          flexWrap: "wrap",
         }}
       >
         <ImageStack />
         <Box
           sx={{
-            paddingX: ["80px", "4", "5"],
+            paddingX: ["4", "4", "auto"],
+            paddingRight: ["4", "0", "0", "4"],
             paddingTop: ["4", "4", "4", "4", "0"],
+            maxWidth: ["420px", "560px"],
           }}
         >
-          <Styled.h4>Waar ik vandaan kom</Styled.h4>
+          <Styled.h4>De wortels</Styled.h4>
           <Styled.p>
             Met mijn achtergrond als theatervormgever en muzikant is het niet
             verrassend dat creativiteit een van de competenties en drijfveren
@@ -33,7 +35,7 @@ export default function About() {
             tentoongesteld in o.a. Galerie Sign en op de alternatieve kunstbeurs
             Kunstvlaai.
           </Styled.p>
-          <Styled.h4>Hoe het allemaal samenhangt</Styled.h4>
+          <Styled.h4>De connecties</Styled.h4>
           <Styled.p>
             Ik houdt ervan om mooie dingen te bedenken en te bouwen en net die
             extra moeite te doen om een bijzondere kwaliteit te bereiken. Om
@@ -44,31 +46,29 @@ export default function About() {
             installaties, nu zijn het webapps. Centraal staat daarbij nog steeds
             de belevenis van de toeschouwer of gebruiker.
           </Styled.p>
-          <Styled.h4>Wat ik nu doe</Styled.h4>
+          <Styled.h4>De groei</Styled.h4>
           <Styled.p>
             De afgelopen drie jaar heb ik mezelf geleerd om te programmeren en
             moderne websites te bouwen. Ik begon met de programmeertal Python en
             de MIT cursus 6.00
             <em> Introduction to computer science and programming</em>. Later
             leerde ik de basics van PHP en Laravel, Git en mySQL. Nu ligt mijn
-            focus op TypeScript en het bouwen van Progressive Web Apps met
-            Gatsby and Next.js. In een markt die nog steeds wordt gedomineerd
-            door WordPress wil ik een impact maken door website te bouwen met
-            een verbeterde gebruikerservaring en die aan te bieden tegen scherpe
-            prijzen.
-            <Styled.h4>Wat er nog meer is </Styled.h4>
-            Ik woon en werk in het schitterende Groningen met mijn lieve vrouw
-            en twee fantastische kinderen. Als muzikant verzamel ik LP’s in
+            focus op React en TypeScript en het bouwen van Progressive Web Apps
+            met Gatsby and Next.js. In een markt die nog steeds wordt
+            gedomineerd door WordPress wil ik een impact maken door websites te
+            bouwen met een verbeterde gebruikerservaring en die aan te bieden
+            tegen scherpe prijzen.
+            <Styled.h4>De rest </Styled.h4>
+            Ik woon en werk in het schitterende Groningen met mijn fantastische
+            vrouw en twee lieve kinderen. Als muzikant verzamel ik LP’s in
             diverse genres zoals pop, jazz, funk, rock en klassieke muziek en
-            speel ik gitaar, bas, banjo en mandoline en elk snaarinstrument dat
-            u mij in de handen geeft. Daarnaast programmeer ik drums en synths
-            en produceer ik de muziek van The Buzz. Verder houdt ik me fit met
-            voetbal en fietsen en gezond door lekker te koken, vooral
-            klassiekers uit de Italiaanse en Duitse keuken met af en toe een
-            uitstapje naar bvb. India of Marocco.
+            speel ik gitaar, bas, banjo en mandoline. Daarnaast programmeer ik
+            drums en synths en produceer ik de muziek van de New Wave band The
+            Buzz. Verder houdt ik me fit met voetbal en fietsen en gezond door
+            lekker te koken, vooral klassiekers uit de internationale keuken.
           </Styled.p>
         </Box>
-      </Grid>
+      </Flex>
     </React.Fragment>
   )
 }

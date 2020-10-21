@@ -33,8 +33,10 @@ export default function ImageStack() {
           gridRowEnd: `${options.rowEnd}`,
           transform: `rotate(${options.rotate}deg)`,
           zIndex: `${onTop === options.id ? 1 : 0}`,
+          height: "fit-content",
         }}
         onClick={() => setOnTop(options.id)}
+        onMouseEnter={() => setOnTop(options.id)}
       >
         <Img fluid={options.pictures} alt={options.alt} />
       </div>
@@ -74,13 +76,13 @@ export default function ImageStack() {
   const theBuzz = filterByName(nodes, "The-Buzz-Winterwelvaart-01.jpg")
   const zomor = filterByName(nodes, "zomor-kampioenen-7.jpg")
   const horumersiel = filterByName(nodes, "Horumersiel.jpg")
-  console.log(nodes)
   return (
     <Grid
       sx={{
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
+
         gridTemplateRows: "repeat(auto-fill, 1fr)",
-        paddingX: ["4", "4", "4", "5", "6"],
+        minWidth: ["280px", "320px", "400px", "400px"],
       }}
     >
       <ImageStackItem
@@ -90,7 +92,7 @@ export default function ImageStack() {
           columnStart: 5,
           columnEnd: 11,
           rowStart: 1,
-          rowEnd: 6,
+          rowEnd: 4,
           rotate: 3,
           id: 1,
         }}
@@ -102,7 +104,7 @@ export default function ImageStack() {
           columnStart: 4,
           columnEnd: 10,
           rowStart: 2,
-          rowEnd: 7,
+          rowEnd: 5,
           rotate: -2,
           id: 2,
         }}
@@ -126,7 +128,7 @@ export default function ImageStack() {
           columnStart: 1,
           columnEnd: 10,
           rowStart: 4,
-          rowEnd: 8,
+          rowEnd: 7,
           rotate: -2,
           id: 4,
         }}
@@ -137,8 +139,8 @@ export default function ImageStack() {
           alt: "Decorbouw Hamlet voor NNT",
           columnStart: 6,
           columnEnd: 12,
-          rowStart: 3,
-          rowEnd: 10,
+          rowStart: 5,
+          rowEnd: 8,
           rotate: -4,
           id: 5,
         }}
@@ -150,7 +152,7 @@ export default function ImageStack() {
           columnStart: 1,
           columnEnd: 10,
           rowStart: 6,
-          rowEnd: 10,
+          rowEnd: 9,
           rotate: 5,
           id: 6,
         }}
@@ -161,7 +163,7 @@ export default function ImageStack() {
           alt: "Bandfoto The Buzz",
           columnStart: 2,
           columnEnd: 11,
-          rowStart: 8,
+          rowStart: 7,
           rowEnd: 10,
           rotate: 3,
           id: 7,
@@ -173,7 +175,7 @@ export default function ImageStack() {
           alt: "Voetbalteam Zomor",
           columnStart: 1,
           columnEnd: 11,
-          rowStart: 9,
+          rowStart: 8,
           rowEnd: 12,
           rotate: -3,
           id: 8,
@@ -185,7 +187,7 @@ export default function ImageStack() {
           alt: "Vakantiefoto Noordzeekust",
           columnStart: 5,
           columnEnd: 12,
-          rowStart: 5,
+          rowStart: 7,
           rowEnd: 12,
           rotate: 1,
           id: 9,
