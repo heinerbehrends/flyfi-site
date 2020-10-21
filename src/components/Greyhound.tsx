@@ -10,8 +10,8 @@ export default function Greyhound(props) {
       sx={{
         marginRight: "4",
         borderRadius: "50%",
-        width: ["200px", "300px"],
-        height: ["200px", "300px"],
+        width: ["200px", "250px", "300px"],
+        height: ["200px", "250px", "300px"],
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
@@ -29,7 +29,7 @@ export default function Greyhound(props) {
         }}
       >
         <video
-          sx={{ maxWidth: ["240px", "360px"] }}
+          sx={{ maxWidth: ["240px", "300px", "360px"] }}
           autoPlay
           loop
           muted
