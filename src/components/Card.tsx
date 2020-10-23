@@ -28,7 +28,7 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
     >
       <div>
         <Flex sx={{ alignItems: "center", fontSize: "5" }}>
-          {icon}
+          <span sx={{ fill: "#663399" }}>{icon}</span>
           <Styled.h3
             sx={{
               marginLeft: icon ? "3" : "0",
