@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Flex } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import React from "react"
 
@@ -9,7 +9,8 @@ export default function Button({ text, location }) {
       to={location}
       sx={{
         display: "inline-block",
-        backgroundColor: "muted",
+        marginTop: ["3", "4"],
+        backgroundColor: "#663399",
         color: "#fff",
         paddingX: ["3", "4"],
         paddingY: "3",
