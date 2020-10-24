@@ -9,8 +9,6 @@ export default function Contact() {
     <React.Fragment>
       <Styled.h1
         sx={{
-          textAlign: "center",
-          paddingTop: ["3", "4", "4", "5"],
           fontSize: ["6", "6", "9vw"],
           "@media screen and (min-width: 960px)": {
             fontSize: "86.43px",
