@@ -35,6 +35,7 @@ export default {
     root: {
       marginTop: "64px",
       fontFamily: "body",
+      fontSize: "2",
       boxSizing: "border-box",
       margin: "0",
       padding: "0",
@@ -48,9 +49,10 @@ export default {
       "@media screen and (min-width: 960px)": {
         fontSize: "86.43px",
       },
-      textAlign: "right",
+      textAlign: "center",
       fontWeight: "200",
       lineHeight: "heading",
+      paddingTop: ["3", "4", "4", "5"],
       marginTop: "3",
       marginX: "3",
       em: {
