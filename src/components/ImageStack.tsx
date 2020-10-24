@@ -24,6 +24,7 @@ type stackItemProps = {
 
 export default function ImageStack() {
   function ImageStackItem({ options }: stackItemProps) {
+    let isFocused = onTop === options.id
     return (
       <div
         sx={{
@@ -32,12 +33,10 @@ export default function ImageStack() {
           gridRowStart: `${options.rowStart}`,
           gridRowEnd: `${options.rowEnd}`,
           transform: `rotate(${options.rotate}deg)`,
-          zIndex: `${onTop === options.id ? 1 : 0}`,
+          zIndex: `${isFocused ? 1 : 0}`,
           height: "fit-content",
           boxShadow: "big",
-          filter: `${
-            onTop === options.id ? "brightness(100%)" : "brightness(60%)"
-          }`,
+          filter: `${isFocused ? "brightness(100%)" : "brightness(60%)"}`,
         }}
         onClick={() => setOnTop(options.id)}
         onMouseEnter={() => setOnTop(options.id)}
@@ -86,17 +85,17 @@ export default function ImageStack() {
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
 
         gridTemplateRows: "repeat(auto-fill, 1fr)",
-        minWidth: ["280px", "320px", "400px", "480px"],
+        minWidth: ["280px", "320px", "400px", "400px"],
       }}
     >
       <ImageStackItem
         options={{
           pictures: koelkast,
-          alt: "Tentoonstelling Galerie Sign",
+          alt: "Tentoonstelling in Galerie Sign",
           columnStart: 5,
           columnEnd: 11,
           rowStart: 1,
-          rowEnd: 4,
+          rowEnd: 5,
           rotate: 3,
           id: 1,
         }}
@@ -108,7 +107,7 @@ export default function ImageStack() {
           columnStart: 4,
           columnEnd: 10,
           rowStart: 2,
-          rowEnd: 5,
+          rowEnd: 6,
           rotate: -2,
           id: 2,
         }}
@@ -120,7 +119,7 @@ export default function ImageStack() {
           columnStart: 2,
           columnEnd: 11,
           rowStart: 3,
-          rowEnd: 6,
+          rowEnd: 7,
           rotate: 4,
           id: 3,
         }}
@@ -132,7 +131,7 @@ export default function ImageStack() {
           columnStart: 1,
           columnEnd: 10,
           rowStart: 4,
-          rowEnd: 7,
+          rowEnd: 8,
           rotate: -2,
           id: 4,
         }}
@@ -144,7 +143,7 @@ export default function ImageStack() {
           columnStart: 6,
           columnEnd: 12,
           rowStart: 5,
-          rowEnd: 8,
+          rowEnd: 9,
           rotate: -4,
           id: 5,
         }}
@@ -152,11 +151,11 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: hetDakje,
-          alt: "Aankleding stadschouwburg voor NNT",
-          columnStart: 1,
-          columnEnd: 10,
+          alt: "Aankleding stadsschouwburg voor NNT",
+          columnStart: 3,
+          columnEnd: 12,
           rowStart: 6,
-          rowEnd: 9,
+          rowEnd: 10,
           rotate: 5,
           id: 6,
         }}
@@ -168,7 +167,7 @@ export default function ImageStack() {
           columnStart: 2,
           columnEnd: 11,
           rowStart: 7,
-          rowEnd: 10,
+          rowEnd: 11,
           rotate: -3,
           id: 7,
         }}
@@ -176,10 +175,10 @@ export default function ImageStack() {
       <ImageStackItem
         options={{
           pictures: zomor,
-          alt: "Mijn voetbalteam",
+          alt: "Voetbalteam Zomor",
           columnStart: 1,
           columnEnd: 11,
-          rowStart: 8,
+          rowStart: 9,
           rowEnd: 12,
           rotate: 2,
           id: 8,
@@ -191,8 +190,8 @@ export default function ImageStack() {
           alt: "Vakantiefoto Noordzeekust",
           columnStart: 5,
           columnEnd: 12,
-          rowStart: 7,
-          rowEnd: 12,
+          rowStart: 8,
+          rowEnd: 13,
           rotate: 1,
           id: 9,
         }}
