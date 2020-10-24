@@ -48,6 +48,10 @@ export default function FooterContact() {
         sx={{
           textDecoration: "none",
           "&:hover": { textDecoration: "underline", color: "text" },
+          "&:focus": {
+            outline: "none",
+            textDecoration: "underline",
+          },
         }}
         to={"/contact"}
       >

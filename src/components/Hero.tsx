@@ -23,12 +23,13 @@ export default function Hero() {
   return (
     <Box
       sx={{
-        paddingTop: ["3", "4", "4", "5"],
         maxWidth: "960px",
         marginX: "auto",
       }}
     >
-      <Styled.h1>Supersnelle webapps voor iedereen</Styled.h1>
+      <Styled.h1 sx={{ textAlign: "right" }}>
+        Supersnelle webapps voor iedereen
+      </Styled.h1>
 
       <Flex
         sx={{
@@ -42,7 +43,7 @@ export default function Hero() {
           sx={{ display: `${inView ? "block" : "none"}` }}
           ref={ref}
           animate={{ x: [0, 0, 800] }}
-          transition={{ times: [0, 0.3, 1], duration: 2, ease: "easeOut" }}
+          transition={{ times: [0, 0.3, 1], duration: 1.5, ease: "easeOut" }}
         >
           <motion.div style={{ x: xPos }}>
             <Greyhound />
@@ -55,7 +56,7 @@ export default function Hero() {
         )}
         <motion.div
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5 }}
           sx={{
             maxWidth: "400px",
             lineHeight: "body",
@@ -68,7 +69,7 @@ export default function Hero() {
         </motion.div>
       </Flex>
       <Box sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
-        <Button text="NIEUWSGIERIG?" location="/contact" />
+        <Button text="NIEUWSGIERIG? >" location="/contact" />
       </Box>
     </Box>
   )

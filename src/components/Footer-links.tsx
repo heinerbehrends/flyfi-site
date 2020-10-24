@@ -31,7 +31,7 @@ export default function FooterLinks() {
   return (
     <nav sx={{ marginX: "4" }}>
       <Styled.h3 sx={{ textAlign: "left", marginLeft: "0", marginBottom: "2" }}>
-        Links
+        Menu
       </Styled.h3>
       <FooterLink location={"/contact"} text={"Contact"} />
       <FooterLink location={"/about"} text={"Over mij"} />

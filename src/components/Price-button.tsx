@@ -5,6 +5,7 @@ import Button from "./Button"
 
 type priceButtonProps = {
   buttonText: string
+  price: number
 }
 type priceProps = {
   price: number
