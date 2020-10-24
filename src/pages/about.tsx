@@ -6,12 +6,11 @@ import ImageStack from "../components/ImageStack"
 export default function About() {
   return (
     <React.Fragment>
-      <Styled.h1 sx={{ textAlign: "center", paddingTop: ["3", "4", "4", "5"] }}>
+      <Styled.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
       <Flex
         sx={{
-          paddingTop: ["3", "3", "4", "5", "6"],
           justifyContent: "center",
           flexWrap: "wrap",
         }}
@@ -20,7 +19,7 @@ export default function About() {
         <Box
           sx={{
             paddingX: "5",
-            paddingTop: ["4", "4", "4", "4", "0"],
+            paddingTop: ["4", "4", "4", "0"],
             maxWidth: ["420px", "480px"],
           }}
         >
