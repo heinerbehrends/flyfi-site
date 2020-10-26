@@ -24,7 +24,7 @@ export default function CardsPakketten() {
         Zo kunt u als starter of creatieve onderneming voor een gunstige prijs profiteren van de vele voordelen van flyfi apps. Het ontwerp wordt voor elke klant aangepast zodat de vormgeving van de site past bij de huisstijl van uw bedrijf.  
         Door middel van het Netlify CMS kunt u de inhoud van uw site eenvoudig aanpassen en berichten ontvangen.`}
         icon={<PlayIcon />}
-        cta={<PriceButton price={500} buttonText={"Nieuwsgierig? >"} />}
+        cta={<PriceButton price={500} buttonText={"Meer weten? >"} />}
       />
       <Card
         sx={cardsPakkettenStyle}

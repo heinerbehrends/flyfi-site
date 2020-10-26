@@ -7,7 +7,6 @@ import { Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
 
 export default function Header() {
-  console.log("hi")
   return (
     <header
       sx={{
@@ -92,7 +91,7 @@ export default function Header() {
         <TopBarNavItem text="faq" location="/faq" />
         <TopBarNavItem text="about" location="/about" />
         <TopBarNavItem text="contact" location="/contact" />
-        <TopBarNavItem text="home" location="/" variant="active" />
+        <TopBarNavItem text="home" location="/" />
       </nav>
     </header>
   )

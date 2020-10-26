@@ -25,7 +25,6 @@ export const buttonStyles: SystemStyleObject = {
   fontWeight: "700",
   fontSize: "4",
   marginTop: "4",
-  textTransform: "uppercase",
 }
 
 export function ErrorMessage({ children }: errorMessageProps) {
