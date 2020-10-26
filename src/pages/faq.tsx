@@ -32,10 +32,10 @@ const faqs = [
         Een{" "}
         <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a>{" "}
         (PWA) is een webapplicatie die meer lijkt op een app voor mobiele
-        telefoons dan op een ouderwetse website. PWA's werken op elke apparaat
-        waarop een moderne browser geinstalleerd kan worden, zowel op desktop
-        computers als ook op tablets of mobiele telefoon. Veel bedrijven die
-        voor een PWA hebben gekozen berichten over{" "}
+        telefoons dan op een ouderwetse website. Of, in de worden van een van de
+        uitvinders van het begrip: het zijn websites die de juiste vitamines
+        hebben genomen. Veel bedrijven die voor een PWA hebben gekozen berichten
+        over{" "}
         <a href="https://ymedialabs.com/progressive-web-apps">
           verbeteringen in conversie en omzet
         </a>{" "}
@@ -130,9 +130,10 @@ const faqs = [
         voor gemaakt om moderne webapps zo snel mogelijk te maken.{" "}
         <a href="https://www.gatsbyjs.com">Gatsby</a> maakt gebruikt van de user
         interface bibliotheek <a href="https://reactjs.org/">React</a>, die door
-        Facebook wordt ontwikkelt, en ook door grote sites zoals twitter wordt
-        gebruikt. Gatsby is een open source software en een commercieel bedrijf,
-        dat cloud gebaseerde oplossinge voor Gatsby apps aanbiedt.<br></br>
+        Facebook wordt ontwikkelt, en ook door andere grote sites zoals twitter
+        wordt gebruikt. Gatsby is een open source software en een commercieel
+        bedrijf, dat cloud gebaseerde oplossinge voor Gatsby apps aanbiedt.
+        <br />
         Voor de schitterende animaties gebruik ik de react bibliotheek{" "}
         <a href="https://www.framer.com/motion/">Framer Motion</a>.
       </>
