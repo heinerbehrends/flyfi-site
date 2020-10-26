@@ -93,6 +93,8 @@ export default function Header() {
       >
         <button
           sx={{
+            alignItems: "center",
+            display: "flex",
             backgroundColor: "transparent",
             border: "none",
             padding: "3",

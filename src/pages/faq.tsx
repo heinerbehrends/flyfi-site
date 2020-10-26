@@ -38,9 +38,9 @@ const faqs = [
         over{" "}
         <a href="https://ymedialabs.com/progressive-web-apps">
           verbeteringen in conversie en omzet
-        </a>{" "}
-        van hun website. PWA's verbinden het beste van het web en van mobiele
-        apps. <br /> Enkele belangrijke kenmerken zijn:
+        </a>
+        . PWA's combineren het beste van het web en van mobiele apps. <br /> De
+        belangrijke kenmerken zijn:
         <ul sx={{ paddingLeft: "3", listStyleType: "circle" }}>
           <li>
             <em>Progressief</em>: ze werken voor elke gebruiker.
@@ -56,18 +56,18 @@ const faqs = [
             werken zij ook offline.
           </li>
           <li>
-            <em>App-achtig</em>: de interactie en navigatie voelen als die van
+            <em>App-achtig</em>: de interacties en navigatie voelen als die van
             een app.
           </li>
           <li>
             <em>Vers</em>: Anders dan mobiele apps zijn PWA's altijd up-to-date.
           </li>
           <li>
-            <em>Veilig</em>: Door https verbinding kan de data over het netwerk
-            niet verandert worden.
+            <em>Veilig</em>: Door https verbinding kan de data tijdens de
+            overdracht niet verandert worden.
           </li>
           <li>
-            <em>Ontdekbaar</em>: PWA's kunnen gewoon via zoekmachines als Google
+            <em>Vindbaar</em>: PWA's kunnen gewoon via zoekmachines als Google
             gevonden worden.
           </li>
           <li>
@@ -91,17 +91,17 @@ const faqs = [
     antwoord: (
       <>
         Als een WordPress site laadt moet de server de pagina nog renderen,
-        terwijl dit bij een flyfi site al vantevoren is gebeurd. De kant en
-        klare html pagina wordt vervolgens via het supersnelle CDN (content
-        delivery network) van <a href="https://netlify.com">Netlify</a> geladen.
-        Door het opsplitsen van de code wordt alleen die code geladen, die voor
-        de eerste pagina noodzakelijk is. Bestanden die op alle pagina's
-        gebruikt worden, worden maar een keer gedownload. <br /> Als de pagina
-        geladen is gedraagt zich een flyfi site als een moderne webapp. Zodra
-        een link zichtbaar is wordt de nodige data voor de gelinkte pagina al op
-        de achtergrond geladen zodat de pagina onmiddelijk beschikbaar is als u
-        op de link klikt. Als de gebruiker een trage 2g netwerk verbinding heeft
-        of data wil besparen wordt de data pas geladen als de gebruiker
+        terwijl dit bij een <em>flyfi</em> site al vantevoren is gebeurd. De
+        kant en klare html pagina wordt vervolgens via het supersnelle CDN
+        (content delivery network) van <a href="https://netlify.com">Netlify</a>{" "}
+        geladen. Door het opsplitsen van de code wordt alleen die code geladen,
+        die voor de eerste pagina noodzakelijk is. Bestanden die op alle
+        pagina's gebruikt worden, worden maar een keer gedownload. <br /> Als de
+        pagina geladen is gedraagt zich een flyfi site als een moderne webapp.
+        Zodra een link zichtbaar is wordt de nodige data voor de gelinkte pagina
+        al op de achtergrond geladen zodat de pagina onmiddelijk beschikbaar is
+        als u op de link klikt. Als de gebruiker een trage 2g netwerk verbinding
+        heeft of data wil besparen wordt de data pas geladen als de gebruiker
         daadwerkelijk op de link klikt.
       </>
     ),
@@ -122,32 +122,32 @@ const faqs = [
     ),
   },
   {
-    vraag: "Welke software gebruikt flyfi voor het ontwikkelen?",
+    vraag: "Welke software gebruikt flyfi?",
     antwoord: (
       <>
         Voor de allermeest projecten gebruikt ik het moderne framework{" "}
         <a href="https://www.gatsbyjs.com">Gatsby</a>. Gatsby is er speciaal
-        voor gemaakt om moderne webapps zo snel mogelijk te maken.{" "}
-        <a href="https://www.gatsbyjs.com">Gatsby</a> maakt gebruikt van de user
-        interface bibliotheek <a href="https://reactjs.org/">React</a>, die door
-        Facebook wordt ontwikkelt, en ook door andere grote sites zoals twitter
-        wordt gebruikt. Gatsby is een open source software en een commercieel
-        bedrijf, dat cloud gebaseerde oplossinge voor Gatsby apps aanbiedt.
+        voor gemaakt om moderne webapps zo snel mogelijk te maken. Gatsby maakt
+        gebruikt van de user interface bibliotheek{" "}
+        <a href="https://reactjs.org/">React</a>, die door Facebook wordt
+        ontwikkelt, en ook door andere grote sites zoals twitter wordt gebruikt.
+        Gatsby is een open source software en een commercieel bedrijf, dat cloud
+        gebaseerde oplossingen voor Gatsby apps aanbiedt.
         <br />
-        Voor de schitterende animaties gebruik ik de react bibliotheek{" "}
-        <a href="https://www.framer.com/motion/">Framer Motion</a>. Voor het
-        ontwerpproces maak ik gebruik van <a href="https://figma.com">Figma</a>.
+        Voor de schitterende animaties gebruik ik{" "}
+        <a href="https://www.framer.com/motion/">Framer Motion</a> en voor het
+        ontwerpproces <a href="https://figma.com">Figma</a>.
       </>
     ),
   },
   {
-    vraag: "Waarom is het hosten van een flyfi site goedkoop en veilig?",
+    vraag: "Waarom zijn flyfi site goedkoop, schaalbaar en veilig?",
     antwoord: (
       <>
-        Flyfi sites hebben geen server nodig omdat de bestanden van tevoren
+        Flyfi sites hebben geen server nodig omdat de bestanden van tevoren al
         gerenderd zijn. Dit maakt de hosting niet alleen snel, maar ook
         goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens uw
-        Black Friday sales of als deze viraal gaat goed te bereiken is. Omdat de
+        Black Friday Sale of als deze viraal gaat goed te bereiken is. Omdat de
         site geen server gebruikt kan deze ook niet gehackt worden of overbelast
         raken. Dit scheelt u een hoop zorgen over veiligheid en bereikbaarheid
         terwijl u ook nog geld bespaart.

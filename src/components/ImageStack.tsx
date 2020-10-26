@@ -140,8 +140,8 @@ export default function ImageStack() {
         options={{
           pictures: toBeOrNotToBe,
           alt: "Decorbouw Hamlet voor NNT",
-          columnStart: 6,
-          columnEnd: 12,
+          columnStart: 2,
+          columnEnd: 8,
           rowStart: 5,
           rowEnd: 9,
           rotate: -4,
@@ -188,8 +188,8 @@ export default function ImageStack() {
         options={{
           pictures: horumersiel,
           alt: "Vakantiefoto Noordzeekust",
-          columnStart: 5,
-          columnEnd: 12,
+          columnStart: 3,
+          columnEnd: 10,
           rowStart: 8,
           rowEnd: 13,
           rotate: 1,

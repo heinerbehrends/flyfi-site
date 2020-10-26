@@ -18,7 +18,7 @@ export default function About() {
         <ImageStack />
         <Box
           sx={{
-            paddingX: "5",
+            paddingX: ["3", "4"],
             paddingTop: ["4", "4", "4", "0"],
             maxWidth: ["420px", "480px"],
           }}

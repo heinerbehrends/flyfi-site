@@ -11,7 +11,7 @@ export default {
         text: "#f7f7f7",
         background: "#131313",
         primary: "#59bfbf",
-        muted: "#9FE5E5",
+        muted: "#59bfbf",
         accent: "#FFC0E2",
       },
     },
