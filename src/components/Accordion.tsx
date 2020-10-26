@@ -15,7 +15,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
           display: "flex",
           justifyContent: "space-between",
           maxWidth: "inherit",
-          width: "60ch",
+          width: "100%",
           backgroundColor: "inherit",
           border: "none",
           fontSize: "4",
@@ -24,6 +24,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
           paddingX: "3",
           paddingY: "3",
           borderRadius: "3",
+          cursor: "pointer",
           "&:focus": {
             outline: "none",
             boxShadow: "focus",
@@ -32,7 +33,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
         initial={false}
         onClick={() => setExpanded(isOpen ? false : i)}
       >
-        <h2>{faq.vraag}</h2>
+        <h2 sx={{ textAlign: "left", color: "text" }}>{faq.vraag}</h2>
         {isOpen ? <MinIcon /> : <PlusIcon />}
       </motion.button>
       <AnimatePresence initial={false}>
@@ -42,7 +43,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
             initial="collapsed"
             animate="open"
             exit="collapsed"
-            sx={{ overflow: "hidden" }}
+            sx={{ overflow: "hidden", maxWidth: "72ch" }}
             variants={{
               open: { opacity: 1, height: "auto" },
               collapsed: { opacity: 0, height: 0 },
