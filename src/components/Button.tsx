@@ -10,7 +10,7 @@ export default function Button({ text, location }) {
       sx={{
         display: "inline-block",
         marginTop: ["3", "4"],
-        backgroundColor: "#663399",
+        backgroundColor: "accent",
         color: "#fff",
         paddingX: ["3", "4"],
         paddingY: "3",

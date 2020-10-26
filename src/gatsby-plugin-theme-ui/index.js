@@ -4,7 +4,7 @@ export default {
     background: "#fff",
     primary: "#9FE5E5",
     muted: "#59bfbf",
-    accent: "#fff700",
+    accent: "#663399",
     secondary: "#FFC0E2",
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -42,6 +42,9 @@ export default {
       fill: "#333",
       maxWidth: "100vw",
       "overflow-x": "hidden",
+      a: {
+        color: "accent",
+      },
     },
     h1: {
       fontSize: ["6", "6", "9vw"],

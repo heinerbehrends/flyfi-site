@@ -20,7 +20,7 @@ export const inputStyles: SystemStyleObject = {
 
 export const buttonStyles: SystemStyleObject = {
   ...inputStyles,
-  backgroundColor: "#663399",
+  backgroundColor: "accent",
   color: "#fff",
   fontWeight: "700",
   fontSize: "4",
