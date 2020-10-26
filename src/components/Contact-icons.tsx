@@ -10,6 +10,8 @@ import LocationIcon from "../icons/location_on-24px.svg"
 import GithubIcon from "../icons/Octicons-mark-github.svg"
 
 const iconLinkStyles: SystemStyleObject = {
+  borderRadius: "3",
+  padding: "1",
   "&:focus": {
     outline: "none",
     boxShadow: "focus",

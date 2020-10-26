@@ -86,7 +86,7 @@ export default function ContactForm(props) {
           <ErrorMessage>Het bericht is te kort of te lang</ErrorMessage>
         )}
         <button type="submit" sx={buttonStyles}>
-          {isSubmitSuccessful ? "Verstuurd" : "Verstuur >"}
+          {isSubmitSuccessful ? "Verstuurd!" : "Verstuur >"}
         </button>
         {isSubmitSuccessful ? (
           <span sx={{ color: "green", marginLeft: "3", marginTop: "1" }}>

@@ -7,7 +7,7 @@ import Button from "../components/Button"
 export default function FourOhFour() {
   return (
     <React.Fragment>
-      <Styled.h1>404 - Dat ging mis</Styled.h1>
+      <Styled.h1>Oh jee - Het stokje is gevallen</Styled.h1>
       <div
         sx={{
           display: "flex",
@@ -21,17 +21,19 @@ export default function FourOhFour() {
         <video
           sx={{
             width: ["320px", "480px", "480px"],
-            // height: ["320px", "480px", "480px"],
           }}
           autoPlay
+          loop
+          muted
           playsInline
         >
           <source src={batonFail} type={"video/mp4"}></source>
         </video>
-        <Styled.p sx={{ alignSelf: "left" }}>
-          We konden de pagina niet vinden. Wilt u wellicht terug naar
-        </Styled.p>
-        <Button text={"De Homepage"} location={"/"} />
+        <Styled.h3 sx={{ marginTop: "3" }}>
+          Deze pagina bestaat niet.
+          <br /> Wilt u wellicht terug naar
+        </Styled.h3>
+        <Button text={"De Homepage?"} location={"/"} />
       </div>
     </React.Fragment>
   )

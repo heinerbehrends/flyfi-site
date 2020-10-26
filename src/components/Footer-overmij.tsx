@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled, Box, Flex } from "theme-ui"
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 export default function FooterOverMij() {
@@ -25,9 +25,21 @@ export default function FooterOverMij() {
           fixed={data.file.childImageSharp.fixed}
           alt={"a recent portret of me"}
         />
-        <Styled.h3 sx={{ fontSize: "5", marginLeft: "3", color: "#333" }}>
-          Over mij
-        </Styled.h3>
+        <Link
+          to={"/about"}
+          sx={{
+            textDecoration: "none",
+            "&:hover": { textDecoration: "underline" },
+            "&:focus": {
+              outline: "none",
+              textDecoration: "underline",
+            },
+          }}
+        >
+          <Styled.h3 sx={{ fontSize: "5", marginLeft: "3", color: "#333" }}>
+            Over mij
+          </Styled.h3>
+        </Link>
       </Flex>
       <p sx={{ lineHeight: "body", marginTop: "3" }}>
         Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik

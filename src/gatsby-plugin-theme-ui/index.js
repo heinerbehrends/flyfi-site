@@ -86,6 +86,7 @@ export default {
       marginX: "3",
     },
     h4: {
+      fontSize: "3",
       fontWeight: "500",
       marginTop: "2",
     },
