@@ -135,7 +135,8 @@ const faqs = [
         bedrijf, dat cloud gebaseerde oplossinge voor Gatsby apps aanbiedt.
         <br />
         Voor de schitterende animaties gebruik ik de react bibliotheek{" "}
-        <a href="https://www.framer.com/motion/">Framer Motion</a>.
+        <a href="https://www.framer.com/motion/">Framer Motion</a>. Voor het
+        ontwerpproces maak ik gebruik van <a href="https://figma.com">Figma</a>.
       </>
     ),
   },
@@ -145,11 +146,11 @@ const faqs = [
       <>
         Flyfi sites hebben geen server nodig omdat de bestanden van tevoren
         gerenderd zijn. Dit maakt de hosting niet alleen snel, maar ook
-        goedkoop, makkelijk, veilig en schaalbaar zodat u site ook goed te
-        bereiken is als deze viraal gaat. Omdat de site geen server gebruikt kan
-        deze ook niet gehackt worden of overbelast raken. Dit scheelt u een hoop
-        zorgen over veiligheid en bereikbaarheid terwijl u ook nog geld
-        bespaart.
+        goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens uw
+        Black Friday sales of als deze viraal gaat goed te bereiken is. Omdat de
+        site geen server gebruikt kan deze ook niet gehackt worden of overbelast
+        raken. Dit scheelt u een hoop zorgen over veiligheid en bereikbaarheid
+        terwijl u ook nog geld bespaart.
       </>
     ),
   },

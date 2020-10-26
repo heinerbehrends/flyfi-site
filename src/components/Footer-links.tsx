@@ -8,7 +8,7 @@ function FooterLink({ text, location }) {
     <Link
       sx={{
         display: "block",
-        color: "text",
+        color: "#333",
         fontSize: "3",
         padding: "3",
         marginLeft: "-16px",
@@ -30,7 +30,14 @@ function FooterLink({ text, location }) {
 export default function FooterLinks() {
   return (
     <nav sx={{ marginX: "4" }}>
-      <Styled.h3 sx={{ textAlign: "left", marginLeft: "0", marginBottom: "2" }}>
+      <Styled.h3
+        sx={{
+          textAlign: "left",
+          marginLeft: "0",
+          marginBottom: "2",
+          color: "#333",
+        }}
+      >
         Menu
       </Styled.h3>
       <FooterLink location={"/contact"} text={"Contact"} />

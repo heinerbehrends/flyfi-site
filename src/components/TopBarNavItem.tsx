@@ -23,7 +23,7 @@ export default function TopBarNavItem({
       }}
       sx={{
         textDecoration: "none",
-        color: "text",
+        color: "#333",
         fontSize: ["2", "2", "3"],
         fontWeight: 200,
         backgroundColor: "transparent",

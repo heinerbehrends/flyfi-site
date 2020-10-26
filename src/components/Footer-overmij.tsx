@@ -25,7 +25,9 @@ export default function FooterOverMij() {
           fixed={data.file.childImageSharp.fixed}
           alt={"a recent portret of me"}
         />
-        <Styled.h3 sx={{ fontSize: "5", marginLeft: "3" }}>Over mij</Styled.h3>
+        <Styled.h3 sx={{ fontSize: "5", marginLeft: "3", color: "#333" }}>
+          Over mij
+        </Styled.h3>
       </Flex>
       <p sx={{ lineHeight: "body", marginTop: "3" }}>
         Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik

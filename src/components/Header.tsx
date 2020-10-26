@@ -41,6 +41,7 @@ export default function Header() {
         >
           <h4
             sx={{
+              color: "#333",
               fontWeight: "light",
               fontStyle: "italic",
               fontSize: ["5", "5", "40px"],
@@ -71,7 +72,7 @@ export default function Header() {
           sx={{
             display: ["none", "inherit"],
             alignItems: "center",
-            backgroundColor: "background",
+            backgroundColor: "#fff",
             height: ["64px", "64px", "82px", "124px"],
             width: ["64px", "64px", "82px", "124px"],
             borderRadius: "50%",

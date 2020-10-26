@@ -11,7 +11,7 @@ export default function Button({ text, location }) {
         display: "inline-block",
         marginTop: ["3", "4"],
         backgroundColor: "accent",
-        color: "#fff",
+        color: "background",
         paddingX: ["3", "4"],
         paddingY: "3",
         fontFamily: "body",

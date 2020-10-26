@@ -34,7 +34,11 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
         onClick={() => setExpanded(isOpen ? false : i)}
       >
         <h2 sx={{ textAlign: "left", color: "text" }}>{faq.vraag}</h2>
-        {isOpen ? <MinIcon /> : <PlusIcon />}
+        {isOpen ? (
+          <MinIcon sx={{ fill: "text" }} />
+        ) : (
+          <PlusIcon sx={{ fill: "text" }} />
+        )}
       </motion.button>
       <AnimatePresence initial={false}>
         {isOpen && (

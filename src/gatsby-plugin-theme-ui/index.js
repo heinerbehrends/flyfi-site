@@ -12,6 +12,7 @@ export default {
         background: "#131313",
         primary: "#59bfbf",
         muted: "#9FE5E5",
+        accent: "#FFC0E2",
       },
     },
   },

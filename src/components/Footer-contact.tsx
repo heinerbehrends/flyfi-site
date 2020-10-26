@@ -20,7 +20,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
     <a
       sx={{
         display: "block",
-        color: "text",
+        color: "#333",
         fontSize: "2",
         marginLeft: "-16px",
         textDecoration: "none",
@@ -47,7 +47,7 @@ export default function FooterContact() {
       <Link
         sx={{
           textDecoration: "none",
-          "&:hover": { textDecoration: "underline", color: "text" },
+          "&:hover": { textDecoration: "underline" },
           "&:focus": {
             outline: "none",
             textDecoration: "underline",
@@ -57,6 +57,7 @@ export default function FooterContact() {
       >
         <Styled.h3
           sx={{
+            color: "#333",
             textAlign: "left",
             marginLeft: "0",
             marginBottom: "2",
