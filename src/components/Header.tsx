@@ -3,10 +3,13 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import Logo from "./Logo"
-import { Flex } from "theme-ui"
+import { useColorMode, Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
+import Sun from "../icons/sun.svg"
+import Moon from "../icons/moon.svg"
 
 export default function Header() {
+  const [colorMode, setColorMode] = useColorMode()
   return (
     <header
       sx={{
@@ -78,21 +81,46 @@ export default function Header() {
           <Logo />
         </Flex>
       </Flex>
-      <nav
+      <Flex
         sx={{
           display: "flex",
           flex: "1 1 auto",
-          padding: "0",
           justifyContent: "flex-end",
           height: "100%",
           margin: "0",
         }}
       >
-        <TopBarNavItem text="faq" location="/faq" />
-        <TopBarNavItem text="about" location="/about" />
-        <TopBarNavItem text="contact" location="/contact" />
-        <TopBarNavItem text="home" location="/" />
-      </nav>
+        <button
+          sx={{
+            backgroundColor: "transparent",
+            border: "none",
+            padding: "3",
+            cursor: "pointer",
+            "&:focus": {
+              outline: "none",
+              boxShadow: "focus",
+            },
+          }}
+          onClick={() =>
+            setColorMode(colorMode === "default" ? "dark" : "default")
+          }
+        >
+          {colorMode === "default" ? <Moon /> : <Sun />}
+        </button>
+        <nav
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            height: "100%",
+            margin: "0",
+          }}
+        >
+          <TopBarNavItem text="faq" location="/faq" />
+          <TopBarNavItem text="about" location="/about" />
+          <TopBarNavItem text="contact" location="/contact" />
+          <TopBarNavItem text="home" location="/" />
+        </nav>
+      </Flex>
     </header>
   )
 }

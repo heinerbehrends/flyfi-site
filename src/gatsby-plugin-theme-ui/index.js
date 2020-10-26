@@ -6,6 +6,14 @@ export default {
     muted: "#59bfbf",
     accent: "#663399",
     secondary: "#FFC0E2",
+    modes: {
+      dark: {
+        text: "#f7f7f7",
+        background: "#131313",
+        primary: "#59bfbf",
+        muted: "#9FE5E5",
+      },
+    },
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
