@@ -22,6 +22,7 @@ export default function Greyhound(props) {
     >
       <div
         sx={{
+          display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
