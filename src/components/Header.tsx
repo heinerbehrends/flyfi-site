@@ -7,6 +7,7 @@ import { useColorMode, Flex } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
 import Sun from "../icons/sun.svg"
 import Moon from "../icons/moon.svg"
+import TextLogo from "./TextLogo"
 
 export default function Header() {
   const [colorMode, setColorMode] = useColorMode()
@@ -26,41 +27,7 @@ export default function Header() {
       }}
     >
       <Flex sx={{ alignItems: "center", height: "100%", flex: "1 1 auto" }}>
-        <Link
-          to={"/"}
-          sx={{
-            textDecoration: "none",
-            color: "text",
-            paddingX: ["1", "2", "3"],
-            paddingY: "2",
-            "&:focus": {
-              outline: "none",
-              boxShadow: "focus",
-            },
-          }}
-        >
-          <h4
-            sx={{
-              color: "#333",
-              fontWeight: "light",
-              fontStyle: "italic",
-              fontSize: ["5", "5", "40px"],
-              margin: "1",
-            }}
-          >
-            flyfi
-            <span
-              sx={{
-                fontSize: "3",
-                fontStyle: "normal",
-                display: ["none", "none", "none", "inline"],
-              }}
-            >
-              {" "}
-              web development
-            </span>
-          </h4>
-        </Link>
+        <TextLogo />
       </Flex>
       <Flex
         sx={{
@@ -68,7 +35,8 @@ export default function Header() {
           justifyContent: "center",
         }}
       >
-        <Flex
+        <Link
+          to="/"
           sx={{
             display: ["none", "inherit"],
             alignItems: "center",
@@ -80,7 +48,7 @@ export default function Header() {
           }}
         >
           <Logo />
-        </Flex>
+        </Link>
       </Flex>
       <Flex
         sx={{
