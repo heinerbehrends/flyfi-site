@@ -25,5 +25,18 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `flyfi webdevelopment`,
+        short_name: `flyfi.nl`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#9FE5E5`,
+        display: `standalone`,
+        icon: `src/icons/flyfi-app-icon.svg`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
