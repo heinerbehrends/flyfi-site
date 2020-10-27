@@ -3,10 +3,18 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import batonFail from "../videos/batonFail.mp4"
 import Button from "../components/Button"
+import { Helmet } from "react-helmet"
 
 export default function FourOhFour() {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>404 - pagina niet gevonden</title>
+        <meta name="description" content="404 pagina voor flyfi.nl" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
+
       <Styled.h1>Oh jee - Het stokje is gevallen</Styled.h1>
       <div
         sx={{

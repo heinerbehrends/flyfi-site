@@ -3,10 +3,21 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ContactForm from "../components/Contact-form"
 import ContactIcons from "../components/Contact-icons"
+import { Helmet } from "react-helmet"
 
 export default function Contact() {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Contact en connect</title>
+        <meta
+          name="description"
+          content="Contactpagina voor flyfi webdevelopment"
+        />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
+
       <Styled.h1
         sx={{
           fontSize: ["6", "6", "9vw"],

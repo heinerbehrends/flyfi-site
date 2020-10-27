@@ -2,6 +2,7 @@
 import { jsx, Styled, Box, Flex } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
+import { Helmet } from "react-helmet"
 
 type aboutItemProps = {
   heading: string
@@ -10,16 +11,25 @@ type aboutItemProps = {
 
 function AboutItem({ heading, text }: aboutItemProps) {
   return (
-    <>
+    <React.Fragment>
       <Styled.h4>{heading}</Styled.h4>
       <Styled.p>{text}</Styled.p>
-    </>
+    </React.Fragment>
   )
 }
 
 export default function About() {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Over mij en flyfi</title>
+        <meta
+          name="description"
+          content="Aboutpagina voor webbureau flyfi web development"
+        />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
       <Styled.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
