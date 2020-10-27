@@ -50,10 +50,17 @@ const cardsVoordelen = [
     heading: "Verbeterde vindbaarheid",
     text: (
       <React.Fragment>
-        Snelheid en gebruikerservaring zijn factoren die een steeds grotere rol
-        spelen in Google’s zoekresultaten. Een moderne webapp van flyfi kan zo
-        niet alleen de conversie verhogen, maar ook het bezoekersaantal van uw
-        webapp.
+        <a href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html">
+          Snelheid
+        </a>{" "}
+        en{" "}
+        <a href="https://blog.chromium.org/2020/05/introducing-web-vitals-essential-metrics.html">
+          {" "}
+          gebruikerservaring
+        </a>{" "}
+        zijn factoren die een steeds grotere rol spelen in Google’s
+        zoekresultaten. Een moderne webapp van flyfi kan zo niet alleen de
+        conversie verhogen, maar ook het bezoekersaantal van uw webapp.
       </React.Fragment>
     ),
   },
