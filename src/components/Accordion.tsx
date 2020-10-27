@@ -24,7 +24,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
           width: "100%",
           backgroundColor: "inherit",
           border: "none",
-          fontSize: "4",
+          fontSize: ["3", "4"],
           fontFamily: "fira sans",
           fontWeight: "bold",
           paddingX: "3",
@@ -41,9 +41,9 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
       >
         <h2 sx={{ textAlign: "left", color: "text" }}>{faq.vraag}</h2>
         {isOpen ? (
-          <MinIcon sx={{ fill: "text" }} />
+          <MinIcon sx={{ fill: "text", minWidth: "32px" }} />
         ) : (
-          <PlusIcon sx={{ fill: "text" }} />
+          <PlusIcon sx={{ fill: "text", minWidth: "32px" }} />
         )}
       </motion.button>
       <AnimatePresence initial={false}>
