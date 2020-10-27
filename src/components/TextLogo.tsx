@@ -5,40 +5,49 @@ import { Link } from "gatsby"
 
 export default function TextLogo() {
   return (
-    <Link
-      to={"/"}
+    <div
       sx={{
-        textDecoration: "none",
-        color: "text",
-        paddingX: ["1", "2", "3"],
-        paddingY: "2",
-        "&:focus": {
-          outline: "none",
-          boxShadow: "focus",
-        },
+        display: "flex",
+        alignItems: "center",
+        height: "100%",
+        flex: "1 1 auto",
       }}
     >
-      <h4
+      <Link
+        to={"/"}
         sx={{
-          color: "#333",
-          fontWeight: "light",
-          fontStyle: "italic",
-          fontSize: ["5", "5", "40px"],
-          margin: "1",
+          textDecoration: "none",
+          color: "text",
+          paddingX: ["1", "2", "3"],
+          paddingY: "12px",
+          "&:focus": {
+            outline: "none",
+            boxShadow: "focus",
+          },
         }}
       >
-        flyfi
-        <span
+        <h4
           sx={{
-            fontSize: "3",
-            fontStyle: "normal",
-            display: ["none", "none", "none", "inline"],
+            color: "#333",
+            fontWeight: "light",
+            fontStyle: "italic",
+            fontSize: ["5", "5", "40px"],
+            margin: "1",
           }}
         >
-          {" "}
-          web development
-        </span>
-      </h4>
-    </Link>
+          flyfi
+          <span
+            sx={{
+              fontSize: "3",
+              fontStyle: "normal",
+              display: ["none", "none", "none", "none", "inline"],
+            }}
+          >
+            {" "}
+            web development
+          </span>
+        </h4>
+      </Link>
+    </div>
   )
 }

@@ -4,7 +4,7 @@ import React from "react"
 import DarkModeSwitch from "./DarkModeSwitch"
 import TopBarNavItem from "./TopBarNavItem"
 
-export default function Logo() {
+export default function Nav() {
   return (
     <div
       sx={{
