@@ -39,7 +39,7 @@ export default {
     text: "5px 5px 5px rgba(0, 0, 0, 0.2)",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 96],
-  breakpoints: ["480px", "576px", "768px"],
+  breakpoints: ["480px", "576px", "768px", "860px"],
   styles: {
     root: {
       marginTop: "64px",
