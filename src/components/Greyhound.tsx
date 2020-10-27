@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import greyhoundMp4 from "../videos/greyhound-loop.mp4"
 import greyhoundWebm from "../videos/greyhound-loop.webm"
 
 export default function Greyhound(props) {
   return (
-    <Flex
+    <div
       sx={{
         marginRight: "4",
         borderRadius: "50%",
@@ -20,7 +20,7 @@ export default function Greyhound(props) {
       }}
       {...props}
     >
-      <Flex
+      <div
         sx={{
           flexDirection: "column",
           alignItems: "center",
@@ -38,7 +38,7 @@ export default function Greyhound(props) {
           <source src={greyhoundMp4} type={"video/mp4"}></source>
           <source src={greyhoundWebm} type={"video/webm"}></source>
         </video>
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   )
 }

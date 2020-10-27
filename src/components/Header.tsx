@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import Logo from "./Logo"
-import { useColorMode, Flex } from "theme-ui"
+import { useColorMode } from "theme-ui"
 import TopBarNavItem from "./TopBarNavItem"
 import Sun from "../icons/sun.svg"
 import Moon from "../icons/moon.svg"
@@ -26,11 +26,19 @@ export default function Header() {
         height: "64px",
       }}
     >
-      <Flex sx={{ alignItems: "center", height: "100%", flex: "1 1 auto" }}>
-        <TextLogo />
-      </Flex>
-      <Flex
+      <div
         sx={{
+          display: "flex",
+          alignItems: "center",
+          height: "100%",
+          flex: "1 1 auto",
+        }}
+      >
+        <TextLogo />
+      </div>
+      <div
+        sx={{
+          display: "flex",
           flex: "0 1 auto",
           justifyContent: "center",
         }}
@@ -49,8 +57,8 @@ export default function Header() {
         >
           <Logo />
         </Link>
-      </Flex>
-      <Flex
+      </div>
+      <div
         sx={{
           display: "flex",
           flex: "1 1 auto",
@@ -59,7 +67,7 @@ export default function Header() {
           margin: "0",
         }}
       >
-        <button
+        <div
           sx={{
             alignItems: "center",
             display: "flex",
@@ -77,7 +85,7 @@ export default function Header() {
           }
         >
           {colorMode === "default" ? <Moon /> : <Sun />}
-        </button>
+        </div>
         <nav
           sx={{
             display: "flex",
@@ -91,7 +99,7 @@ export default function Header() {
           <TopBarNavItem text="contact" location="/contact" />
           <TopBarNavItem text="home" location="/" />
         </nav>
-      </Flex>
+      </div>
     </header>
   )
 }
