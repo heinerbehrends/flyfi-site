@@ -3,6 +3,7 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
 import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 
 type aboutItemProps = {
   heading: string
@@ -21,15 +22,7 @@ function AboutItem({ heading, text }: aboutItemProps) {
 export default function About() {
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Over mij en flyfi</title>
-        <meta
-          name="description"
-          content="Aboutpagina voor webbureau flyfi web development"
-        />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Helmet>
+      <SEO description={"Aboutpagina voor webbureau flyfi web development"} />
       <Styled.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>

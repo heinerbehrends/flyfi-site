@@ -2,23 +2,19 @@
 import { jsx, Styled } from "theme-ui"
 import * as React from "react"
 import { useState } from "react"
-import Helmet from "react-helmet"
 import Accordion from "../components/Accordion"
+import SEO from "../components/SEO"
 
 export default function FAQs() {
   const [expanded, setExpanded] = useState<false | number>(0)
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Vaak gestelde vragen</title>
-        <meta
-          name="description"
-          content="Antwoorden voor vaak gestelde vragen over flyfi's snelle webapps"
-        />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Helmet>
+      <SEO
+        description={
+          "Antwoorden voor vaak gestelde vragen over flyfi's snelle webapps"
+        }
+      />
       <Styled.h1>Vaak gestelde vragen</Styled.h1>
       <main sx={{ maxWidth: "80ch", marginX: "auto", marginTop: "4" }}>
         {faqs.map((faq, i) => (
