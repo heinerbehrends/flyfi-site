@@ -53,7 +53,7 @@ export default function ImageStack() {
           node {
             base
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 350) {
                 base64
                 aspectRatio
                 sizes
