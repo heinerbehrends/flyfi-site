@@ -2,11 +2,10 @@
 import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { useInView } from "react-intersection-observer"
-import { motion } from "framer-motion"
+import { AnimationFeature, m as motion, MotionConfig } from "framer-motion"
 import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
-import { SystemStyleObject } from "@styled-system/css"
 
 export default function Main() {
   const [ref, inView] = useInView({
@@ -27,7 +26,7 @@ export default function Main() {
   })
 
   return (
-    <React.Fragment>
+    <MotionConfig features={[AnimationFeature]}>
       <motion.div ref={ref} animate={{ x: inView ? 0 : -800 }}>
         <Styled.h2>
           De voordelen van <i>flyfi</i> webapps {inView}
@@ -60,6 +59,6 @@ export default function Main() {
         <Styled.h2>Maatwerk of starterspakket?</Styled.h2>
       </motion.div>
       <CardsPakketten />
-    </React.Fragment>
+    </MotionConfig>
   )
 }

@@ -1,7 +1,13 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import * as React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import {
+  m as motion,
+  AnimatePresence,
+  MotionConfig,
+  AnimationFeature,
+  ExitFeature,
+} from "framer-motion"
 import PlusIcon from "../icons/add_circle_outline-24px.svg"
 import MinIcon from "../icons/remove_circle_outline-24px.svg"
 
@@ -9,7 +15,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
   const isOpen = i === expanded
 
   return (
-    <React.Fragment>
+    <MotionConfig features={[AnimationFeature, ExitFeature]}>
       <motion.button
         sx={{
           display: "flex",
@@ -58,6 +64,6 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
           </motion.section>
         )}
       </AnimatePresence>
-    </React.Fragment>
+    </MotionConfig>
   )
 }

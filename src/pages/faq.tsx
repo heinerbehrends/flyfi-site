@@ -164,4 +164,5 @@ const faqs = [
       </React.Fragment>
     ),
   },
+  // {vraag: "Wat is de PRPL pattern?"}
 ]
