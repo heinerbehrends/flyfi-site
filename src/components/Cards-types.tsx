@@ -47,7 +47,7 @@ const cardsTypes = [
   {
     heading: "Marketing site",
     text: (
-      <>
+      <React.Fragment>
         Bent u net begonnen met een nieuwe bedrijf of is uw oude website niet
         meer van deze tijd? Wij bouwen voor u de perfecte marketing site met een
         moderne uitstraling, supersnelle laadtijd en een gebruikerservaring die
@@ -55,28 +55,28 @@ const cardsTypes = [
         verouderde en trage website? De meeste websites voor midden- en
         kleinbedrijf bieden wij aan zonder vaste kosten. Met de kennis van flyfi
         haalt u meer uit uw website.
-      </>
+      </React.Fragment>
     ),
     icon: <TrendingUpIcon />,
   },
   {
     heading: "Webwinkel",
     text: (
-      <>
+      <React.Fragment>
         Wilt u een webwinkel beginnen om uw talenten te versilveren of uw winkel
         online te brengen en te profiteren van de digitalisering van de handel?
         flyfi’s moderne webwinkels baseren op shopify, waar u al vanaf 30 euro
         in de maand uw webwinkel kunt beheren. Uiteraard zijn flyfi’s webshops
         ongekend snel, wat u tevreden klanten oplevert en een hoge plek in
         Googles zoekresultaten.
-      </>
+      </React.Fragment>
     ),
     icon: <CartIcon />,
   },
   {
     heading: "Portfolio",
     text: (
-      <>
+      <React.Fragment>
         Speciaal voor creatieve bedrijven zoals grafische vormgevers,
         interieurontwerpers, kunstenaars, muzikanten en bands biedt flyfi een
         moderne portfolio website aan. Presenteer uw projecten met prachtige
@@ -84,21 +84,21 @@ const cardsTypes = [
         audio en videowerk hebben we een playlist ontwikkelt waarmee u
         mediabestanden van diverse videoplatforms als ook zelf gehoste bestanden
         kunt afspelen.
-      </>
+      </React.Fragment>
     ),
     icon: <PortfolioIcon />,
   },
   {
     heading: "Blog",
     text: (
-      <>
+      <React.Fragment>
         Of je over koken, kunst of politiek schrijft, met een flyfi blog heb je
         het gereedschap in handen om gehoord en gevonden te worden. Onze blogs
         werken met het populaire markdown, het hippe mdx of een content
         management system. Het is ook mogelijk om WordPress als ‘headless CMS’
         te gebruiken. Dan schrijf je posts gewoon in WordPress en profiteer je
         toch van onze supersnelle laadtijden en app-achtige gebruikerservaring.
-      </>
+      </React.Fragment>
     ),
     icon: <PencilIcon />,
   },

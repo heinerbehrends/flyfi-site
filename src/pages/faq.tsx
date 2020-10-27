@@ -28,7 +28,7 @@ const faqs = [
   {
     vraag: "Wat is een Progressive Web App?",
     antwoord: (
-      <>
+      <React.Fragment>
         Een{" "}
         <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a>{" "}
         (PWA) is een webapplicatie die meer lijkt op een app voor mobiele
@@ -83,13 +83,13 @@ const faqs = [
             mobieltjes geinstalleerd worden.
           </li>
         </ul>
-      </>
+      </React.Fragment>
     ),
   },
   {
     vraag: "Waarom is een flyfi site zoveel sneller dan WordPress?",
     antwoord: (
-      <>
+      <React.Fragment>
         Als een WordPress site laadt moet de server de pagina nog renderen,
         terwijl dit bij een <em>flyfi</em> site al vantevoren is gebeurd. De
         kant en klare html pagina wordt vervolgens via het supersnelle CDN
@@ -103,13 +103,13 @@ const faqs = [
         als u op de link klikt. Als de gebruiker een trage 2g netwerk verbinding
         heeft of data wil besparen wordt de data pas geladen als de gebruiker
         daadwerkelijk op de link klikt.
-      </>
+      </React.Fragment>
     ),
   },
   {
     vraag: "Hoe worden de foto's geoptimaliseerd?",
     antwoord: (
-      <>
+      <React.Fragment>
         Alle grotere foto's worden pas geladen als de gebruiker deze kan zien.
         Terwijl de foto laadt wordt eerst een onscherpe of getekende versie
         getoond, die wordt vervangen door de foto als deze is geladen. Elke foto
@@ -118,13 +118,13 @@ const faqs = [
         gebruiker met een scherm met een hoge resolutie altijd scherpe foto's en
         de gebruiker met een oud mobieltje laadt alleen die pixels die hij ook
         daadwerkelijk kan zien.
-      </>
+      </React.Fragment>
     ),
   },
   {
     vraag: "Welke software gebruikt flyfi?",
     antwoord: (
-      <>
+      <React.Fragment>
         Voor de allermeest projecten gebruikt ik het moderne framework{" "}
         <a href="https://www.gatsbyjs.com">Gatsby</a>. Gatsby is er speciaal
         voor gemaakt om moderne webapps zo snel mogelijk te maken. Gatsby maakt
@@ -137,21 +137,21 @@ const faqs = [
         Voor de schitterende animaties gebruik ik{" "}
         <a href="https://www.framer.com/motion/">Framer Motion</a> en voor het
         ontwerpproces <a href="https://figma.com">Figma</a>.
-      </>
+      </React.Fragment>
     ),
   },
   {
     vraag: "Waarom zijn flyfi site goedkoop, schaalbaar en veilig?",
     antwoord: (
-      <>
-        Flyfi sites hebben geen server nodig omdat de bestanden van tevoren al
-        gerenderd zijn. Dit maakt de hosting niet alleen snel, maar ook
-        goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens uw
-        Black Friday Sale of als deze viraal gaat goed te bereiken is. Omdat de
-        site geen server gebruikt kan deze ook niet gehackt worden of overbelast
-        raken. Dit scheelt u een hoop zorgen over veiligheid en bereikbaarheid
-        terwijl u ook nog geld bespaart.
-      </>
+      <React.Fragment>
+        Flyfi sites hebben geen ingewikkelde server nodig omdat de bestanden van
+        tevoren al gerenderd zijn. Dit maakt de hosting niet alleen snel, maar
+        ook goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens
+        uw Black Friday Sale of als deze viraal gaat goed te bereiken is. Omdat
+        de site geen server gebruikt kan deze ook niet gehackt worden of
+        overbelast raken. Dit scheelt u een hoop zorgen over veiligheid en
+        bereikbaarheid terwijl u ook nog geld bespaart.
+      </React.Fragment>
     ),
   },
 ]
