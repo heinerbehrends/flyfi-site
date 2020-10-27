@@ -8,7 +8,7 @@ type CardProps = {
   icon?: React.ReactNode
   cta?: React.ReactNode
   heading: string
-  text: string
+  text: React.ReactNode
 }
 
 export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
