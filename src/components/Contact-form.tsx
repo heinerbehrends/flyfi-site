@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import { useForm } from "react-hook-form"
 import {
@@ -26,7 +26,7 @@ export default function ContactForm(props) {
       onSubmit={handleSubmit(onSubmit)}
       {...props}
     >
-      <Flex sx={{ flexDirection: "column" }}>
+      <div sx={{ display: "flex", flexDirection: "column" }}>
         <Label for="name">Naam</Label>
         <input
           type="text"
@@ -93,7 +93,7 @@ export default function ContactForm(props) {
             U bericht is verstuurd.
           </span>
         ) : null}
-      </Flex>
+      </div>
     </form>
   )
 }

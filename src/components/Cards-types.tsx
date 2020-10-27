@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import Card from "./Card"
 import TrendingUpIcon from "../icons/trending_up-24px.svg"

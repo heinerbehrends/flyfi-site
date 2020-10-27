@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
+import { jsx } from "theme-ui"
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
@@ -80,8 +80,9 @@ export default function ImageStack() {
   const zomor = filterByName(nodes, "zomor-kampioenen-7.jpg")
   const horumersiel = filterByName(nodes, "Horumersiel.jpg")
   return (
-    <Grid
+    <section
       sx={{
+        display: "grid",
         gridTemplateColumns: "repeat(auto-fill, 1fr)",
 
         gridTemplateRows: "repeat(auto-fill, 1fr)",
@@ -196,6 +197,6 @@ export default function ImageStack() {
           id: 9,
         }}
       />
-    </Grid>
+    </section>
   )
 }

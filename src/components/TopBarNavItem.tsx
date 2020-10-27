@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 
@@ -9,11 +9,7 @@ type TopBarNavItemProps = {
   variant?: "active"
 }
 
-export default function TopBarNavItem({
-  text,
-  location,
-  variant,
-}: TopBarNavItemProps) {
+export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
   return (
     <Link
       activeStyle={{
@@ -35,15 +31,16 @@ export default function TopBarNavItem({
       }}
       to={location}
     >
-      <Flex
+      <div
         sx={{
+          display: "flex",
           height: "100%",
           alignItems: "center",
           paddingX: ["2", "2", "3"],
         }}
       >
         {text}
-      </Flex>
+      </div>
     </Link>
   )
 }

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Styled } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { m as motion, MotionConfig, AnimationFeature } from "framer-motion"
 import { useInView } from "react-intersection-observer"
@@ -28,7 +28,7 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
         }}
       >
         <div>
-          <Flex sx={{ alignItems: "center", fontSize: "5" }}>
+          <div sx={{ display: "flex", alignItems: "center", fontSize: "5" }}>
             <span sx={{ fill: "accent" }}>{icon}</span>
             <Styled.h3
               sx={{
@@ -37,7 +37,7 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
             >
               {heading}
             </Styled.h3>
-          </Flex>
+          </div>
           <p
             sx={{
               marginBlockEnd: "0",

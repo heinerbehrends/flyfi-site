@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Flex, Styled } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import {
   m as motion,
@@ -33,7 +33,7 @@ export default function Hero() {
 
   return (
     <MotionConfig features={[AnimationFeature, ExitFeature]}>
-      <Box
+      <div
         sx={{
           maxWidth: "960px",
           marginX: "auto",
@@ -43,8 +43,9 @@ export default function Hero() {
           Supersnelle webapps voor iedereen
         </Styled.h1>
 
-        <Flex
+        <section
           sx={{
+            display: "flex",
             alignItems: "center",
             justifyContent: "center",
             marginTop: "3",
@@ -79,11 +80,11 @@ export default function Hero() {
               <HeroParagraph />
             </motion.div>
           </motion.div>
-        </Flex>
-        <Box sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
+        </section>
+        <div sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
           <Button text="Nieuwsgierig? >" location="/contact" />
-        </Box>
-      </Box>
+        </div>
+      </div>
     </MotionConfig>
   )
 }

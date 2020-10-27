@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Box, Flex } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
@@ -18,8 +18,8 @@ export default function FooterOverMij() {
     }
   `)
   return (
-    <Box sx={{ marginX: ["0", "4"] }}>
-      <Flex sx={{ alignItems: "center" }}>
+    <div sx={{ marginX: ["0", "4"] }}>
+      <div sx={{ display: "flex", alignItems: "center" }}>
         <Img
           sx={{ borderRadius: "50%" }}
           fixed={data.file.childImageSharp.fixed}
@@ -40,13 +40,13 @@ export default function FooterOverMij() {
             Over mij
           </Styled.h3>
         </Link>
-      </Flex>
+      </div>
       <p sx={{ lineHeight: "body", marginTop: "3" }}>
         Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik
         streef er altijd na om een mooi resultaat neer te zetten, als ontwerper
         en programmeur, maar ook als veelzijdige muzikant en als faire
         verdediger in mijn voetbalelftal. <p>© Heiner S. Behrends, 2020</p>
       </p>
-    </Box>
+    </div>
   )
 }

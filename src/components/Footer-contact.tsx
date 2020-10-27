@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Flex } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import MailIcon from "../icons/mail_outline-24px.svg"
@@ -32,11 +32,11 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
       }}
       href={location}
     >
-      <Flex sx={{ alignItems: "center", padding: "3" }}>
+      <div sx={{ display: "flex", alignItems: "center", padding: "3" }}>
         {icon}
 
         <p sx={{ marginLeft: "2" }}>{text}</p>
-      </Flex>
+      </div>
     </a>
   )
 }

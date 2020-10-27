@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Box, Flex } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
 import { Helmet } from "react-helmet"
@@ -33,14 +33,15 @@ export default function About() {
       <Styled.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
       </Styled.h1>
-      <Flex
+      <main
         sx={{
+          display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
         }}
       >
         <ImageStack />
-        <Box
+        <section
           sx={{
             paddingX: ["3", "4"],
             paddingTop: ["4", "4", "4", "0"],
@@ -50,8 +51,8 @@ export default function About() {
           {aboutTexts.map(item => (
             <AboutItem heading={item.heading} text={item.text} />
           ))}
-        </Box>
-      </Flex>
+        </section>
+      </main>
     </React.Fragment>
   )
 }

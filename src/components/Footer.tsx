@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Flex, Grid } from "theme-ui"
+import { jsx } from "theme-ui"
 import React from "react"
 import FooterOverMij from "./Footer-overmij"
 import FooterContact from "./Footer-contact"
@@ -17,8 +17,9 @@ export default function Footer() {
         marginTop: "5",
       }}
     >
-      <Grid
+      <section
         sx={{
+          display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(35ch, 1fr))",
           maxWidth: "1280px",
           marginX: "auto",
@@ -27,7 +28,7 @@ export default function Footer() {
         <FooterOverMij />
         <FooterContact />
         <FooterLinks />
-      </Grid>
+      </section>
     </footer>
   )
 }
