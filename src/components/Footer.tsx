@@ -12,7 +12,7 @@ export default function Footer() {
         color: "#333",
         width: "100%",
         backgroundColor: "primary",
-        paddingX: "4",
+        paddingX: ["3", "3", "4"],
         paddingY: "5",
         marginTop: "5",
       }}

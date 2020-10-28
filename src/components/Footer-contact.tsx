@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { IconButton, jsx, Styled } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import MailIcon from "../icons/mail_outline-24px.svg"
@@ -43,7 +43,13 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
 
 export default function FooterContact() {
   return (
-    <address sx={{ marginX: "4", fontStyle: "normal" }}>
+    <address
+      sx={{
+        marginX: ["0", "3", "4"],
+        marginTop: ["3", "4"],
+        fontStyle: "normal",
+      }}
+    >
       <Link
         sx={{
           textDecoration: "none",
@@ -66,40 +72,47 @@ export default function FooterContact() {
           Connect
         </Styled.h3>
       </Link>
-      <ContactItem
-        text={"info@flyfi.nl"}
-        location={"mailto:info@flyfi.nl"}
-        icon={<MailIcon />}
-      />
-      <ContactItem
-        text={"06-58910956"}
-        location={"tel:0031658910956"}
-        icon={<PhoneIcon />}
-      />
-
-      <ContactItem
-        text={"linkedin.com/in/heiner-behrends/"}
-        location={"https://linkedin.com/in/heiner-behrends/"}
-        icon={<LinkedInIcon />}
-      />
-
-      <ContactItem
-        text={"@HSBehrends"}
-        location={"https://twitter.com/HSBehrends"}
-        icon={<TwitterIcon />}
-      />
-      <ContactItem
-        text={"github.com/heinerbehrends"}
-        location={"https://github.com/heinerbehrends"}
-        icon={<GithubIcon />}
-      />
-      <ContactItem
-        text={"Travertijstraat 12, 9743 Groningen"}
-        location={
-          "https://www.google.com/maps/place/Travertijnstraat+12,+9743+SZ+Groningen/"
-        }
-        icon={<LocationIcon />}
-      />
+      {contactInfo.map(item => (
+        <ContactItem
+          text={item.text}
+          location={item.location}
+          icon={item.icon}
+        />
+      ))}
     </address>
   )
 }
+
+const contactInfo = [
+  {
+    text: "info@flyfi.nl",
+    location: "mailto:info@flyfi.nl",
+    icon: <MailIcon />,
+  },
+  {
+    text: "06-58910956",
+    location: "tel:0031658910956",
+    icon: <PhoneIcon />,
+  },
+  {
+    text: "linkedin.com/in/heiner-behrends/",
+    location: "https://linkedin.com/in/heiner-behrends/",
+    icon: <LinkedInIcon />,
+  },
+  {
+    text: "@HSBehrends",
+    location: "https://twitter.com/HSBehrends",
+    icon: <TwitterIcon />,
+  },
+  {
+    text: "github.com/heinerbehrends",
+    location: "https://github.com/heinerbehrends",
+    icon: <GithubIcon />,
+  },
+  {
+    text: "Travertijstraat 12, 9743 Groningen",
+    location:
+      "https://www.google.com/maps/place/Travertijnstraat+12,+9743+SZ+Groningen/",
+    icon: <LocationIcon />,
+  },
+]
