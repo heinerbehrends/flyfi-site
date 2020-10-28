@@ -22,12 +22,14 @@ export default function Greyhound(props) {
           from: { transform: "translate(-100vw)" },
           to: { transform: "translate(0)" },
         },
-        animation: "slideIn 2s ease-out 0.5s",
+        animation: "slideIn 2s ease-out",
       }}
       {...props}
     >
       <video
-        sx={{ maxWidth: ["240px", "300px", "360px"] }}
+        sx={{
+          maxWidth: ["240px", "300px", "360px"],
+        }}
         autoPlay
         loop
         muted
