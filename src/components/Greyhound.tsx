@@ -8,38 +8,34 @@ export default function Greyhound(props) {
   return (
     <div
       sx={{
+        display: "flex",
+        position: "relative",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         marginRight: "4",
         borderRadius: "50%",
         width: ["200px", "250px", "300px"],
         height: ["200px", "250px", "300px"],
-        alignItems: "center",
-        justifyContent: "center",
         overflow: "hidden",
-        position: "relative",
-        boxShadow: "big",
+        "@keyframes slideIn": {
+          from: { transform: "translate(-100vw)" },
+          to: { transform: "translate(0)" },
+        },
+        animation: "slideIn 2s ease-out 0.5s",
       }}
       {...props}
     >
-      <div
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-        }}
+      <video
+        sx={{ maxWidth: ["240px", "300px", "360px"] }}
+        autoPlay
+        loop
+        muted
+        playsInline
       >
-        <video
-          sx={{ maxWidth: ["240px", "300px", "360px"] }}
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src={greyhoundMp4} type={"video/mp4"}></source>
-          <source src={greyhoundWebm} type={"video/webm"}></source>
-        </video>
-      </div>
+        <source src={greyhoundMp4} type={"video/mp4"}></source>
+        <source src={greyhoundWebm} type={"video/webm"}></source>
+      </video>
     </div>
   )
 }

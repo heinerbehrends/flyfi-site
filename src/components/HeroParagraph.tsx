@@ -18,9 +18,16 @@ export default function HeroParagraph() {
       <p
         sx={{
           marginLeft: ["0", "0", "0", "4"],
-          marginTop: "3",
+          marginTop: ["4", "3"],
           marginX: ["3", "0"],
           fontSize: ["2", "2", "3"],
+          maxWidth: "400px",
+          lineHeight: "body",
+          "@keyframes fadeIn": {
+            from: { opacity: "0" },
+            to: { opacity: "1" },
+          },
+          animation: "fadeIn 2s",
         }}
       >
         <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle

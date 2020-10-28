@@ -2,7 +2,6 @@
 import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { useInView } from "react-intersection-observer"
-import { m as motion } from "framer-motion"
 import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
@@ -26,16 +25,20 @@ export default function Main() {
   })
 
   return (
-    <>
-      <motion.div ref={ref} animate={{ x: inView ? 0 : -800 }}>
-        <Styled.h2>
-          De voordelen van <i>flyfi</i> webapps {inView}
+    <React.Fragment>
+      <div ref={ref}>
+        <Styled.h2
+          sx={{
+            transform: `${inView ? "translate(0)" : "translate(-100vw)"}`,
+            transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
+          }}
+        >
+          De voordelen van <i>flyfi</i> webapps
         </Styled.h2>
-      </motion.div>
+      </div>
       <CardsVoordelen />
-      <motion.blockquote
+      <blockquote
         ref={ref2}
-        animate={{ opacity: inView2 ? 1 : 0 }}
         sx={{
           backgroundColor: "muted",
           color: "#fff",
@@ -46,19 +49,35 @@ export default function Main() {
           paddingY: "3",
           fontWeight: "900",
           whiteSpace: "pre-line",
+          opacity: `${inView2 ? "1" : "0"}`,
+          transition: "opacity 0.5s ease-in",
         }}
       >
         Wist u dat 53% van alle bezoekers afhaakt <br></br>als een site langer
         dan 3 seconden laadt?
-      </motion.blockquote>
-      <motion.div ref={ref3} animate={{ x: inView3 ? 0 : -800 }}>
-        <Styled.h2>Hoe kan ik u helpen?</Styled.h2>
-      </motion.div>
+      </blockquote>
+      <div ref={ref3}>
+        <Styled.h2
+          sx={{
+            transform: `${inView3 ? "translate(0)" : "translate(-100vw)"}`,
+            transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
+          }}
+        >
+          Hoe kan ik u helpen?
+        </Styled.h2>
+      </div>
       <CardsTypes />
-      <motion.div ref={ref4} animate={{ x: inView4 ? 0 : -800 }}>
-        <Styled.h2>Maatwerk of starterspakket?</Styled.h2>
-      </motion.div>
+      <div ref={ref4}>
+        <Styled.h2
+          sx={{
+            transform: `${inView4 ? "translate(0)" : "translate(-100vw)"}`,
+            transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
+          }}
+        >
+          Maatwerk of starterspakket?
+        </Styled.h2>
+      </div>
       <CardsPakketten />
-    </>
+    </React.Fragment>
   )
 }
