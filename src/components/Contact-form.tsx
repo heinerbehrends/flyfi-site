@@ -37,7 +37,7 @@ export default function ContactForm(props) {
           sx={{
             ...inputStyles,
             backgroundColor: `${
-              dirtyFields.name && !errors.name ? "#ebfff0" : "inherit"
+              dirtyFields.name && !errors.name ? "#ebfff0" : "#fff"
             }`,
           }}
         />
