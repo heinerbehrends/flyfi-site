@@ -29,12 +29,12 @@ function FooterLink({ text, location }) {
 
 export default function FooterLinks() {
   return (
-    <nav sx={{ marginX: ["2", "3", "4"] }}>
+    <nav sx={{ marginX: ["0", "3", "4"], marginTop: ["3", "4"] }}>
       <Styled.h3
         sx={{
           textAlign: "left",
           marginLeft: "0",
-          marginBottom: "2",
+          marginBottom: ["1", "2"],
           color: "#333",
         }}
       >

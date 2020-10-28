@@ -66,7 +66,7 @@ export default function FooterContact() {
             color: "#333",
             textAlign: "left",
             marginLeft: "0",
-            marginBottom: "2",
+            marginBottom: ["1", "2"],
           }}
         >
           Connect
