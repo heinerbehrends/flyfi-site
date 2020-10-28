@@ -5,7 +5,6 @@ import {
   m as motion,
   AnimatePresence,
   MotionConfig,
-  AnimationFeature,
   ExitFeature,
 } from "framer-motion"
 import PlusIcon from "../icons/add_circle_outline-24px.svg"
@@ -15,7 +14,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
   const isOpen = i === expanded
 
   return (
-    <MotionConfig features={[AnimationFeature, ExitFeature]}>
+    <MotionConfig features={[ExitFeature]}>
       <motion.button
         sx={{
           display: "flex",

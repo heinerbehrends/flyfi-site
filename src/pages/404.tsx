@@ -16,7 +16,7 @@ export default function FourOhFour() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: "480px",
+          maxWidth: "480px",
           marginX: "auto",
           marginTop: "4",
         }}

@@ -1,14 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import React from "react"
-import {
-  m as motion,
-  useViewportScroll,
-  useTransform,
-  MotionConfig,
-  AnimationFeature,
-  ExitFeature,
-} from "framer-motion"
+import { m as motion, useViewportScroll, useTransform } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import Greyhound from "./Greyhound"
 import Button from "./Button"
@@ -32,59 +25,57 @@ export default function Hero() {
   })
 
   return (
-    <MotionConfig features={[AnimationFeature, ExitFeature]}>
-      <div
+    <div
+      sx={{
+        maxWidth: "960px",
+        marginX: "auto",
+      }}
+    >
+      <Styled.h1 sx={{ textAlign: "right" }}>
+        Supersnelle webapps voor iedereen
+      </Styled.h1>
+
+      <section
         sx={{
-          maxWidth: "960px",
-          marginX: "auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "3",
+          flexDirection: ["column", "column", "column", "row"],
         }}
       >
-        <Styled.h1 sx={{ textAlign: "right" }}>
-          Supersnelle webapps voor iedereen
-        </Styled.h1>
-
-        <section
+        <motion.div
+          sx={{ display: `${inView ? "block" : "none"}` }}
+          ref={ref}
+          animate={{ x: [0, 0, 800] }}
+          transition={{ times: [0, 0.3, 1], duration: 1.5, ease: "easeOut" }}
+        >
+          <motion.div style={{ x: xPos }}>
+            <Greyhound />
+          </motion.div>
+        </motion.div>
+        {inView ? null : (
+          <motion.div style={{ x: xPos2 }}>
+            <Greyhound />
+          </motion.div>
+        )}
+        <motion.div
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
           sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "3",
-            flexDirection: ["column", "column", "column", "row"],
+            maxWidth: "400px",
+            lineHeight: "body",
+            opacity: "0",
           }}
         >
-          <motion.div
-            sx={{ display: `${inView ? "block" : "none"}` }}
-            ref={ref}
-            animate={{ x: [0, 0, 800] }}
-            transition={{ times: [0, 0.3, 1], duration: 1.5, ease: "easeOut" }}
-          >
-            <motion.div style={{ x: xPos }}>
-              <Greyhound />
-            </motion.div>
+          <motion.div style={{ opacity: opacity }}>
+            <HeroParagraph />
           </motion.div>
-          {inView ? null : (
-            <motion.div style={{ x: xPos2 }}>
-              <Greyhound />
-            </motion.div>
-          )}
-          <motion.div
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            sx={{
-              maxWidth: "400px",
-              lineHeight: "body",
-              opacity: "0",
-            }}
-          >
-            <motion.div style={{ opacity: opacity }}>
-              <HeroParagraph />
-            </motion.div>
-          </motion.div>
-        </section>
-        <div sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
-          <Button text="Nieuwsgierig? >" location="/contact" />
-        </div>
+        </motion.div>
+      </section>
+      <div sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
+        <Button text="Nieuwsgierig? >" location="/contact" />
       </div>
-    </MotionConfig>
+    </div>
   )
 }

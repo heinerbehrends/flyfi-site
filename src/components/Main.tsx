@@ -2,7 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import React from "react"
 import { useInView } from "react-intersection-observer"
-import { AnimationFeature, m as motion, MotionConfig } from "framer-motion"
+import { m as motion } from "framer-motion"
 import CardsVoordelen from "./Cards-voordelen"
 import CardsTypes from "./Cards-types"
 import CardsPakketten from "./Cards-pakketten"
@@ -26,7 +26,7 @@ export default function Main() {
   })
 
   return (
-    <MotionConfig features={[AnimationFeature]}>
+    <>
       <motion.div ref={ref} animate={{ x: inView ? 0 : -800 }}>
         <Styled.h2>
           De voordelen van <i>flyfi</i> webapps {inView}
@@ -48,7 +48,7 @@ export default function Main() {
           whiteSpace: "pre-line",
         }}
       >
-        Wist u dat 53% van alle bezoekers afhaken <br></br>als een site langer
+        Wist u dat 53% van alle bezoekers afhaakt <br></br>als een site langer
         dan 3 seconden laadt?
       </motion.blockquote>
       <motion.div ref={ref3} animate={{ x: inView3 ? 0 : -800 }}>
@@ -59,6 +59,6 @@ export default function Main() {
         <Styled.h2>Maatwerk of starterspakket?</Styled.h2>
       </motion.div>
       <CardsPakketten />
-    </MotionConfig>
+    </>
   )
 }
