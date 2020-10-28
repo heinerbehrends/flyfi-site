@@ -19,7 +19,7 @@ export default function TextLogo() {
           textDecoration: "none",
           color: "text",
           paddingX: ["1", "2", "3"],
-          paddingY: "12px",
+          paddingY: "2",
           "&:focus": {
             outline: "none",
             boxShadow: "focus",

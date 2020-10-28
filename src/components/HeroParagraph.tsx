@@ -27,7 +27,7 @@ export default function HeroParagraph() {
             from: { opacity: "0" },
             to: { opacity: "1" },
           },
-          animation: "fadeIn 2s",
+          animation: "fadeIn 1s",
         }}
       >
         <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle

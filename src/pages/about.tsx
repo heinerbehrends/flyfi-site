@@ -2,7 +2,6 @@
 import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ImageStack from "../components/ImageStack"
-import { Helmet } from "react-helmet"
 import SEO from "../components/SEO"
 
 type aboutItemProps = {

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import React from "react"
-// import { m as motion, useViewportScroll, useTransform } from "framer-motion"
 import Greyhound from "./Greyhound"
 import Button from "./Button"
 import HeroParagraph from "./HeroParagraph"
