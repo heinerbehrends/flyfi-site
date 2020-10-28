@@ -16,7 +16,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
 
   return (
     <MotionConfig features={[AnimationFeature, ExitFeature]}>
-      <motion.button
+      <button
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -36,7 +36,6 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
             boxShadow: "focus",
           },
         }}
-        initial={false}
         onClick={() => setExpanded(isOpen ? false : i)}
       >
         <h2 sx={{ textAlign: "left", color: "text" }}>{faq.vraag}</h2>
@@ -45,7 +44,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
         ) : (
           <PlusIcon sx={{ fill: "text", minWidth: "32px" }} />
         )}
-      </motion.button>
+      </button>
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.section
