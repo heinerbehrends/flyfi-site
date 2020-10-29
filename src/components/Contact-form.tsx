@@ -18,10 +18,10 @@ export default function ContactForm(props) {
 
   return (
     <form
+      method="POST"
       netlify
-      method="post"
       encType="application/x-www-form-urlencoded"
-      name="contact-form"
+      name="contact"
       id="contact-form"
       // onSubmit={handleSubmit(onSubmit)}
       {...props}
