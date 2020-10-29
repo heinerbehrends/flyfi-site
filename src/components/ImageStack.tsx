@@ -41,7 +41,11 @@ export default function ImageStack() {
         onClick={() => setOnTop(options.id)}
         onMouseEnter={() => setOnTop(options.id)}
       >
-        <Img fluid={options.pictures} alt={options.alt} />
+        <Img
+          sx={{ color: "transparent" }}
+          fluid={options.pictures}
+          alt={options.alt}
+        />
       </div>
     )
   }
