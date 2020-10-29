@@ -10,14 +10,11 @@ import {
 } from "./Contact-form-components"
 
 export default function ContactForm(props) {
-  const { register, handleSubmit, errors, formState } = useForm({
+  const { register, errors, formState } = useForm({
     mode: "onChange",
     shouldFocusError: true,
   })
-  function onSubmit(data) {
-    console.log(JSON.stringify(data))
-  }
-  const { dirtyFields, isSubmitting, isSubmitSuccessful } = formState
+  const { dirtyFields, isSubmitSuccessful } = formState
 
   return (
     <form
@@ -26,7 +23,7 @@ export default function ContactForm(props) {
       encType="application/x-www-form-urlencoded"
       name="contact-form"
       id="contact-form"
-      onSubmit={handleSubmit(onSubmit)}
+      // onSubmit={handleSubmit(onSubmit)}
       {...props}
     >
       <div sx={{ display: "flex", flexDirection: "column" }}>
