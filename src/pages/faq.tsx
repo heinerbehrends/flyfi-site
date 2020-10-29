@@ -106,9 +106,7 @@ const faqs = [
         pagina geladen is gedraagt zich een flyfi site als een moderne webapp.
         Zodra een link zichtbaar is wordt de nodige data voor de gelinkte pagina
         al op de achtergrond geladen zodat de pagina onmiddelijk beschikbaar is
-        als u op de link klikt. Als de gebruiker een trage 2g netwerk verbinding
-        heeft of data wil besparen wordt de data pas geladen als de gebruiker
-        daadwerkelijk op de link klikt.
+        als u op de link klikt.
       </React.Fragment>
     ),
   },
