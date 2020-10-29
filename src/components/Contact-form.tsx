@@ -21,7 +21,7 @@ export default function ContactForm(props) {
       method="POST"
       netlify
       encType="application/x-www-form-urlencoded"
-      name="contact"
+      name="contact-form"
       id="contact-form"
       // onSubmit={handleSubmit(onSubmit)}
       {...props}
