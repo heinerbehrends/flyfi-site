@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import React from "react"
-import Logo from "./Logo"
+import { Link } from "gatsby"
+import Nav from "./Nav"
+import Logo from "../icons/logo.svg"
 import TextLogo from "./TextLogo"
 
 export default function Header() {
@@ -9,6 +11,7 @@ export default function Header() {
     <header
       sx={{
         display: "flex",
+        maxWidth: "100vw",
         backgroundColor: "primary",
         boxShadow: "big",
         position: "fixed",
@@ -21,7 +24,22 @@ export default function Header() {
       }}
     >
       <TextLogo />
-      <Logo />
+      <Link to="/">
+        <div
+          sx={{
+            display: ["none", "flex"],
+            alignItems: "center",
+            backgroundColor: "#fff",
+            height: ["64px", "64px", "82px", "124px"],
+            width: ["64px", "64px", "82px", "124px"],
+            borderRadius: "50%",
+            boxShadow: "big",
+          }}
+        >
+          <Logo />
+        </div>
+      </Link>
+      <Nav />
     </header>
   )
 }
