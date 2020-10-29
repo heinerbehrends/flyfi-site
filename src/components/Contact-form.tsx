@@ -22,10 +22,11 @@ export default function ContactForm(props) {
       netlify
       encType="application/x-www-form-urlencoded"
       name="contact-form"
-      id="contact-form"
-      // onSubmit={handleSubmit(onSubmit)}
+      id="contact"
       {...props}
     >
+      {/* hidden form field neccessary for netlify form submission */}
+      <input type="hidden" name="form-name" value="contact-form" />
       <div sx={{ display: "flex", flexDirection: "column" }}>
         <Label for="name">Naam</Label>
         <input
