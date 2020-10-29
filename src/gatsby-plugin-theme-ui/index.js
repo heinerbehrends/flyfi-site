@@ -50,7 +50,7 @@ export default {
       padding: "0",
       fill: "#333",
       maxWidth: "100vw",
-      "overflow-x": "hidden",
+      overflowX: "hidden",
       a: {
         color: "accent",
       },
