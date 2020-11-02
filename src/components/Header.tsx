@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import Nav from "./Nav"
-import Logo from "../icons/logo.svg"
+import Logo from "../icons/logo-oud.svg"
 import TextLogo from "./TextLogo"
 
 export default function Header() {
@@ -34,9 +34,10 @@ export default function Header() {
             width: ["64px", "64px", "82px", "124px"],
             borderRadius: "50%",
             boxShadow: "big",
+            overflow: "hidden",
           }}
         >
-          <Logo />
+          <Logo sx={{ transform: "translate(-5px, -10px) scale(1.04)" }} />
         </div>
       </Link>
       <Nav />
