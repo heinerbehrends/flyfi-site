@@ -17,6 +17,9 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
   return (
     <MotionConfig features={[AnimationFeature, ExitFeature]}>
       <button
+        id={`accordion-button-0${i}`}
+        aria-controls={`accordion-panel-0${i}`}
+        aria-expanded={isOpen ? true : false}
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -48,6 +51,8 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.section
+            id={`accordion-panel-0${i}`}
+            aria-labelledby={`accordion-button-0${i}`}
             key="content"
             initial="collapsed"
             animate="open"
