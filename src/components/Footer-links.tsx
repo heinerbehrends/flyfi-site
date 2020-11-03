@@ -12,7 +12,7 @@ function FooterLink({ text, location }) {
         fontSize: "3",
         padding: "3",
         marginLeft: "-16px",
-        fontWeight: "500",
+        fontWeight: "medium",
         textDecoration: "none",
         "&:hover": { textDecoration: "underline" },
         "&:focus": {

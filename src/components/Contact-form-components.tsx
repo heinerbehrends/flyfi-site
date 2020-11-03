@@ -22,7 +22,7 @@ export const buttonStyles: SystemStyleObject = {
   ...inputStyles,
   backgroundColor: "accent",
   color: "background",
-  fontWeight: "700",
+  fontWeight: "bold",
   fontSize: "4",
   marginTop: "4",
 }

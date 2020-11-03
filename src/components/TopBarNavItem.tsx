@@ -14,14 +14,14 @@ export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
     <Link
       activeStyle={{
         color: "#fff",
-        fontWeight: 600,
+        fontWeight: "500",
         backgroundColor: "#59bfbf",
       }}
       sx={{
         textDecoration: "none",
         color: "#333",
         fontSize: ["2", "2", "3"],
-        fontWeight: 200,
+        fontWeight: "thin",
         backgroundColor: "transparent",
         "&:hover": { backgroundColor: "#c0eeee" },
         "&:focus": {

@@ -22,11 +22,12 @@ export default {
     heading: "Fira Sans",
   },
   fontWeights: {
-    thin: 100,
+    thin: 200,
     light: 300,
     body: 400,
-    heading: 700,
+    medium: 500,
     bold: 700,
+    black: 900,
   },
   lineHeights: {
     body: 1.5,
@@ -54,6 +55,9 @@ export default {
       a: {
         color: "accent",
       },
+      label: {
+        fontWeight: "bold",
+      },
     },
     h1: {
       fontSize: ["6", "6", "9vw"],
@@ -62,7 +66,7 @@ export default {
         fontSize: "86.43px",
       },
       textAlign: "center",
-      fontWeight: "200",
+      fontWeight: "thin",
       lineHeight: "heading",
       paddingTop: ["3", "4", "4", "5"],
       marginTop: "3",
@@ -76,19 +80,19 @@ export default {
       marginX: ["3", "3", "4", "4"],
       paddingY: "3",
       fontSize: ["5", "6"],
-      fontWeight: "900",
+      fontWeight: "black",
       textShadow: "text",
     },
     h3: {
       fontSize: ["4", "5"],
-      fontWeight: "700",
+      fontWeight: "bold",
       color: "text",
       marginX: "3",
     },
     h4: {
       fontSize: "3",
-      fontWeight: "500",
-      marginTop: "2",
+      fontWeight: "black",
+      marginTop: "3",
     },
     p: {
       lineHeight: "body",

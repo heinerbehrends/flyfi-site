@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import React from "react"
 
-export default function Button({ text, location }) {
+export default function Button({ text, location, ...props }) {
   return (
     <Link
       to={location}
@@ -16,7 +16,7 @@ export default function Button({ text, location }) {
         paddingY: "3",
         fontFamily: "body",
         fontSize: ["2", "3"],
-        fontWeight: "800",
+        fontWeight: "bold",
         textDecoration: "none",
         border: "none",
         borderRadius: "2",
@@ -35,6 +35,7 @@ export default function Button({ text, location }) {
           transform: "scale(1.0)",
         },
       }}
+      {...props}
     >
       {text}
     </Link>
