@@ -27,21 +27,28 @@ function Price({ price }: priceProps) {
       }}
     >
       <div sx={{ marginBottom: "-4px" }}>vanaf</div>
-      <div sx={{ fontSize: "5", fontWeight: "700" }}>€{price}</div>
+      <div sx={{ fontSize: "5", fontWeight: "black" }}>€{price}</div>
     </div>
   )
 }
 
-export default function PriceButton({ buttonText }: priceButtonProps) {
+export default function PriceButton({ buttonText, price }: priceButtonProps) {
   return (
     <div
       sx={{
+        display: "flex",
         marginTop: "4",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
+        maxWidth: "420px",
       }}
     >
-      <Button text={buttonText} location="/contact"></Button>
+      <Price price={price} />
+      <Button
+        style={{ margin: "0" }}
+        text={buttonText}
+        location="/contact"
+      ></Button>
     </div>
   )
 }
