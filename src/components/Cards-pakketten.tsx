@@ -46,7 +46,7 @@ const cardsPakketten = [
       </React.Fragment>
     ),
     icon: <PlayIcon />,
-    cta: <PriceButton price={500} buttonText={"Meer weten? >"} />,
+    cta: <PriceButton price={500} buttonText={"Meer weten?"} />,
   },
   {
     heading: "Professioneel Maatwerk",
@@ -57,10 +57,10 @@ const cardsPakketten = [
         product te ontwikkelen dat optimaal is afgestemd op de behoeftes van uw
         bedrijf. Geanimeerde logo’s of paginaovergangen, een donkere night mode
         weergave of een service worker, die zorgt dat uw webapp ook offline
-        werkt? Flyfi zorgt ervoor dat uw wensen werkelijkheid worden.
+        werkt? flyfi zorgt ervoor dat uw wensen werkelijkheid worden.
       </React.Fragment>
     ),
     icon: <CustomIcon />,
-    cta: <PriceButton price={1000} buttonText={"Geïnteresseerd? >"} />,
+    cta: <PriceButton price={1000} buttonText={"Geïnteresseerd?"} />,
   },
 ]
