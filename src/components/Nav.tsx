@@ -24,9 +24,9 @@ export default function Nav() {
           margin: "0",
         }}
       >
-        <TopBarNavItem text="faq" location="/faq" />
-        <TopBarNavItem text="about" location="/about" />
-        <TopBarNavItem text="contact" location="/contact" />
+        <TopBarNavItem text="faq" location="/faq/" />
+        <TopBarNavItem text="about" location="/about/" />
+        <TopBarNavItem text="contact" location="/contact/" />
         <TopBarNavItem text="home" location="/" />
       </nav>
     </div>
