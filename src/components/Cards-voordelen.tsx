@@ -39,7 +39,7 @@ const cardsVoordelen = [
     heading: "Optimale gebruikerservaring",
     text: (
       <React.Fragment>
-        Flyfi sites zijn zo ontworpen en gebouwt dat de gebruikerservaring lijkt
+        flyfi sites zijn zo ontworpen en gebouwt dat de gebruikerservaring lijkt
         op die van een app, net zoals gmail of de twitter site. Een betere
         gebruikerservaring leidt tot een betere conversie en dus tot meer
         klanten voor uw bedrijf.
@@ -90,7 +90,7 @@ const cardsVoordelen = [
     heading: "Progressive Web Apps",
     text: (
       <React.Fragment>
-        Flyfi's progressive web apps zijn een geschikt alternatief voor de
+        flyfi's progressive web apps zijn een geschikt alternatief voor de
         ontwikkeling van Android en iOS apps. Ze zijn beter vindbaar,
         makkelijker te installeren en te updaten, gunstiger in de ontwikkeling
         en verhogen de conversie.

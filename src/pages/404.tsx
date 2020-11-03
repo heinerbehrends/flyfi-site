@@ -3,14 +3,13 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import batonFail from "../videos/batonFail.mp4"
 import Button from "../components/Button"
-import { Helmet } from "react-helmet"
 import SEO from "../components/SEO"
 
 export default function FourOhFour() {
   return (
     <React.Fragment>
       <SEO description={"404 pagina voor flyfi.nl"} />
-      <Styled.h1>Oh jee - Het stokje is gevallen</Styled.h1>
+      <Styled.h1>Het stokje is gevallen</Styled.h1>
       <div
         sx={{
           display: "flex",

@@ -148,7 +148,7 @@ const faqs = [
     vraag: "Waarom zijn flyfi site goedkoop, schaalbaar en veilig?",
     antwoord: (
       <React.Fragment>
-        Flyfi sites hebben geen ingewikkelde server nodig omdat de bestanden van
+        flyfi sites hebben geen ingewikkelde server nodig omdat de bestanden van
         tevoren al gerenderd zijn. Dit maakt de hosting niet alleen snel, maar
         ook goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens
         uw Black Friday Sale of als deze viraal gaat goed te bereiken is. Omdat

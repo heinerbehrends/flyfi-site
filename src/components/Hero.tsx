@@ -30,7 +30,7 @@ export default function Hero() {
         <HeroParagraph />
       </section>
       <div sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
-        <Button text="Nieuwsgierig? >" location="/contact" />
+        <Button text="Nieuwsgierig?" location="/contact" />
       </div>
     </div>
   )
