@@ -3,7 +3,6 @@ import { jsx, Styled } from "theme-ui"
 import React from "react"
 import ContactForm from "../components/Contact-form"
 import ContactIcons from "../components/Contact-icons"
-import { Helmet } from "react-helmet"
 import SEO from "../components/SEO"
 
 export default function Contact() {
