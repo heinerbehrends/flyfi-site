@@ -30,14 +30,14 @@ export default function Header() {
             display: ["none", "flex"],
             alignItems: "center",
             backgroundColor: "#fff",
-            height: ["64px", "64px", "82px", "124px"],
-            width: ["64px", "64px", "82px", "124px"],
+            height: ["64px", "94px", "94px", "124px"],
+            width: ["64px", "94px", "94px", "124px"],
             borderRadius: "50%",
             boxShadow: "big",
             overflow: "hidden",
           }}
         >
-          <Logo sx={{ transform: "translate(-5px, -10px) scale(1.04)" }} />
+          <Logo sx={{ transform: "translate(0px, -8px) scale(0.9)" }} />
         </div>
       </Link>
       <Nav />
