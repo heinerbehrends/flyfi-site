@@ -24,7 +24,7 @@ export default function DarkModeSwitch() {
       }}
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
     >
-      {colorMode === "default" ? <Moon /> : <Sun />}
+      {colorMode === "default" ? <Sun /> : <Moon />}
     </button>
   )
 }
