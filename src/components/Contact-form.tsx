@@ -19,11 +19,11 @@ export default function ContactForm(props) {
   return (
     <form
       method="POST"
-      netlify
+      data-netlify="true"
       encType="application/x-www-form-urlencoded"
       name="contact-form"
       id="contact"
-      action="/succes/"
+      action="/succes"
       {...props}
     >
       {/* hidden form field neccessary for netlify form submission */}
@@ -69,7 +69,7 @@ export default function ContactForm(props) {
         <Label for="message">Bericht</Label>
         <textarea
           name="message"
-          form="contact-form"
+          form="contact"
           ref={register({
             required: true,
             minLength: 12,
