@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import OGImage from "../images/og-image.png"
+import OGImage from "../../static/og-image.png"
 
 type SEOProps = {
   description: string
