@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import OGImage from "../../static/og-image.png"
 
 type SEOProps = {
   description: string
@@ -20,10 +19,7 @@ export default function SEO({ description }: SEOProps) {
       <meta property="og:url" content="https://www.flyfi.nl" />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
-      <meta
-        property="og:image"
-        content="https://www.flyfi.nl/static/og-image.png"
-      />
+      <meta property="og:image" content="https://www.flyfi.nl/og-image.png" />
       <meta property="og:locale" content="nl_NL" />
     </Helmet>
   )
