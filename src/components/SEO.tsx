@@ -20,7 +20,10 @@ export default function SEO({ description }: SEOProps) {
       <meta property="og:url" content="https://www.flyfi.nl" />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={OGImage} />
+      <meta
+        property="og:image"
+        content="https://www.flyfi.nl/static/og-image.png"
+      />
       <meta property="og:locale" content="nl_NL" />
     </Helmet>
   )
