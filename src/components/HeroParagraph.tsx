@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
+import { jsx } from "theme-ui";
+import React from "react";
 
 export default function HeroParagraph() {
   return (
@@ -39,5 +39,5 @@ export default function HeroParagraph() {
         vooruit. */}
       </p>
     </div>
-  )
+  );
 }

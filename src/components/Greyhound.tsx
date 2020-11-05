@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import greyhoundMp4 from "../videos/greyhound-loop.mp4"
-import greyhoundWebm from "../videos/greyhound-loop.webm"
+import { jsx } from "theme-ui";
+import React from "react";
+import greyhoundMp4 from "../videos/greyhound-loop.mp4";
+import greyhoundWebm from "../videos/greyhound-loop.webm";
 // import { useInView } from "react-intersection-observer"
 
 export default function Greyhound(props) {
@@ -47,5 +47,5 @@ export default function Greyhound(props) {
         <source src={greyhoundWebm} type={"video/webm"}></source>
       </video>
     </div>
-  )
+  );
 }

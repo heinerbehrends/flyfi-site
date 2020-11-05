@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import Card from "./Card"
-import CustomIcon from "../icons/settings-24px.svg"
-import PlayIcon from "../icons/play_circle_outline-24px.svg"
-import PriceButton from "./Price-button"
-import { cardBorderStyle } from "./Cards-types"
-import { SystemStyleObject } from "@styled-system/css"
-import { cardSectionStyle } from "./Cards-types"
+import { jsx } from "theme-ui";
+import React from "react";
+import Card from "./Card";
+import CustomIcon from "../icons/settings-24px.svg";
+import PlayIcon from "../icons/play_circle_outline-24px.svg";
+import PriceButton from "./Price-button";
+import { cardBorderStyle } from "./Cards-types";
+import { SystemStyleObject } from "@styled-system/css";
+import { cardSectionStyle } from "./Cards-types";
 
 const cardsPakkettenStyle: SystemStyleObject = {
   ...cardBorderStyle,
   justifyContent: "space-between",
-}
+};
 
 export default function CardsPakketten() {
   return (
@@ -27,7 +27,7 @@ export default function CardsPakketten() {
         />
       ))}
     </section>
-  )
+  );
 }
 
 const cardsPakketten = [
@@ -63,4 +63,4 @@ const cardsPakketten = [
     icon: <CustomIcon />,
     cta: <PriceButton price={1000} buttonText={"Geïnteresseerd?"} />,
   },
-]
+];

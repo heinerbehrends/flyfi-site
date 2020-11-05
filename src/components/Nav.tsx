@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import DarkModeSwitch from "./DarkModeSwitch"
-import TopBarNavItem from "./TopBarNavItem"
+import { jsx } from "theme-ui";
+import React from "react";
+import DarkModeSwitch from "./DarkModeSwitch";
+import TopBarNavItem from "./TopBarNavItem";
 
 export default function Nav() {
   return (
@@ -30,5 +30,5 @@ export default function Nav() {
         <TopBarNavItem text="home" location="/" />
       </nav>
     </div>
-  )
+  );
 }

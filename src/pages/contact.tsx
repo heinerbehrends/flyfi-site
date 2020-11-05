@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import ContactForm from "../components/Contact-form"
-import ContactIcons from "../components/Contact-icons"
-import SEO from "../components/SEO"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import ContactForm from "../components/Contact-form";
+import ContactIcons from "../components/Contact-icons";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   return (
@@ -50,5 +50,5 @@ export default function Contact() {
         <ContactIcons />
       </section>
     </React.Fragment>
-  )
+  );
 }

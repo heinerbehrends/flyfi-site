@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import batonFail from "../videos/batonFail.mp4"
-import Button from "../components/Button"
-import SEO from "../components/SEO"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import batonFail from "../videos/batonFail.mp4";
+import Button from "../components/Button";
+import SEO from "../components/SEO";
 
 export default function FourOhFour() {
   return (
@@ -38,5 +38,5 @@ export default function FourOhFour() {
         <Button text={"De Homepage?"} location={"/"} />
       </div>
     </React.Fragment>
-  )
+  );
 }

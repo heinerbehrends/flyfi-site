@@ -1,9 +1,9 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import React from "react";
+import { Helmet } from "react-helmet";
 
 type SEOProps = {
-  description: string
-}
+  description: string;
+};
 
 export default function SEO({ description }: SEOProps) {
   return (
@@ -22,5 +22,5 @@ export default function SEO({ description }: SEOProps) {
       <meta property="og:image" content="https://www.flyfi.nl/og-image.png" />
       <meta property="og:locale" content="nl_NL" />
     </Helmet>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
+import { jsx } from "theme-ui";
+import React from "react";
+import { Link } from "gatsby";
 
 export default function TextLogo() {
   return (
@@ -49,5 +49,5 @@ export default function TextLogo() {
         </h4>
       </Link>
     </div>
-  )
+  );
 }

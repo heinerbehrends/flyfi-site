@@ -1,30 +1,30 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React, { useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { jsx } from "theme-ui";
+import React, { useState } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 function filterByName(images, name) {
   return images.filter(obj => obj.node.base === name)[0].node.childImageSharp
-    .fluid
+    .fluid;
 }
 
 type stackItemProps = {
   options: {
-    id: number
-    columnStart: number
-    columnEnd: number
-    rowStart: number
-    rowEnd: number
-    rotate: number
-    pictures: any
-    alt: string
-  }
-}
+    id: number;
+    columnStart: number;
+    columnEnd: number;
+    rowStart: number;
+    rowEnd: number;
+    rotate: number;
+    pictures: any;
+    alt: string;
+  };
+};
 
 export default function ImageStack() {
   function ImageStackItem({ options }: stackItemProps) {
-    let isFocused = onTop === options.id
+    let isFocused = onTop === options.id;
     return (
       <div
         sx={{
@@ -47,7 +47,7 @@ export default function ImageStack() {
           alt={options.alt}
         />
       </div>
-    )
+    );
   }
 
   const data = useStaticQuery(graphql`
@@ -69,20 +69,20 @@ export default function ImageStack() {
         }
       }
     }
-  `)
+  `);
 
-  const [onTop, setOnTop] = useState(0)
+  const [onTop, setOnTop] = useState(0);
 
-  const nodes = data.allFile.edges
-  const gideon = filterByName(nodes, "CosmicSpringGideon.jpg")
-  const koelkast = filterByName(nodes, "Koelkast.jpg")
-  const examen = filterByName(nodes, "Examen.jpg")
-  const herfst = filterByName(nodes, "Herfst.jpg")
-  const toBeOrNotToBe = filterByName(nodes, "to-be-kast-nnt.jpg")
-  const hetDakje = filterByName(nodes, "HetDakje.jpg")
-  const theBuzz = filterByName(nodes, "The-Buzz-Winterwelvaart-01.jpg")
-  const zomor = filterByName(nodes, "zomor-kampioenen-7.jpg")
-  const horumersiel = filterByName(nodes, "Horumersiel.jpg")
+  const nodes = data.allFile.edges;
+  const gideon = filterByName(nodes, "CosmicSpringGideon.jpg");
+  const koelkast = filterByName(nodes, "Koelkast.jpg");
+  const examen = filterByName(nodes, "Examen.jpg");
+  const herfst = filterByName(nodes, "Herfst.jpg");
+  const toBeOrNotToBe = filterByName(nodes, "to-be-kast-nnt.jpg");
+  const hetDakje = filterByName(nodes, "HetDakje.jpg");
+  const theBuzz = filterByName(nodes, "The-Buzz-Winterwelvaart-01.jpg");
+  const zomor = filterByName(nodes, "zomor-kampioenen-7.jpg");
+  const horumersiel = filterByName(nodes, "Horumersiel.jpg");
   return (
     <section
       sx={{
@@ -202,5 +202,5 @@ export default function ImageStack() {
         }}
       />
     </section>
-  )
+  );
 }

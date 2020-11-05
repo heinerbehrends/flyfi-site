@@ -1,28 +1,28 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import { useInView } from "react-intersection-observer"
-import CardsVoordelen from "./Cards-voordelen"
-import CardsTypes from "./Cards-types"
-import CardsPakketten from "./Cards-pakketten"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import CardsVoordelen from "./Cards-voordelen";
+import CardsTypes from "./Cards-types";
+import CardsPakketten from "./Cards-pakketten";
 
 export default function Main() {
   const [ref, inView] = useInView({
     rootMargin: "-100px 0px",
     triggerOnce: true,
-  })
+  });
   const [ref2, inView2] = useInView({
     rootMargin: "-100px 0px",
     triggerOnce: true,
-  })
+  });
   const [ref3, inView3] = useInView({
     rootMargin: "-100px 0px",
     triggerOnce: true,
-  })
+  });
   const [ref4, inView4] = useInView({
     rootMargin: "-100px 0px",
     triggerOnce: true,
-  })
+  });
 
   return (
     <React.Fragment>
@@ -79,5 +79,5 @@ export default function Main() {
       </div>
       <CardsPakketten />
     </React.Fragment>
-  )
+  );
 }

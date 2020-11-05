@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import ContactIcons from "../components/Contact-icons"
-import SEO from "../components/SEO"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import ContactIcons from "../components/Contact-icons";
+import SEO from "../components/SEO";
 
 function SuccessMessage() {
   return (
@@ -20,7 +20,7 @@ function SuccessMessage() {
       netwerk op linkedIn of twitter. Als u geïnteresseerd bent in mijn code,
       neem dan een kijkje op mijn github pagina.
     </Styled.p>
-  )
+  );
 }
 
 export default function Succes() {
@@ -51,5 +51,5 @@ export default function Succes() {
         <ContactIcons />
       </section>
     </React.Fragment>
-  )
+  );
 }

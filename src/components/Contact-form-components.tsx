@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { SystemStyleObject } from "@styled-system/css"
+import { jsx } from "theme-ui";
+import { SystemStyleObject } from "@styled-system/css";
 
 export const inputStyles: SystemStyleObject = {
   padding: "3",
@@ -16,7 +16,7 @@ export const inputStyles: SystemStyleObject = {
     outline: "none",
     boxShadow: "focus",
   },
-}
+};
 
 export const buttonStyles: SystemStyleObject = {
   ...inputStyles,
@@ -25,24 +25,24 @@ export const buttonStyles: SystemStyleObject = {
   fontWeight: "bold",
   fontSize: "4",
   marginTop: "4",
-}
+};
 
 export function ErrorMessage({ children }: errorMessageProps) {
   return (
     <span sx={{ marginLeft: "3", marginTop: "1", color: "red" }}>
       {children}
     </span>
-  )
+  );
 }
 
 type errorMessageProps = {
-  children?: any
-}
+  children?: any;
+};
 
 type labelProps = {
-  for: string
-  children?: any
-}
+  for: string;
+  children?: any;
+};
 
 export function Label(props: labelProps) {
   return (
@@ -52,5 +52,5 @@ export function Label(props: labelProps) {
     >
       {props.children}
     </label>
-  )
+  );
 }

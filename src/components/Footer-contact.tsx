@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { IconButton, jsx, Styled } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
-import MailIcon from "../icons/mail_outline-24px.svg"
-import PhoneIcon from "../icons/phone-24px.svg"
-import LinkedInIcon from "../icons/linkedin.svg"
-import TwitterIcon from "../icons/twitter-logo.svg"
-import LocationIcon from "../icons/location_on-24px.svg"
-import GithubIcon from "../icons/Octicons-mark-github.svg"
+import { IconButton, jsx, Styled } from "theme-ui";
+import React from "react";
+import { Link } from "gatsby";
+import MailIcon from "../icons/mail_outline-24px.svg";
+import PhoneIcon from "../icons/phone-24px.svg";
+import LinkedInIcon from "../icons/linkedin.svg";
+import TwitterIcon from "../icons/twitter-logo.svg";
+import LocationIcon from "../icons/location_on-24px.svg";
+import GithubIcon from "../icons/Octicons-mark-github.svg";
 
 type ContactItemProps = {
-  text: string
-  location: string
-  icon: React.ReactNode
-}
+  text: string;
+  location: string;
+  icon: React.ReactNode;
+};
 
 function ContactItem({ icon, text, location }: ContactItemProps) {
   return (
@@ -38,7 +38,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
         <p sx={{ marginLeft: "2" }}>{text}</p>
       </div>
     </a>
-  )
+  );
 }
 
 export default function FooterContact() {
@@ -80,7 +80,7 @@ export default function FooterContact() {
         />
       ))}
     </address>
-  )
+  );
 }
 
 const contactInfo = [
@@ -115,4 +115,4 @@ const contactInfo = [
       "https://www.google.com/maps/place/Travertijnstraat+12,+9743+SZ+Groningen/",
     icon: <LocationIcon />,
   },
-]
+];

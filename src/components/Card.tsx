@@ -1,17 +1,17 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import { useInView } from "react-intersection-observer"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import { useInView } from "react-intersection-observer";
 
 type CardProps = {
-  icon?: React.ReactNode
-  cta?: React.ReactNode
-  heading: string
-  text: React.ReactNode
-}
+  icon?: React.ReactNode;
+  cta?: React.ReactNode;
+  heading: string;
+  text: React.ReactNode;
+};
 
 export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView();
   return (
     <div
       {...rest}
@@ -50,5 +50,5 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
       </div>
       {cta}
     </div>
-  )
+  );
 }

@@ -1,20 +1,20 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { useForm } from "react-hook-form"
+import { jsx } from "theme-ui";
+import React from "react";
+import { useForm } from "react-hook-form";
 import {
   Label,
   ErrorMessage,
   inputStyles,
   buttonStyles,
-} from "./Contact-form-components"
+} from "./Contact-form-components";
 
 export default function ContactForm(props) {
   const { register, errors, formState } = useForm({
     mode: "onChange",
     shouldFocusError: true,
-  })
-  const { dirtyFields, isSubmitSuccessful } = formState
+  });
+  const { dirtyFields, isSubmitSuccessful } = formState;
 
   return (
     <form
@@ -97,5 +97,5 @@ export default function ContactForm(props) {
         ) : null}
       </div>
     </form>
-  )
+  );
 }

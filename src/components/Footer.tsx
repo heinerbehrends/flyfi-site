@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import FooterOverMij from "./Footer-overmij"
-import FooterContact from "./Footer-contact"
-import FooterLinks from "./Footer-links"
+import { jsx } from "theme-ui";
+import React from "react";
+import FooterOverMij from "./Footer-overmij";
+import FooterContact from "./Footer-contact";
+import FooterLinks from "./Footer-links";
 
 export default function Footer() {
   return (
@@ -30,5 +30,5 @@ export default function Footer() {
         <FooterLinks />
       </section>
     </footer>
-  )
+  );
 }

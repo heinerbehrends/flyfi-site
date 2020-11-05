@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
+import { jsx } from "theme-ui";
+import React from "react";
+import { Link } from "gatsby";
 
 type TopBarNavItemProps = {
-  text: string
-  location: string
-  variant?: "active"
-}
+  text: string;
+  location: string;
+  variant?: "active";
+};
 
 export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
   return (
@@ -42,5 +42,5 @@ export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
         {text}
       </div>
     </Link>
-  )
+  );
 }

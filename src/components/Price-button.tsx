@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import Button from "./Button"
+import { jsx } from "theme-ui";
+import React from "react";
+import Button from "./Button";
 
 type priceButtonProps = {
-  buttonText: string
-  price: number
-}
+  buttonText: string;
+  price: number;
+};
 type priceProps = {
-  price: number
-}
+  price: number;
+};
 
 function Price({ price }: priceProps) {
   return (
@@ -29,7 +29,7 @@ function Price({ price }: priceProps) {
       <div sx={{ marginBottom: "-4px" }}>vanaf</div>
       <div sx={{ fontSize: "5", fontWeight: "black" }}>€{price}</div>
     </div>
-  )
+  );
 }
 
 export default function PriceButton({ buttonText, price }: priceButtonProps) {
@@ -50,5 +50,5 @@ export default function PriceButton({ buttonText, price }: priceButtonProps) {
         location="/contact"
       ></Button>
     </div>
-  )
+  );
 }

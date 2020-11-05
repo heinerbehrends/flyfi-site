@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { SystemStyleObject } from "@styled-system/css"
-import MailIcon from "../icons/mail_outline-24px.svg"
-import PhoneIcon from "../icons/phone-24px.svg"
-import LinkedInIcon from "../icons/linkedin.svg"
-import TwitterIcon from "../icons/twitter-logo.svg"
-import LocationIcon from "../icons/location_on-24px.svg"
-import GithubIcon from "../icons/Octicons-mark-github.svg"
+import { jsx } from "theme-ui";
+import React from "react";
+import { SystemStyleObject } from "@styled-system/css";
+import MailIcon from "../icons/mail_outline-24px.svg";
+import PhoneIcon from "../icons/phone-24px.svg";
+import LinkedInIcon from "../icons/linkedin.svg";
+import TwitterIcon from "../icons/twitter-logo.svg";
+import LocationIcon from "../icons/location_on-24px.svg";
+import GithubIcon from "../icons/Octicons-mark-github.svg";
 
 const iconLinkStyles: SystemStyleObject = {
   borderRadius: "3",
@@ -22,7 +22,7 @@ const iconLinkStyles: SystemStyleObject = {
     height: ["90px"],
     width: ["90px"],
   },
-}
+};
 
 export default function ContactIcons(props) {
   return (
@@ -60,5 +60,5 @@ export default function ContactIcons(props) {
         <MailIcon />
       </a>
     </address>
-  )
+  );
 }

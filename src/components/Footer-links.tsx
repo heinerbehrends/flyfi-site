@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import { Link } from "gatsby";
 
 function FooterLink({ text, location }) {
   return (
@@ -24,7 +24,7 @@ function FooterLink({ text, location }) {
     >
       {text}
     </Link>
-  )
+  );
 }
 
 export default function FooterLinks() {
@@ -48,5 +48,5 @@ export default function FooterLinks() {
         text={"Algemene voorwarden"}
       />
     </nav>
-  )
+  );
 }

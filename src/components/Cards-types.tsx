@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import Card from "./Card"
-import TrendingUpIcon from "../icons/trending_up-24px.svg"
-import CartIcon from "../icons/shopping_cart-24px.svg"
-import PencilIcon from "../icons/edit-24px.svg"
-import PortfolioIcon from "../icons/work_outline-24px.svg"
-import { SystemStyleObject } from "@styled-system/css"
+import { jsx } from "theme-ui";
+import React from "react";
+import Card from "./Card";
+import TrendingUpIcon from "../icons/trending_up-24px.svg";
+import CartIcon from "../icons/shopping_cart-24px.svg";
+import PencilIcon from "../icons/edit-24px.svg";
+import PortfolioIcon from "../icons/work_outline-24px.svg";
+import { SystemStyleObject } from "@styled-system/css";
 
 export const cardBorderStyle: SystemStyleObject = {
   borderWidth: "2px",
   borderColor: "secondary",
   borderStyle: "dashed",
   borderRadius: "3",
-}
+};
 
 export const cardSectionStyle: SystemStyleObject = {
   display: "grid",
@@ -26,7 +26,7 @@ export const cardSectionStyle: SystemStyleObject = {
   maxWidth: "1280px",
   marginX: "auto",
   marginTop: "4",
-}
+};
 
 export default function CardsTypes() {
   return (
@@ -40,7 +40,7 @@ export default function CardsTypes() {
         />
       ))}
     </section>
-  )
+  );
 }
 
 const cardsTypes = [
@@ -102,4 +102,4 @@ const cardsTypes = [
     ),
     icon: <PencilIcon />,
   },
-]
+];

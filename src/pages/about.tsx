@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import ImageStack from "../components/ImageStack"
-import SEO from "../components/SEO"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import ImageStack from "../components/ImageStack";
+import SEO from "../components/SEO";
 
 type aboutItemProps = {
-  heading: string
-  text: React.ReactNode
-}
+  heading: string;
+  text: React.ReactNode;
+};
 
 function AboutItem({ heading, text }: aboutItemProps) {
   return (
@@ -15,7 +15,7 @@ function AboutItem({ heading, text }: aboutItemProps) {
       <Styled.h4>{heading}</Styled.h4>
       <Styled.p>{text}</Styled.p>
     </React.Fragment>
-  )
+  );
 }
 
 export default function About() {
@@ -46,7 +46,7 @@ export default function About() {
         </section>
       </main>
     </React.Fragment>
-  )
+  );
 }
 
 const aboutTexts = [
@@ -109,4 +109,4 @@ const aboutTexts = [
       </>
     ),
   },
-]
+];

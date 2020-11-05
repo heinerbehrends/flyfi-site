@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import * as React from "react"
-import { useState } from "react"
-import Accordion from "../components/Accordion"
-import SEO from "../components/SEO"
+import { jsx, Styled } from "theme-ui";
+import * as React from "react";
+import { useState } from "react";
+import Accordion from "../components/Accordion";
+import SEO from "../components/SEO";
 
 export default function FAQs() {
-  const [expanded, setExpanded] = useState<false | number>(0)
+  const [expanded, setExpanded] = useState<false | number>(0);
 
   return (
     <React.Fragment>
@@ -27,7 +27,7 @@ export default function FAQs() {
         ))}
       </main>
     </React.Fragment>
-  )
+  );
 }
 
 const faqs = [
@@ -159,4 +159,4 @@ const faqs = [
     ),
   },
   // {vraag: "Wat is de PRPL pattern?"}
-]
+];

@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import Greyhound from "./Greyhound"
-import Button from "./Button"
-import HeroParagraph from "./HeroParagraph"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import Greyhound from "./Greyhound";
+import Button from "./Button";
+import HeroParagraph from "./HeroParagraph";
 
 export default function Hero() {
   return (
@@ -33,5 +33,5 @@ export default function Hero() {
         <Button text="Nieuwsgierig?" location="/contact" />
       </div>
     </div>
-  )
+  );
 }

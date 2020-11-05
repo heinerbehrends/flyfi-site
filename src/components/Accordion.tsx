@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import * as React from "react"
+import { jsx, Styled } from "theme-ui";
+import * as React from "react";
 import {
   m as motion,
   AnimatePresence,
   MotionConfig,
   AnimationFeature,
   ExitFeature,
-} from "framer-motion"
-import PlusIcon from "../icons/add_circle_outline-24px.svg"
-import MinIcon from "../icons/remove_circle_outline-24px.svg"
+} from "framer-motion";
+import PlusIcon from "../icons/add_circle_outline-24px.svg";
+import MinIcon from "../icons/remove_circle_outline-24px.svg";
 
 export default function Accordion({ i, expanded, setExpanded, faq }) {
-  const isOpen = i === expanded
+  const isOpen = i === expanded;
 
   return (
     <MotionConfig features={[AnimationFeature, ExitFeature]}>
@@ -69,5 +69,5 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
         )}
       </AnimatePresence>
     </MotionConfig>
-  )
+  );
 }

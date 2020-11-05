@@ -1,7 +1,7 @@
-import React from "react"
-import Hero from "../components/Hero"
-import Main from "../components/Main"
-import SEO from "../components/SEO"
+import React from "react";
+import Hero from "../components/Hero";
+import Main from "../components/Main";
+import SEO from "../components/SEO";
 
 export default function Home() {
   return (
@@ -10,5 +10,5 @@ export default function Home() {
       <Hero />
       <Main />
     </>
-  )
+  );
 }

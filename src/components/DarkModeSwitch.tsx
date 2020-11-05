@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { useColorMode } from "theme-ui"
-import Sun from "../icons/sun.svg"
-import Moon from "../icons/moon.svg"
+import { jsx } from "theme-ui";
+import React from "react";
+import { useColorMode } from "theme-ui";
+import Sun from "../icons/sun.svg";
+import Moon from "../icons/moon.svg";
 
 export default function DarkModeSwitch() {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode, setColorMode] = useColorMode();
   return (
     <button
       sx={{
@@ -26,5 +26,5 @@ export default function DarkModeSwitch() {
     >
       {colorMode === "default" ? <Sun /> : <Moon />}
     </button>
-  )
+  );
 }

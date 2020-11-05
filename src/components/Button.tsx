@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Link } from "gatsby"
-import React from "react"
+import { jsx } from "theme-ui";
+import { Link } from "gatsby";
+import React from "react";
 
 export default function Button({ text, location, ...props }) {
   return (
@@ -39,5 +39,5 @@ export default function Button({ text, location, ...props }) {
     >
       {text}
     </Link>
-  )
+  );
 }

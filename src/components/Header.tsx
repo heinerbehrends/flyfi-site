@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
-import Nav from "./Nav"
-import Logo from "../icons/logo-oud.svg"
-import TextLogo from "./TextLogo"
+import { jsx } from "theme-ui";
+import React from "react";
+import { Link } from "gatsby";
+import Nav from "./Nav";
+import Logo from "../icons/logo-oud.svg";
+import TextLogo from "./TextLogo";
 
 export default function Header() {
   return (
@@ -42,5 +42,5 @@ export default function Header() {
       </Link>
       <Nav />
     </header>
-  )
+  );
 }

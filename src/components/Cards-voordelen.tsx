@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
-import Card from "./Card"
-import { cardSectionStyle } from "./Cards-types"
+import { jsx } from "theme-ui";
+import React from "react";
+import Card from "./Card";
+import { cardSectionStyle } from "./Cards-types";
 
 export default function CardsVoordelen() {
   return (
@@ -20,7 +20,7 @@ export default function CardsVoordelen() {
         <Card heading={voordeel.heading} text={voordeel.text} />
       ))}
     </section>
-  )
+  );
 }
 
 const cardsVoordelen = [
@@ -97,4 +97,4 @@ const cardsVoordelen = [
       </React.Fragment>
     ),
   },
-]
+];

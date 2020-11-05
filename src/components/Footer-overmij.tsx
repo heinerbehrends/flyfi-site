@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { jsx, Styled } from "theme-ui";
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 export default function FooterOverMij() {
   const data = useStaticQuery(graphql`
@@ -16,7 +16,7 @@ export default function FooterOverMij() {
         }
       }
     }
-  `)
+  `);
   return (
     <div sx={{ marginX: ["0", "4"] }}>
       <div sx={{ display: "flex", alignItems: "center" }}>
@@ -48,5 +48,5 @@ export default function FooterOverMij() {
         verdediger in mijn voetbalelftal. <p>© Heiner S. Behrends, 2020</p>
       </p>
     </div>
-  )
+  );
 }
