@@ -3,7 +3,7 @@ export default {
     text: "#333",
     background: "#fff",
     primary: "#9FE5E5",
-    muted: "#59bfbf",
+    muted: "#328181",
     accent: "#663399",
     secondary: "#FFC0E2",
     modes: {
@@ -13,6 +13,7 @@ export default {
         primary: "#59bfbf",
         muted: "#59bfbf",
         accent: "#FFC0E2",
+        secondary: "#663399",
       },
     },
   },
