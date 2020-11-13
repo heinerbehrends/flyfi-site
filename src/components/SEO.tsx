@@ -7,7 +7,7 @@ type SEOProps = {
 
 export default function SEO({ description }: SEOProps) {
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: "nl" }}>
       <title>flyfi web development</title>
       <meta name="description" content={description} />
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
