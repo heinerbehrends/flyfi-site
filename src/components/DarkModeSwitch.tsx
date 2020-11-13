@@ -9,6 +9,7 @@ export default function DarkModeSwitch() {
   const [colorMode, setColorMode] = useColorMode();
   return (
     <button
+      aria-label="dark mode"
       sx={{
         alignItems: "center",
         display: "flex",
