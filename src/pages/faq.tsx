@@ -1,32 +1,75 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
-import * as React from "react";
-import { useState } from "react";
-import Accordion from "../components/Accordion";
+/** @jsxFrag React.Fragment */
+import { jsx, Themed } from "theme-ui";
+import React from "react";
 import SEO from "../components/SEO";
+import ArrowDownIcon from "../icons/arrow_circle_down-24px.svg";
+import ArrowUpIcon from "../icons/arrow_circle_up-24px.svg";
+import { Link as ScrollLink } from "react-scroll/";
 
 export default function FAQs() {
-  const [expanded, setExpanded] = useState<false | number>(0);
-
   return (
-    <React.Fragment>
+    <>
       <SEO
         description={
           "Antwoorden voor vaak gestelde vragen over flyfi's snelle webapps"
         }
       />
-      <Styled.h1>Vaak gestelde vragen</Styled.h1>
-      <main sx={{ maxWidth: "80ch", marginX: "auto", marginTop: "4" }}>
-        {faqs.map((faq, i) => (
-          <Accordion
-            i={i + 1}
-            faq={faq}
-            expanded={expanded}
-            setExpanded={setExpanded}
-          />
-        ))}
+      <Themed.h1 id={"top"}>Vaak gestelde vragen</Themed.h1>
+      <main sx={{ maxWidth: "100ch", marginX: "auto", marginTop: "4" }}>
+        <section sx={{ marginTop: ["4", "5"] }}>
+          {faqs.map((faq, i) => (
+            <ScrollLink
+              sx={{
+                "&:hover": {
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                },
+              }}
+              to={`question${i}`}
+              smooth={true}
+              offset={-120}
+            >
+              <Themed.h3 sx={{ marginX: 0, marginTop: 4 }} key={i}>
+                <span
+                  sx={{
+                    fill: "text",
+                    marginRight: 3,
+                  }}
+                >
+                  <ArrowDownIcon />
+                </span>
+                {faq.vraag}
+              </Themed.h3>
+            </ScrollLink>
+          ))}
+        </section>
+        <section sx={{ marginTop: 6 }}>
+          {faqs.map((faq, i) => (
+            <>
+              <Themed.h3 sx={{ marginX: 0, marginTop: 4 }} id={`question${i}`}>
+                <span
+                  sx={{
+                    fill: "text",
+                    marginRight: 3,
+                    "&:hover": {
+                      cursor: "pointer",
+                      transform: "scale(1.2)",
+                    },
+                  }}
+                >
+                  <ScrollLink to={"top"} offset={-64}>
+                    <ArrowUpIcon />
+                  </ScrollLink>
+                </span>
+                {faq.vraag}
+              </Themed.h3>
+              <Themed.p sx={{ marginTop: 3 }}>{faq.antwoord}</Themed.p>
+            </>
+          ))}
+        </section>
       </main>
-    </React.Fragment>
+    </>
   );
 }
 
@@ -34,7 +77,7 @@ const faqs = [
   {
     vraag: "Wat is een Progressive Web App?",
     antwoord: (
-      <React.Fragment>
+      <>
         Een{" "}
         <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a>{" "}
         (PWA) is een webapplicatie die meer lijkt op een app voor mobiele
@@ -45,9 +88,16 @@ const faqs = [
         <a href="https://ymedialabs.com/progressive-web-apps">
           verbeteringen in conversie en omzet
         </a>
-        . PWA's combineren het beste van het web en van mobiele apps. <br /> De
-        belangrijke kenmerken zijn:
-        <ul sx={{ paddingLeft: "3", listStyleType: "circle" }}>
+        . PWA's combineren het beste van het web en van mobiele apps. <br />
+      </>
+    ),
+  },
+  {
+    vraag: "Wat zijn de kenmerken van een Progressive Web App?",
+    antwoord: (
+      <>
+        De belangrijke kenmerken zijn:
+        <ul sx={{ paddingLeft: "3", listStyleType: "decimal" }}>
           <li>
             <em>Progressief</em>: ze werken voor elke gebruiker.
           </li>
@@ -89,13 +139,13 @@ const faqs = [
             mobieltjes geinstalleerd worden.
           </li>
         </ul>
-      </React.Fragment>
+      </>
     ),
   },
   {
     vraag: "Waarom is een flyfi site zoveel sneller dan WordPress?",
     antwoord: (
-      <React.Fragment>
+      <>
         Als een WordPress site laadt moet de server de pagina nog renderen,
         terwijl dit bij een <em>flyfi</em> site al vantevoren is gebeurd. De
         kant en klare html pagina wordt vervolgens via het supersnelle CDN
@@ -107,13 +157,13 @@ const faqs = [
         Zodra een link zichtbaar is wordt de nodige data voor de gelinkte pagina
         al op de achtergrond geladen zodat de pagina onmiddelijk beschikbaar is
         als u op de link klikt.
-      </React.Fragment>
+      </>
     ),
   },
   {
     vraag: "Hoe worden de foto's geoptimaliseerd?",
     antwoord: (
-      <React.Fragment>
+      <>
         Alle grotere foto's worden pas geladen als de gebruiker deze kan zien.
         Terwijl de foto laadt wordt eerst een onscherpe of getekende versie
         getoond, die wordt vervangen door de foto als deze is geladen. Elke foto
@@ -122,13 +172,13 @@ const faqs = [
         gebruiker met een scherm met een hoge resolutie altijd scherpe foto's en
         de gebruiker met een oud mobieltje laadt alleen die pixels die hij ook
         daadwerkelijk kan zien.
-      </React.Fragment>
+      </>
     ),
   },
   {
     vraag: "Welke software gebruikt flyfi?",
     antwoord: (
-      <React.Fragment>
+      <>
         Voor de allermeest projecten gebruikt ik het moderne framework{" "}
         <a href="https://www.gatsbyjs.com">Gatsby</a>. Gatsby is er speciaal
         voor gemaakt om moderne webapps zo snel mogelijk te maken. Gatsby maakt
@@ -141,13 +191,13 @@ const faqs = [
         Voor de schitterende animaties gebruik ik{" "}
         <a href="https://www.framer.com/motion/">Framer Motion</a> en voor het
         ontwerpproces <a href="https://figma.com">Figma</a>.
-      </React.Fragment>
+      </>
     ),
   },
   {
     vraag: "Waarom zijn flyfi site goedkoop, schaalbaar en veilig?",
     antwoord: (
-      <React.Fragment>
+      <>
         flyfi sites hebben geen ingewikkelde server nodig omdat de bestanden van
         tevoren al gerenderd zijn. Dit maakt de hosting niet alleen snel, maar
         ook goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens
@@ -155,7 +205,7 @@ const faqs = [
         de site geen server gebruikt kan deze ook niet gehackt worden of
         overbelast raken. Dit scheelt u een hoop zorgen over veiligheid en
         bereikbaarheid terwijl u ook nog geld bespaart.
-      </React.Fragment>
+      </>
     ),
   },
   // {vraag: "Wat is de PRPL pattern?"}
