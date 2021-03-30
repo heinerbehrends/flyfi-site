@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import ContactForm from "../components/Contact-form";
 import ContactIcons from "../components/Contact-icons";
@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <React.Fragment>
       <SEO description={"Contactpagina voor flyfi webdevelopment"} />
-      <Styled.h1
+      <Themed.h1
         sx={{
           fontSize: ["6", "6", "9vw"],
           "@media screen and (min-width: 960px)": {
@@ -18,7 +18,7 @@ export default function Contact() {
         }}
       >
         Contact
-      </Styled.h1>
+      </Themed.h1>
       <p
         sx={{
           paddingTop: ["3", "4", "4", "4"],

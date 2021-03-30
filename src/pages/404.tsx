@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import batonFail from "../videos/batonFail.mp4";
 import Button from "../components/Button";
@@ -9,7 +9,7 @@ export default function FourOhFour() {
   return (
     <React.Fragment>
       <SEO description={"404 pagina voor flyfi.nl"} />
-      <Styled.h1>Het stokje is gevallen</Styled.h1>
+      <Themed.h1>Het stokje is gevallen</Themed.h1>
       <div
         sx={{
           display: "flex",
@@ -31,10 +31,10 @@ export default function FourOhFour() {
         >
           <source src={batonFail} type={"video/mp4"}></source>
         </video>
-        <Styled.h3 sx={{ marginTop: "3" }}>
+        <Themed.h3 sx={{ marginTop: "3" }}>
           Deze pagina bestaat niet.
           <br /> Wilt u wellicht terug naar
-        </Styled.h3>
+        </Themed.h3>
         <Button text={"De Homepage?"} location={"/"} />
       </div>
     </React.Fragment>

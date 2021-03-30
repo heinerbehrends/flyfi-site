@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
 import React from "react";
+import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import Nav from "./Nav";
 import Logo from "../icons/logo-oud.svg";
@@ -21,10 +21,17 @@ export default function Header() {
         paddingX: ["2", "3"],
         marginBottom: "4",
         height: "64px",
+        borderBottom: "1px solid",
+        borderColor: "accent",
       }}
     >
       <TextLogo />
-      <Link to="/">
+      <Link to="/" tabIndex={-1} style={{ borderRadius: "50%" }}>
+        <div
+          sx={{
+            boxShadow: "big",
+          }}
+        ></div>
         <div
           sx={{
             display: ["none", "flex"],
@@ -32,12 +39,17 @@ export default function Header() {
             backgroundColor: "#fff",
             height: ["64px", "94px", "94px", "124px"],
             width: ["64px", "94px", "94px", "124px"],
+            border: "1px solid",
+            borderColor: "accent",
             borderRadius: "50%",
-            boxShadow: "big",
             overflow: "hidden",
           }}
         >
-          <Logo sx={{ transform: "translate(0px, -8px) scale(0.9)" }} />
+          <Logo
+            sx={{
+              transform: "translate(0px, -8px) scale(0.9)",
+            }}
+          />
         </div>
       </Link>
       <Nav />

@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import * as React from "react";
 import {
   m as motion,
   AnimatePresence,
   MotionConfig,
-  AnimationFeature,
-  ExitFeature,
+  LazyMotion,
+  domAnimation,
 } from "framer-motion";
 import PlusIcon from "../icons/add_circle_outline-24px.svg";
 import MinIcon from "../icons/remove_circle_outline-24px.svg";
@@ -15,12 +15,13 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
   const isOpen = i === expanded;
 
   return (
-    <MotionConfig features={[AnimationFeature, ExitFeature]}>
+    <LazyMotion features={domAnimation}>
       <button
         id={`accordion-button-0${i}`}
         aria-controls={`accordion-panel-0${i}`}
         aria-expanded={isOpen ? true : false}
         sx={{
+          marginBottom: ["2", "3"],
           display: "flex",
           justifyContent: "space-between",
           maxWidth: "inherit",
@@ -30,7 +31,7 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
           fontSize: ["3", "4"],
           fontFamily: "fira sans",
           fontWeight: "bold",
-          paddingX: "3",
+          paddingX: "4",
           paddingY: "3",
           borderRadius: "3",
           cursor: "pointer",
@@ -64,10 +65,12 @@ export default function Accordion({ i, expanded, setExpanded, faq }) {
             }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <Styled.p sx={{ paddingX: "3" }}>{faq.antwoord}</Styled.p>
+            <Themed.p sx={{ paddingX: "4", marginBottom: ["2", "3"] }}>
+              {faq.antwoord}
+            </Themed.p>
           </motion.section>
         )}
       </AnimatePresence>
-    </MotionConfig>
+    </LazyMotion>
   );
 }

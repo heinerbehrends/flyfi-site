@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -27,13 +27,13 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
       <div>
         <div sx={{ display: "flex", alignItems: "center", fontSize: "5" }}>
           <span sx={{ fill: "accent" }}>{icon}</span>
-          <Styled.h3
+          <Themed.h3
             sx={{
               marginLeft: icon ? "3" : "0",
             }}
           >
             {heading}
-          </Styled.h3>
+          </Themed.h3>
         </div>
         <p
           sx={{

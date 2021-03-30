@@ -1,16 +1,16 @@
-export default {
+const theme = {
   colors: {
     text: "#333",
     background: "#fff",
     primary: "#9FE5E5",
-    muted: "#328181",
+    muted: "#40A5A5",
     accent: "#663399",
     secondary: "#FFC0E2",
     modes: {
       dark: {
         text: "#f7f7f7",
         background: "#131313",
-        primary: "#59bfbf",
+        primary: "#9FE5E5",
         muted: "#59bfbf",
         accent: "#FFC0E2",
         secondary: "#663399",
@@ -31,7 +31,7 @@ export default {
     black: 900,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.75,
     heading: 1,
   },
   radii: [4, 8, 16, 24],
@@ -55,6 +55,10 @@ export default {
       overflowX: "hidden",
       a: {
         color: "accent",
+        "&:focus": {
+          outline: "none",
+          boxShadow: "focus",
+        },
       },
       label: {
         fontWeight: "bold",
@@ -105,3 +109,5 @@ export default {
     },
   },
 };
+
+export default theme;

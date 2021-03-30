@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { IconButton, jsx, Styled } from "theme-ui";
+import { IconButton, jsx, Themed } from "theme-ui";
 import React from "react";
 import { Link } from "gatsby";
 import MailIcon from "../icons/mail_outline-24px.svg";
@@ -61,7 +61,7 @@ export default function FooterContact() {
         }}
         to={"/contact"}
       >
-        <Styled.h3
+        <Themed.h3
           sx={{
             color: "#333",
             textAlign: "left",
@@ -70,7 +70,7 @@ export default function FooterContact() {
           }}
         >
           Connect
-        </Styled.h3>
+        </Themed.h3>
       </Link>
       {contactInfo.map(item => (
         <ContactItem

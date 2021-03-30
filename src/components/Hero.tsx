@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import Greyhound from "./Greyhound";
 import Button from "./Button";
@@ -13,9 +13,9 @@ export default function Hero() {
         marginX: "auto",
       }}
     >
-      <Styled.h1 sx={{ textAlign: "right" }}>
+      <Themed.h1 sx={{ textAlign: "right" }}>
         Supersnelle webapps voor iedereen
-      </Styled.h1>
+      </Themed.h1>
 
       <section
         sx={{

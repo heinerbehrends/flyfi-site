@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import CardsVoordelen from "./Cards-voordelen";
@@ -27,14 +27,14 @@ export default function Main() {
   return (
     <React.Fragment>
       <div ref={ref}>
-        <Styled.h2
+        <Themed.h2
           sx={{
             transform: `${inView ? "translate(0)" : "translate(-100vw)"}`,
             transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
           }}
         >
           De voordelen van <i>flyfi</i> webapps
-        </Styled.h2>
+        </Themed.h2>
       </div>
       <CardsVoordelen />
       <blockquote
@@ -57,25 +57,25 @@ export default function Main() {
         dan 3 seconden laadt?
       </blockquote>
       <div ref={ref3}>
-        <Styled.h2
+        <Themed.h2
           sx={{
             transform: `${inView3 ? "translate(0)" : "translate(-100vw)"}`,
             transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
           }}
         >
           Hoe kan ik u helpen?
-        </Styled.h2>
+        </Themed.h2>
       </div>
       <CardsTypes />
       <div ref={ref4}>
-        <Styled.h2
+        <Themed.h2
           sx={{
             transform: `${inView4 ? "translate(0)" : "translate(-100vw)"}`,
             transition: "transform 0.5s cubic-bezier(.56,.01,.39,1.29)",
           }}
         >
           Maatwerk of starterspakket?
-        </Styled.h2>
+        </Themed.h2>
       </div>
       <CardsPakketten />
     </React.Fragment>

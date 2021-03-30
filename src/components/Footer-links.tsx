@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { Link } from "gatsby";
 
@@ -30,7 +30,7 @@ function FooterLink({ text, location }) {
 export default function FooterLinks() {
   return (
     <nav sx={{ marginX: ["0", "3", "4"], marginTop: ["3", "4"] }}>
-      <Styled.h3
+      <Themed.h3
         sx={{
           textAlign: "left",
           marginLeft: "0",
@@ -39,7 +39,7 @@ export default function FooterLinks() {
         }}
       >
         Menu
-      </Styled.h3>
+      </Themed.h3>
       <FooterLink location={"/contact"} text={"Contact"} />
       <FooterLink location={"/about"} text={"Over mij"} />
       <FooterLink location={"/faq"} text={"FAQ"} />

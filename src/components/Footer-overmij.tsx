@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
@@ -36,9 +36,9 @@ export default function FooterOverMij() {
             },
           }}
         >
-          <Styled.h3 sx={{ fontSize: "5", marginLeft: "3", color: "#333" }}>
+          <Themed.h3 sx={{ fontSize: "5", marginLeft: "3", color: "#333" }}>
             Over mij
-          </Styled.h3>
+          </Themed.h3>
         </Link>
       </div>
       <p sx={{ lineHeight: "body", marginTop: "3" }}>

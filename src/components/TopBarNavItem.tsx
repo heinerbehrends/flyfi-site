@@ -15,7 +15,7 @@ export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
       activeStyle={{
         color: "#fff",
         fontWeight: "500",
-        backgroundColor: "#59bfbf",
+        backgroundColor: "#3FA2A2",
       }}
       sx={{
         textDecoration: "none",

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import ImageStack from "../components/ImageStack";
 import SEO from "../components/SEO";
@@ -12,8 +12,8 @@ type aboutItemProps = {
 function AboutItem({ heading, text }: aboutItemProps) {
   return (
     <React.Fragment>
-      <Styled.h4>{heading}</Styled.h4>
-      <Styled.p>{text}</Styled.p>
+      <Themed.h4>{heading}</Themed.h4>
+      <Themed.p>{text}</Themed.p>
     </React.Fragment>
   );
 }
@@ -22,9 +22,9 @@ export default function About() {
   return (
     <React.Fragment>
       <SEO description={"Aboutpagina voor webbureau flyfi web development"} />
-      <Styled.h1 sx={{ textAlign: "center" }}>
+      <Themed.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
-      </Styled.h1>
+      </Themed.h1>
       <main
         sx={{
           display: "flex",
