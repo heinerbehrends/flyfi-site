@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
 import { useColorMode } from "theme-ui";
 import Sun from "../icons/sun.svg";
 import Moon from "../icons/moon.svg";
@@ -25,7 +24,7 @@ export default function DarkModeSwitch() {
       }}
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
     >
-      {colorMode === "default" ? <Sun /> : <Moon />}
+      {colorMode === "default" ? <Moon /> : <Sun />}
     </button>
   );
 }
