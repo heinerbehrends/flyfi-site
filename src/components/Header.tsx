@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import Nav from "./Nav";
@@ -21,8 +20,6 @@ export default function Header() {
         paddingX: ["2", "3"],
         marginBottom: "4",
         height: "64px",
-        borderBottom: "1px solid",
-        borderColor: "accent",
       }}
     >
       <TextLogo />
@@ -39,10 +36,9 @@ export default function Header() {
             backgroundColor: "#fff",
             height: ["64px", "94px", "94px", "124px"],
             width: ["64px", "94px", "94px", "124px"],
-            border: "1px solid",
-            borderColor: "accent",
             borderRadius: "50%",
             overflow: "hidden",
+            boxShadow: "big",
           }}
         >
           <Logo
