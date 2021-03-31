@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
 
 export default function HeroParagraph() {
   return (
@@ -18,7 +17,7 @@ export default function HeroParagraph() {
       <p
         sx={{
           marginLeft: ["0", "0", "0", "4"],
-          marginTop: ["4", "3"],
+          marginTop: ["4", "0"],
           marginX: ["3", "0"],
           fontSize: ["2", "2", "3"],
           maxWidth: "400px",
@@ -30,13 +29,11 @@ export default function HeroParagraph() {
           animation: "fadeIn 1s",
         }}
       >
-        <i>flyfi</i> ontwikkelt niet alleen mooie, goed vindbare en supersnelle
-        websites, maar biedt deze service ook voor zeer scherpe prijzen aan.
+        flyfi ontwikkelt niet alleen mooie, goed vindbare en supersnelle
+        websites, maar biedt deze service ook tegen zeer scherpe prijzen aan.
         <br />
-        Ik gebruik de nieuwste open source software om het beste van mobiele
+        flyfi gebruikt de nieuwste open source software om het beste van mobiele
         apps en het web te combineren.
-        {/* Met <i>flyfi’s</i> moderne webapps bent u de concurrentie één stap
-        vooruit. */}
       </p>
     </div>
   );
