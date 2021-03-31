@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { useInView } from "react-intersection-observer";
@@ -25,7 +26,7 @@ export default function Main() {
   });
 
   return (
-    <React.Fragment>
+    <>
       <div ref={ref}>
         <Themed.h2
           sx={{
@@ -47,7 +48,7 @@ export default function Main() {
           fontSize: ["4", "5"],
           paddingX: ["3", "3", "4", "5"],
           paddingY: "3",
-          fontWeight: "900",
+          fontWeight: "700",
           whiteSpace: "pre-line",
           opacity: `${inView2 ? "1" : "0"}`,
           transition: "opacity 0.5s ease-in",
@@ -78,6 +79,6 @@ export default function Main() {
         </Themed.h2>
       </div>
       <CardsPakketten />
-    </React.Fragment>
+    </>
   );
 }
