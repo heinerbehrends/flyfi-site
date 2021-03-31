@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import { jsx, Themed } from "theme-ui";
 import React from "react";
 import ContactForm from "../components/Contact-form";
@@ -7,7 +8,7 @@ import SEO from "../components/SEO";
 
 export default function Contact() {
   return (
-    <React.Fragment>
+    <>
       <SEO description={"Contactpagina voor flyfi webdevelopment"} />
       <Themed.h1
         sx={{
@@ -21,7 +22,7 @@ export default function Contact() {
       </Themed.h1>
       <p
         sx={{
-          paddingTop: ["3", "4", "4", "4"],
+          paddingTop: ["2", "2", "3", "3"],
           paddingX: "4",
           lineHeight: "body",
           color: "text",
@@ -29,12 +30,11 @@ export default function Contact() {
           marginX: "auto",
         }}
       >
-        Als u geinteresseerd bent in een flyfi webapp, stuur me dan een bericht
-        door middel van de contactform of via e-mail naar info@flyfi.nl. Ik
-        antwoord altijd binnen 2 werkdagen. Als het sneller moet gaan kunt u mij
-        bellen via 06-58910956.U kunt me ook volgen en berichtjes sturen via
-        linkedIn of twitter. Als u geinteresseerd bent in mijn code, volg me dan
-        op Github.
+        Als u geinteresseerd bent in een flyfi webapp kunt u mij een bericht
+        sturen door middel van de contactform of via e-mail naar info@flyfi.nl.
+        Ik antwoord altijd binnen 2 werkdagen. Alternatief kunt u mij ook bellen
+        via 06-58910956. U kunt me ook volgen en berichtjes sturen via LinkedIn
+        of Twitter. Wilt u meer weten over mijn code, volg me dan op Github.
       </p>
       <section
         sx={{
@@ -49,6 +49,6 @@ export default function Contact() {
         <ContactForm />
         <ContactIcons />
       </section>
-    </React.Fragment>
+    </>
   );
 }
