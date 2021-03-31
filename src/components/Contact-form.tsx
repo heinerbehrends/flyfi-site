@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
 import { useForm } from "react-hook-form";
 import {
   Label,
@@ -14,7 +13,7 @@ export default function ContactForm(props) {
     mode: "onChange",
     shouldFocusError: true,
   });
-  const { dirtyFields, isSubmitSuccessful } = formState;
+  const { isSubmitSuccessful } = formState;
 
   return (
     <form
@@ -38,9 +37,6 @@ export default function ContactForm(props) {
           ref={register({ required: true, minLength: 2, maxLength: 30 })}
           sx={{
             ...inputStyles,
-            backgroundColor: `${
-              dirtyFields.name && !errors.name ? "#ebfff0" : "#fff"
-            }`,
           }}
         />
         {errors.name ? (
@@ -60,9 +56,6 @@ export default function ContactForm(props) {
           })}
           sx={{
             ...inputStyles,
-            backgroundColor: `${
-              dirtyFields.email && !errors.email ? "#ebfff0" : "#fff"
-            }`,
           }}
         />
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
@@ -79,9 +72,6 @@ export default function ContactForm(props) {
           rows={6}
           sx={{
             ...inputStyles,
-            backgroundColor: `${
-              dirtyFields.message && !errors.message ? "#ebfff0" : "#fff"
-            }`,
           }}
         ></textarea>
         {errors.message && (
@@ -91,9 +81,14 @@ export default function ContactForm(props) {
           type="submit"
           sx={{
             ...buttonStyles,
+            transitionProperty: "transform",
+            transitionDuration: "0.25s",
             "&:focus": {
               outline: "none",
-              boxShadow: "inset 0 0 3px 3px #663399",
+              boxShadow: "focus",
+            },
+            "&:hover": {
+              transform: "scale(1.05)",
             },
           }}
         >
