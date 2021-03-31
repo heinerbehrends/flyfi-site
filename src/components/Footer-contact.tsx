@@ -26,8 +26,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
         textDecoration: "none",
         "&:hover": { textDecoration: "underline" },
         "&:focus": {
-          outline: "none",
-          boxShadow: "focus",
+          textDecoration: "underline",
         },
       }}
       href={location}
