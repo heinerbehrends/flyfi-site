@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
-import React from "react";
 import { Link } from "gatsby";
 
 function FooterLink({ text, location }) {
@@ -17,7 +16,7 @@ function FooterLink({ text, location }) {
         "&:hover": { textDecoration: "underline" },
         "&:focus": {
           outline: "none",
-          boxShadow: "focus",
+          textDecoration: "underline",
         },
       }}
       to={location}
