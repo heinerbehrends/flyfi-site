@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
 import { Link } from "gatsby";
 
 export default function TextLogo() {
@@ -23,6 +22,7 @@ export default function TextLogo() {
           "&:focus": {
             outline: "none",
             boxShadow: "focus",
+            textDecoration: "none",
           },
         }}
       >
