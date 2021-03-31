@@ -27,6 +27,7 @@ export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
         "&:focus": {
           outline: "none",
           boxShadow: "focus",
+          textDecoration: "none",
         },
       }}
       to={location}
