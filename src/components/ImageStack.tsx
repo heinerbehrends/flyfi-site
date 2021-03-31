@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React, { useState } from "react";
+import { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
@@ -12,11 +12,11 @@ function filterByName(images, name) {
 type stackItemProps = {
   options: {
     id: number;
-    columnStart: number;
-    columnEnd: number;
-    rowStart: number;
-    rowEnd: number;
-    rotate: number;
+    columnStart: string;
+    columnEnd: string;
+    rowStart: string;
+    rowEnd: string;
+    rotate: string;
     pictures: any;
     alt: string;
   };
@@ -32,7 +32,7 @@ export default function ImageStack() {
           gridColumnEnd: `${options.columnEnd}`,
           gridRowStart: `${options.rowStart}`,
           gridRowEnd: `${options.rowEnd}`,
-          transform: `rotate(${options.rotate}deg)`,
+          transform: options.rotate,
           zIndex: `${isFocused ? 1 : 0}`,
           height: "fit-content",
           boxShadow: "big",
@@ -97,11 +97,11 @@ export default function ImageStack() {
         options={{
           pictures: koelkast,
           alt: "Tentoonstelling in Galerie Sign",
-          columnStart: 5,
-          columnEnd: 11,
-          rowStart: 1,
-          rowEnd: 5,
-          rotate: 3,
+          columnStart: "5",
+          columnEnd: "11",
+          rowStart: "1",
+          rowEnd: "5",
+          rotate: "rotate(3deg)",
           id: 1,
         }}
       />
@@ -109,11 +109,11 @@ export default function ImageStack() {
         options={{
           pictures: examen,
           alt: "Eindexamen Academie Minerva",
-          columnStart: 4,
-          columnEnd: 10,
-          rowStart: 2,
-          rowEnd: 6,
-          rotate: -2,
+          columnStart: "4",
+          columnEnd: "10",
+          rowStart: "2",
+          rowEnd: "6",
+          rotate: "rotate(-2deg)",
           id: 2,
         }}
       />
@@ -121,11 +121,11 @@ export default function ImageStack() {
         options={{
           pictures: gideon,
           alt: "Optreden met Cosmic Spring",
-          columnStart: 2,
-          columnEnd: 11,
-          rowStart: 3,
-          rowEnd: 7,
-          rotate: 4,
+          columnStart: "2",
+          columnEnd: "11",
+          rowStart: "3",
+          rowEnd: "7",
+          rotate: "rotate(4deg)",
           id: 3,
         }}
       />
@@ -133,11 +133,11 @@ export default function ImageStack() {
         options={{
           pictures: herfst,
           alt: "Familiefoto met herfstbladeren",
-          columnStart: 1,
-          columnEnd: 10,
-          rowStart: 4,
-          rowEnd: 8,
-          rotate: -2,
+          columnStart: "1",
+          columnEnd: "10",
+          rowStart: "4",
+          rowEnd: "8",
+          rotate: "rotate(-2deg)",
           id: 4,
         }}
       />
@@ -145,11 +145,11 @@ export default function ImageStack() {
         options={{
           pictures: toBeOrNotToBe,
           alt: "Decorbouw Hamlet voor NNT",
-          columnStart: 2,
-          columnEnd: 8,
-          rowStart: 5,
-          rowEnd: 9,
-          rotate: -4,
+          columnStart: "2",
+          columnEnd: "8",
+          rowStart: "5",
+          rowEnd: "9",
+          rotate: "rotate(-4deg)",
           id: 5,
         }}
       />
@@ -157,11 +157,11 @@ export default function ImageStack() {
         options={{
           pictures: hetDakje,
           alt: "Aankleding stadsschouwburg voor NNT",
-          columnStart: 3,
-          columnEnd: 12,
-          rowStart: 6,
-          rowEnd: 10,
-          rotate: 5,
+          columnStart: "3",
+          columnEnd: "12",
+          rowStart: "6",
+          rowEnd: "10",
+          rotate: "rotate(5deg)",
           id: 6,
         }}
       />
@@ -169,11 +169,11 @@ export default function ImageStack() {
         options={{
           pictures: theBuzz,
           alt: "Bandfoto The Buzz",
-          columnStart: 2,
-          columnEnd: 11,
-          rowStart: 7,
-          rowEnd: 11,
-          rotate: -3,
+          columnStart: "2",
+          columnEnd: "11",
+          rowStart: "7",
+          rowEnd: "11",
+          rotate: "rotate(-3deg)",
           id: 7,
         }}
       />
@@ -181,11 +181,11 @@ export default function ImageStack() {
         options={{
           pictures: zomor,
           alt: "Voetbalteam Zomor",
-          columnStart: 1,
-          columnEnd: 11,
-          rowStart: 9,
-          rowEnd: 12,
-          rotate: 2,
+          columnStart: "1",
+          columnEnd: "11",
+          rowStart: "9",
+          rowEnd: "12",
+          rotate: "rotate(2deg)",
           id: 8,
         }}
       />
@@ -193,11 +193,11 @@ export default function ImageStack() {
         options={{
           pictures: horumersiel,
           alt: "Vakantiefoto Noordzeekust",
-          columnStart: 3,
-          columnEnd: 10,
-          rowStart: 8,
-          rowEnd: 13,
-          rotate: 1,
+          columnStart: "3",
+          columnEnd: "10",
+          rowStart: "8",
+          rowEnd: "13",
+          rotate: "rotate(1deg)",
           id: 9,
         }}
       />
