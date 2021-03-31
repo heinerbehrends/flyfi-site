@@ -9,7 +9,7 @@ export default function FourOhFour() {
   return (
     <React.Fragment>
       <SEO description={"404 pagina voor flyfi.nl"} />
-      <Themed.h1>Het stokje is gevallen</Themed.h1>
+      <Themed.h1>Er is iets misgegaan.</Themed.h1>
       <div
         sx={{
           display: "flex",

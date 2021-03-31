@@ -1,8 +1,10 @@
 /** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import { jsx, Themed } from "theme-ui";
 import React from "react";
 import ContactIcons from "../components/Contact-icons";
 import SEO from "../components/SEO";
+import { successText } from "../data/tekstData";
 
 function SuccessMessage() {
   return (
@@ -15,18 +17,14 @@ function SuccessMessage() {
         fontSize: ["2", "2", "3"],
       }}
     >
-      U kunt binnen twee werkdagen een antwoord verwachten. Mocht dit niet snel
-      genoeg zijn kunt u proberen om te bellen met 06-58910956. <br /> Wilt u in
-      op de hoogte blijven van de activiteiten van flyfi? Voeg me dan toe aan uw
-      netwerk op linkedIn of twitter. Als u geïnteresseerd bent in mijn code,
-      neem dan een kijkje op mijn github pagina.
+      {successText}
     </Themed.p>
   );
 }
 
 export default function Succes() {
   return (
-    <React.Fragment>
+    <>
       <SEO description={"Pagina die laadt als een bericht verstuurd is"} />
       <Themed.h1
         sx={{
@@ -51,6 +49,6 @@ export default function Succes() {
         <SuccessMessage />
         <ContactIcons />
       </section>
-    </React.Fragment>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import React from "react";
 import ContactForm from "../components/Contact-form";
 import ContactIcons from "../components/Contact-icons";
 import SEO from "../components/SEO";
+import { contactText } from "../data/tekstData";
 
 export default function Contact() {
   return (
@@ -30,11 +31,7 @@ export default function Contact() {
           marginX: "auto",
         }}
       >
-        Als u geinteresseerd bent in een flyfi webapp kunt u mij een bericht
-        sturen door middel van de contactform of via e-mail naar info@flyfi.nl.
-        Ik antwoord altijd binnen 2 werkdagen. Alternatief kunt u mij ook bellen
-        via 06-58910956. U kunt me ook volgen en berichtjes sturen via LinkedIn
-        of Twitter. Wilt u meer weten over mijn code, volg me dan op Github.
+        {contactText}
       </p>
       <section
         sx={{

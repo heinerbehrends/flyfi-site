@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { heroText } from "../data/tekstData";
 
 export default function HeroParagraph() {
   return (
@@ -29,11 +30,7 @@ export default function HeroParagraph() {
           animation: "fadeIn 1s",
         }}
       >
-        flyfi ontwikkelt niet alleen mooie, goed vindbare en supersnelle
-        websites, maar biedt deze service ook tegen zeer scherpe prijzen aan.
-        <br />
-        flyfi gebruikt de nieuwste open source software om het beste van mobiele
-        apps en het web te combineren.
+        {heroText}
       </p>
     </div>
   );

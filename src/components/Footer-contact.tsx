@@ -1,13 +1,8 @@
 /** @jsx jsx */
-import { IconButton, jsx, Themed } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import React from "react";
 import { Link } from "gatsby";
-import MailIcon from "../icons/mail_outline-24px.svg";
-import PhoneIcon from "../icons/phone-24px.svg";
-import LinkedInIcon from "../icons/linkedin.svg";
-import TwitterIcon from "../icons/twitter-logo.svg";
-import LocationIcon from "../icons/location_on-24px.svg";
-import GithubIcon from "../icons/Octicons-mark-github.svg";
+import { contactInfo, Contact } from "../data/contactData";
 
 type ContactItemProps = {
   text: string;
@@ -71,7 +66,7 @@ export default function FooterContact() {
           Connect
         </Themed.h3>
       </Link>
-      {contactInfo.map(item => (
+      {contactInfo.map((item: Contact) => (
         <ContactItem
           text={item.text}
           location={item.location}
@@ -81,37 +76,3 @@ export default function FooterContact() {
     </address>
   );
 }
-
-const contactInfo = [
-  {
-    text: "info@flyfi.nl",
-    location: "mailto:info@flyfi.nl",
-    icon: <MailIcon />,
-  },
-  {
-    text: "06-58910956",
-    location: "tel:0031658910956",
-    icon: <PhoneIcon />,
-  },
-  {
-    text: "linkedin.com/in/heiner-behrends/",
-    location: "https://linkedin.com/in/heiner-behrends/",
-    icon: <LinkedInIcon />,
-  },
-  {
-    text: "@HSBehrends",
-    location: "https://twitter.com/HSBehrends",
-    icon: <TwitterIcon />,
-  },
-  {
-    text: "github.com/heinerbehrends",
-    location: "https://github.com/heinerbehrends",
-    icon: <GithubIcon />,
-  },
-  {
-    text: "Travertijstraat 12, 9743 Groningen",
-    location:
-      "https://www.google.com/maps/place/Travertijnstraat+12,+9743+SZ+Groningen/",
-    icon: <LocationIcon />,
-  },
-];

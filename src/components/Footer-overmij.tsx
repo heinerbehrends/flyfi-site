@@ -2,6 +2,7 @@
 import { jsx, Themed } from "theme-ui";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import { footerOverMijText } from "../data/aboutData";
 
 export default function FooterOverMij() {
   const data = useStaticQuery(graphql`
@@ -42,10 +43,8 @@ export default function FooterOverMij() {
         </Link>
       </div>
       <p sx={{ lineHeight: "body", marginTop: "3" }}>
-        Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik
-        streef er altijd na om een mooi resultaat neer te zetten, als ontwerper
-        en programmeur, maar ook als veelzijdige muzikant en als faire
-        verdediger in mijn voetbalelftal. <br />
+        {footerOverMijText}
+        <br />
         <br />
         <p>© Heiner S. Behrends, {new Date().getFullYear()}</p>
       </p>

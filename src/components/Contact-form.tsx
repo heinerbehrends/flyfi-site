@@ -86,6 +86,7 @@ export default function ContactForm(props) {
             "&:focus": {
               outline: "none",
               boxShadow: "focus",
+              transform: "scale(1.05)",
             },
             "&:hover": {
               transform: "scale(1.05)",
