@@ -20,6 +20,7 @@ export default function FAQs() {
         <section sx={{ marginTop: ["4", "5"] }}>
           {faqs.map((faq, i) => (
             <ScrollLink
+              href={"/"}
               sx={{
                 "&:hover": {
                   textDecoration: "underline",
@@ -28,43 +29,76 @@ export default function FAQs() {
               }}
               to={`question${i}`}
               smooth={true}
-              offset={-120}
+              offset={-150}
             >
-              <Themed.h3 sx={{ marginX: 0, marginTop: 4 }} key={i}>
-                <span
+              <div
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginTop: 4,
+                }}
+              >
+                <div
                   sx={{
                     fill: "text",
-                    marginRight: 3,
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
                   <ArrowDownIcon />
-                </span>
-                {faq.vraag}
-              </Themed.h3>
+                </div>
+                <Themed.h3 sx={{ marginX: 0, paddingLeft: 3 }} key={i}>
+                  {faq.vraag}
+                </Themed.h3>
+              </div>
             </ScrollLink>
           ))}
         </section>
         <section sx={{ marginTop: 6 }}>
           {faqs.map((faq, i) => (
             <>
-              <Themed.h3 sx={{ marginX: 0, marginTop: 4 }} id={`question${i}`}>
-                <span
-                  sx={{
-                    fill: "text",
-                    marginRight: 3,
-                    "&:hover": {
-                      cursor: "pointer",
-                      transform: "scale(1.2)",
-                    },
-                  }}
+              <div
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginTop: 4,
+                }}
+              >
+                <ScrollLink
+                  sx={{ fill: "text" }}
+                  to={"top"}
+                  offset={-64}
+                  smooth={true}
+                  href={"/"}
                 >
-                  <ScrollLink to={"top"} offset={-64}>
+                  {" "}
+                  <div
+                    sx={{
+                      fill: "text",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
                     <ArrowUpIcon />
-                  </ScrollLink>
-                </span>
-                {faq.vraag}
-              </Themed.h3>
-              <Themed.p sx={{ marginTop: 3 }}>{faq.antwoord}</Themed.p>
+                  </div>
+                </ScrollLink>
+                <Themed.h3
+                  sx={{ marginX: 0, paddingLeft: 3 }}
+                  id={`question${i}`}
+                >
+                  {faq.vraag}
+                </Themed.h3>
+              </div>
+              <Themed.p
+                sx={{
+                  marginTop: 3,
+                  marginLeft: 3,
+                  columnCount: 2,
+                  columnWidth: "420px",
+                }}
+              >
+                {faq.antwoord}
+              </Themed.p>
             </>
           ))}
         </section>
@@ -183,28 +217,26 @@ const faqs = [
         <a href="https://www.gatsbyjs.com">Gatsby</a>. Gatsby is er speciaal
         voor gemaakt om moderne webapps zo snel mogelijk te maken. Gatsby maakt
         gebruikt van de user interface bibliotheek{" "}
-        <a href="https://reactjs.org/">React</a>, die door Facebook wordt
-        ontwikkelt, en ook door andere grote sites zoals twitter wordt gebruikt.
-        Gatsby is een open source software en een commercieel bedrijf, dat cloud
-        gebaseerde oplossingen voor Gatsby apps aanbiedt.
-        <br />
-        Voor de schitterende animaties gebruik ik{" "}
-        <a href="https://www.framer.com/motion/">Framer Motion</a> en voor het
-        ontwerpproces <a href="https://figma.com">Figma</a>.
+        <a href="https://reactjs.org/">React</a> die door Facebook wordt
+        ontwikkelt, en ook door andere grote sites zoals Twitter wordt gebruikt.
+        Gatsby is een open source software en een commercieel bedrijf, dat
+        hosting en cloud gebaseerde oplossingen voor Gatsby apps aanbiedt. Voor
+        apps waarbij veel interactie met de gebruikers plaats vindt is het
+        framework Nextjs vaak een betere match.
       </>
     ),
   },
   {
-    vraag: "Waarom zijn flyfi site goedkoop, schaalbaar en veilig?",
+    vraag: "Waarom zijn flyfi sites voordelig, schaalbaar en veilig?",
     antwoord: (
       <>
-        flyfi sites hebben geen ingewikkelde server nodig omdat de bestanden van
+        flyfi sites hebben geen ouderwetse server nodig omdat de bestanden van
         tevoren al gerenderd zijn. Dit maakt de hosting niet alleen snel, maar
         ook goedkoop, makkelijk, veilig en schaalbaar zodat u site ook tijdens
         uw Black Friday Sale of als deze viraal gaat goed te bereiken is. Omdat
-        de site geen server gebruikt kan deze ook niet gehackt worden of
-        overbelast raken. Dit scheelt u een hoop zorgen over veiligheid en
-        bereikbaarheid terwijl u ook nog geld bespaart.
+        het front-end losgekoppelt is van het back-end kan de database niet
+        worden gehackt of overbelast raken. Dit scheelt u een hoop zorgen over
+        veiligheid en bereikbaarheid terwijl u ook nog geld bespaart.
       </>
     ),
   },
