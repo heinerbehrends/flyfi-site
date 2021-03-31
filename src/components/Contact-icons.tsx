@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import React from "react";
-import { SystemStyleObject } from "@styled-system/css";
+import { jsx, ThemeUIStyleObject } from "theme-ui";
 import MailIcon from "../icons/mail_outline-24px.svg";
 import PhoneIcon from "../icons/phone-24px.svg";
 import LinkedInIcon from "../icons/linkedin.svg";
@@ -9,7 +7,7 @@ import TwitterIcon from "../icons/twitter-logo.svg";
 import LocationIcon from "../icons/location_on-24px.svg";
 import GithubIcon from "../icons/Octicons-mark-github.svg";
 
-const iconLinkStyles: SystemStyleObject = {
+const iconLinkStyles: ThemeUIStyleObject = {
   borderRadius: "3",
   padding: "1",
   "&:focus": {
