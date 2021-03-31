@@ -9,7 +9,7 @@ const theme = {
     modes: {
       dark: {
         text: "#f7f7f7",
-        background: "#131313",
+        background: "#262626",
         primary: "#9FE5E5",
         muted: "#59bfbf",
         accent: "#FFC0E2",
@@ -55,9 +55,10 @@ const theme = {
       overflowX: "hidden",
       a: {
         color: "accent",
+        textDecoration: "none",
         "&:focus": {
           outline: "none",
-          boxShadow: "focus",
+          textDecoration: "underline",
         },
       },
       label: {
@@ -66,7 +67,6 @@ const theme = {
     },
     h1: {
       fontSize: ["6", "6", "9vw"],
-      textShadow: "text",
       "@media screen and (min-width: 960px)": {
         fontSize: "86.43px",
       },
@@ -74,8 +74,7 @@ const theme = {
       fontWeight: "thin",
       lineHeight: "heading",
       paddingTop: ["3", "4", "4", "5"],
-      marginTop: "3",
-      marginX: "3",
+      marginRight: "3",
       em: {
         fontStyle: "italic",
       },
@@ -85,12 +84,12 @@ const theme = {
       marginX: ["3", "3", "4", "4"],
       paddingY: "3",
       fontSize: ["5", "6"],
-      fontWeight: "black",
-      textShadow: "text",
+      fontWeight: "900",
+      // textShadow: "text",
     },
     h3: {
-      fontSize: ["4", "5"],
-      fontWeight: "bold",
+      fontSize: ["3", "4"],
+      fontWeight: "500",
       color: "text",
       marginX: "3",
     },
