@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { SystemStyleObject } from "@styled-system/css";
+import { jsx, ThemeUIStyleObject } from "theme-ui";
 
-export const inputStyles: SystemStyleObject = {
+export const inputStyles: ThemeUIStyleObject = {
   padding: "3",
   maxWidth: ["280px", "400px"],
   borderRadius: "3",
@@ -18,7 +17,7 @@ export const inputStyles: SystemStyleObject = {
   },
 };
 
-export const buttonStyles: SystemStyleObject = {
+export const buttonStyles: ThemeUIStyleObject = {
   ...inputStyles,
   backgroundColor: "accent",
   color: "background",
