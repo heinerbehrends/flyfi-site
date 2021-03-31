@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
-import React from "react";
 import Greyhound from "./Greyhound";
 import Button from "./Button";
 import HeroParagraph from "./HeroParagraph";
@@ -14,7 +13,7 @@ export default function Hero() {
       }}
     >
       <Themed.h1 sx={{ textAlign: "right" }}>
-        Supersnelle webapps voor iedereen
+        Specialist in moderne snelle webapps
       </Themed.h1>
 
       <section
