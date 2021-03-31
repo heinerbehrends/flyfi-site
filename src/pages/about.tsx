@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import { jsx, Themed } from "theme-ui";
 import React from "react";
 import ImageStack from "../components/ImageStack";
@@ -11,22 +12,23 @@ type aboutItemProps = {
 
 function AboutItem({ heading, text }: aboutItemProps) {
   return (
-    <React.Fragment>
+    <>
       <Themed.h4>{heading}</Themed.h4>
       <Themed.p>{text}</Themed.p>
-    </React.Fragment>
+    </>
   );
 }
 
 export default function About() {
   return (
-    <React.Fragment>
+    <>
       <SEO description={"Aboutpagina voor webbureau flyfi web development"} />
       <Themed.h1 sx={{ textAlign: "center" }}>
         Over <em>flyfi</em> en mij
       </Themed.h1>
       <main
         sx={{
+          marginTop: 4,
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
@@ -45,7 +47,7 @@ export default function About() {
           ))}
         </section>
       </main>
-    </React.Fragment>
+    </>
   );
 }
 
