@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
-import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
@@ -28,6 +27,7 @@ export default function FooterOverMij() {
         <Link
           to={"/about"}
           sx={{
+            paddingY: 2,
             textDecoration: "none",
             "&:hover": { textDecoration: "underline" },
             "&:focus": {
@@ -45,7 +45,9 @@ export default function FooterOverMij() {
         Creativiteit en liefde voor vakwerk zijn de drijfveren van flyfi. Ik
         streef er altijd na om een mooi resultaat neer te zetten, als ontwerper
         en programmeur, maar ook als veelzijdige muzikant en als faire
-        verdediger in mijn voetbalelftal. <p>© Heiner S. Behrends, 2020</p>
+        verdediger in mijn voetbalelftal. <br />
+        <br />
+        <p>© Heiner S. Behrends, {new Date().getFullYear()}</p>
       </p>
     </div>
   );
