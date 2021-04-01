@@ -12,8 +12,8 @@ export const faqs: Faq[] = [
         (PWA) is een webapplicatie die meer lijkt op een app voor mobiele
         telefoons dan op een ouderwetse website. Of, in de worden van een van de
         uitvinders van het begrip: het zijn websites die de juiste vitamines
-        hebben genomen. Veel bedrijven die voor een PWA hebben gekozen berichten
-        over{" "}
+        hebben genomen. <br /> Bedrijven die voor een PWA hebben gekozen
+        berichten over{" "}
         <a href="https://ymedialabs.com/progressive-web-apps">
           verbeteringen in conversie en omzet
         </a>
@@ -25,7 +25,6 @@ export const faqs: Faq[] = [
     vraag: "Wat zijn de kenmerken van een Progressive Web App?",
     antwoord: (
       <>
-        De belangrijke kenmerken zijn:
         <ul sx={{ paddingLeft: "3", listStyleType: "decimal" }}>
           <li>
             <em>Progressief</em>: ze werken voor elke gebruiker.
