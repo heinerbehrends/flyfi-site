@@ -42,7 +42,8 @@ export default function Faq({ faq, index }: FAQProps) {
           marginTop: 3,
           marginLeft: 3,
           columnCount: 2,
-          columnWidth: "420px",
+          columnWidth: "320px",
+          columnGap: 4,
         }}
       >
         {faq.antwoord}
