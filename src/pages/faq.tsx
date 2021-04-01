@@ -16,7 +16,14 @@ export default function FAQs() {
         }
       />
       <Themed.h1 id={"top"}>Vaak gestelde vragen</Themed.h1>
-      <main sx={{ maxWidth: "100ch", marginX: "auto", marginTop: "4" }}>
+      <main
+        sx={{
+          maxWidth: "100ch",
+          marginX: "auto",
+          paddingX: ["3", "4"],
+          marginTop: "4",
+        }}
+      >
         <section sx={{ marginTop: ["4", "5"] }}>
           {faqs.map((faq, i) => (
             <ScrollLinkHeading faq={faq} index={i} />
