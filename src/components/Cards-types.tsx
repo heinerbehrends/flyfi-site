@@ -23,7 +23,7 @@ export const cardSectionStyle: ThemeUIStyleObject = {
   ],
   gap: "4",
   maxWidth: "1280px",
-  marginX: ["5"],
+  marginX: "5",
   marginTop: "4",
 };
 

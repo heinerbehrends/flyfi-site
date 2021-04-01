@@ -81,7 +81,7 @@ const theme = {
     },
     h2: {
       marginTop: "5",
-      marginX: ["3", "3", "4", "4"],
+      marginX: ["4", "4", "5", "5"],
       paddingY: "3",
       fontSize: ["5", "6"],
       fontWeight: "900",

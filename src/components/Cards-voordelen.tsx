@@ -11,6 +11,7 @@ export default function CardsVoordelen() {
     <section
       sx={{
         ...cardSectionStyle,
+        marginX: "4",
         gap: "0",
         gridTemplateColumns: [
           "repeat(auto-fill, minmax(30ch, 1fr))",
