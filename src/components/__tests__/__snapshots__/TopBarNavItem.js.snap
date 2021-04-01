@@ -1,85 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopBarNavItem renders correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: text;
-  font-weight: 300;
+  color: #333;
+  font-size: 16px;
+  font-weight: thin;
+  background-color: transparent;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+@media screen and (min-width: 40em) {
+  .emotion-0 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-0 {
+    font-size: 20px;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #c0eeee;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: focus;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  background-color: transparent;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.emotion-0:hover {
-  background-color: #a1e5e5;
+@media screen and (min-width: 40em) {
+  .emotion-1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 <a
-  className="emotion-1"
-  href="/"
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
-  >
-    home
-  </div>
+    className="emotion-1"
+  />
 </a>
 `;
 
 exports[`TopBarNavItem renders the active variant correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
-  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+  font-weight: thin;
+  background-color: transparent;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+@media screen and (min-width: 40em) {
+  .emotion-0 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-0 {
+    font-size: 20px;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #c0eeee;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: focus;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  background-color: muted;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.emotion-0:hover {
-  background-color: #a1e5e5;
+@media screen and (min-width: 40em) {
+  .emotion-1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 <a
-  className="emotion-1"
-  href="/"
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
-  >
-    home
-  </div>
+    className="emotion-1"
+  />
 </a>
 `;
