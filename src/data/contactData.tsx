@@ -1,3 +1,4 @@
+import React from "react";
 import MailIcon from "../icons/mail_outline-24px.svg";
 import PhoneIcon from "../icons/phone-24px.svg";
 import LinkedInIcon from "../icons/linkedin.svg";
