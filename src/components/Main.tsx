@@ -54,8 +54,8 @@ export default function Main() {
           transition: "opacity 0.5s ease-in",
         }}
       >
-        Wist u dat 53% van alle bezoekers afhaakt <br></br>als een site langer
-        dan 3 seconden laadt?
+        Wist u dat 53% van alle bezoekers afhaakt als een site langer dan 3
+        seconden laadt?
       </blockquote>
       <div ref={ref3}>
         <Themed.h2
