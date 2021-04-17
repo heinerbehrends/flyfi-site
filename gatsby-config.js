@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: "https://www.flyfi.com",
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-theme-ui",
