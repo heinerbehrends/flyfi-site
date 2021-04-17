@@ -21,7 +21,7 @@ export default function Contact() {
       >
         Contact
       </Themed.h1>
-      <p
+      {/* <p
         sx={{
           paddingTop: ["2", "2", "3", "3"],
           paddingX: "4",
@@ -32,7 +32,7 @@ export default function Contact() {
         }}
       >
         {contactText}
-      </p>
+      </p> */}
       <section
         sx={{
           display: "flex",
