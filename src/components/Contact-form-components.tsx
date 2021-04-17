@@ -7,7 +7,7 @@ export const inputStyles: ThemeUIStyleObject = {
   borderRadius: "3",
   border: "1px solid #333",
   fontSize: ["2", "3"],
-  fontWeight: "300",
+  fontWeight: "200",
   fontFamily: "Fira Sans",
   boxShadow: "big",
   transition: "background-color 1.5s ease-in",
