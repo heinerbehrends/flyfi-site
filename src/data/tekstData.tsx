@@ -1,10 +1,10 @@
 import React from "react";
 
-export const contactText = `Als u geinteresseerd bent in een flyfi webapp kunt u mij een bericht
-sturen door middel van de contactform of via e-mail naar info@flyfi.nl.
-Ik antwoord altijd binnen 2 werkdagen. Alternatief kunt u mij ook bellen
-via 06-58910956. U kunt me ook volgen en berichtjes sturen via LinkedIn
-of Twitter. Wilt u meer weten over mijn code, volg me dan op Github.`;
+export const contactText = `Als u geinteresseerd bent in een flyfi webapp kunt u 
+mij een bericht sturen door middel van de contactform of via e-mail naar 
+info@flyfi.nl. Alternatief kunt u mij ook bellen op 06-58910956. 
+U kunt me ook volgen en berichtjes sturen via LinkedInof Twitter. 
+Wilt u meer weten over mijn code, volg me dan op Github.`;
 
 export const heroText = (
   <>
