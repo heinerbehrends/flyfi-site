@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-preact`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-theme-ui",
