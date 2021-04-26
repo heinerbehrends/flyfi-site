@@ -63,10 +63,13 @@ exports[`TopBarNavItem renders correctly 1`] = `
 
 <a
   className="emotion-0"
+  href="/"
 >
   <div
     className="emotion-1"
-  />
+  >
+    home
+  </div>
 </a>
 `;
 
@@ -133,9 +136,12 @@ exports[`TopBarNavItem renders the active variant correctly 1`] = `
 
 <a
   className="emotion-0"
+  href="/"
 >
   <div
     className="emotion-1"
-  />
+  >
+    home
+  </div>
 </a>
 `;
