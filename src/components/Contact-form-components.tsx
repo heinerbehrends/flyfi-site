@@ -28,7 +28,7 @@ export const buttonStyles: ThemeUIStyleObject = {
 
 export function ErrorMessage({ children }: errorMessageProps) {
   return (
-    <span sx={{ marginLeft: "3", marginTop: "1", color: "red" }}>
+    <span role="alert" sx={{ marginLeft: "3", marginTop: "1", color: "red" }}>
       {children}
     </span>
   );
