@@ -10,7 +10,7 @@ import {
 
 export default function ContactForm(props) {
   const { register, errors, formState } = useForm({
-    mode: "onChange",
+    mode: "onBlur",
     shouldFocusError: true,
   });
   const { isSubmitSuccessful } = formState;
@@ -32,6 +32,7 @@ export default function ContactForm(props) {
         <input
           type="text"
           autoFocus
+          id="name"
           name="name"
           placeholder="Naam"
           ref={register({ required: true, minLength: 2, maxLength: 30 })}
@@ -45,13 +46,14 @@ export default function ContactForm(props) {
         <Label for="email">E-mail</Label>
         <input
           type="email"
+          id="email"
           name="email"
           placeholder="E-mail adres"
           ref={register({
             required: "Dit is een verplicht veld.",
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Ongeldige e-mail adres.",
+              message: "Ongeldige e-mailadres.",
             },
           })}
           sx={{
@@ -61,6 +63,7 @@ export default function ContactForm(props) {
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
         <Label for="message">Bericht</Label>
         <textarea
+          id="message"
           name="message"
           form="contact"
           ref={register({
