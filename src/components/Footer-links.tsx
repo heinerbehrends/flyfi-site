@@ -19,7 +19,7 @@ function FooterLink({ text, location }) {
           textDecoration: "underline",
         },
       }}
-      to={location}
+      to={`${location}/`}
     >
       {text}
     </Link>
