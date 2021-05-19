@@ -39,7 +39,7 @@ export default function FooterContact() {
   return (
     <address
       sx={{
-        marginX: ["0", "3", "4"],
+        marginX: ["0", "4"],
         marginTop: ["3", "4"],
         fontStyle: "normal",
       }}
