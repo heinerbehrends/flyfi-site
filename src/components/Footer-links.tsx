@@ -2,7 +2,12 @@
 import { jsx, Themed } from "theme-ui";
 import { Link } from "gatsby";
 
-function FooterLink({ text, location }) {
+type FooterLinkProps = {
+  text: string;
+  location: string;
+};
+
+function FooterLink({ text, location }: FooterLinkProps) {
   return (
     <Link
       sx={{
@@ -28,7 +33,7 @@ function FooterLink({ text, location }) {
 
 export default function FooterLinks() {
   return (
-    <nav sx={{ marginX: ["0", "3", "4"], marginTop: ["3", "4"] }}>
+    <nav sx={{ marginX: ["0", "4"], marginTop: ["3", "4"] }}>
       <Themed.h3
         sx={{
           textAlign: "left",
