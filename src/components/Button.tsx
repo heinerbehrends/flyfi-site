@@ -1,9 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Link } from "gatsby";
-import React from "react";
 
-export default function Button({ text, location, ...props }) {
+type ButtonProps = {
+  text: string;
+  location: string;
+};
+
+export default function Button({ text, location }: ButtonProps) {
   return (
     <Link
       to={location}
@@ -36,7 +40,6 @@ export default function Button({ text, location, ...props }) {
           transform: "scale(1.0)",
         },
       }}
-      {...props}
     >
       {text}
     </Link>
