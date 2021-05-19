@@ -22,7 +22,7 @@ const iconLinkStyles: ThemeUIStyleObject = {
   },
 };
 
-export default function ContactIcons(props) {
+export default function ContactIcons() {
   return (
     <address
       sx={{
@@ -32,7 +32,6 @@ export default function ContactIcons(props) {
         marginX: "5",
         marginTop: "4",
       }}
-      {...props}
     >
       <a sx={iconLinkStyles} href={"tel:0031658910956"}>
         <PhoneIcon />

@@ -8,7 +8,7 @@ import {
   buttonStyles,
 } from "./Contact-form-components";
 
-export default function ContactForm(props) {
+export default function ContactForm() {
   const { register, errors, formState } = useForm({
     mode: "onBlur",
     shouldFocusError: true,
@@ -23,7 +23,7 @@ export default function ContactForm(props) {
       name="contact-form"
       id="contact"
       action="/succes"
-      {...props}
+      // {...props}
     >
       {/* hidden form field neccessary for netlify form submission */}
       <input type="hidden" name="form-name" value="contact-form" />
@@ -68,7 +68,7 @@ export default function ContactForm(props) {
           form="contact"
           ref={register({
             required: true,
-            minLength: 12,
+            minLength: 6,
             maxLength: 2000,
           })}
           placeholder="Uw vraag of boodschap"
