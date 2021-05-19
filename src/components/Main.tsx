@@ -26,7 +26,7 @@ export default function Main() {
   });
 
   return (
-    <>
+    <main>
       <div ref={ref}>
         <Themed.h2
           sx={{
@@ -79,6 +79,6 @@ export default function Main() {
         </Themed.h2>
       </div>
       <CardsPakketten />
-    </>
+    </main>
   );
 }
