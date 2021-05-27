@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { footerOverMijText } from "../data/aboutData";
 
 export default function FooterOverMij() {
