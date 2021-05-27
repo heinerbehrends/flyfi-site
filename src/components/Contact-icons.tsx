@@ -15,7 +15,7 @@ const iconLinkStyles: ThemeUIStyleObject = {
     boxShadow: "focus",
   },
   svg: {
-    fill: "#59bfbf",
+    fill: "#40A5A5",
     filter: "drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25))",
     height: ["90px"],
     width: ["90px"],
