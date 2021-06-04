@@ -42,7 +42,7 @@
     "react-hook-form": "^6.15.5",
     "react-intersection-observer": "^8.31.0",
     "react-scroll": "^1.8.2",
-    "theme-ui": "^0.6.1",
+    "theme-ui": "^0.9.1",
     "typeface-fira-sans": "^1.1.13"
   },
   "devDependencies": {
