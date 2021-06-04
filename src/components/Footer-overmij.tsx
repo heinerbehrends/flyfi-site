@@ -18,7 +18,7 @@ export default function FooterOverMij() {
             },
           }}
         >
-          <Themed.h3 sx={{ fontSize: "5", color: "#333", marginLeft: 0 }}>
+          <Themed.h3 sx={{ fontSize: "5", color: "text", marginLeft: 0 }}>
             Over mij
           </Themed.h3>
         </Link>

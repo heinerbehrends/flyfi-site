@@ -28,7 +28,7 @@ export default function TextLogo() {
       >
         <h4
           sx={{
-            color: "#333",
+            color: "text",
             fontWeight: "thin",
             fontStyle: "italic",
             fontSize: ["5", "5", "40px"],

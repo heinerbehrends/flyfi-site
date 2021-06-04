@@ -12,7 +12,7 @@ function FooterLink({ text, location }: FooterLinkProps) {
     <Link
       sx={{
         display: "block",
-        color: "#333",
+        color: "text",
         fontSize: "3",
         padding: "3",
         marginLeft: "-16px",
@@ -39,7 +39,7 @@ export default function FooterLinks() {
           textAlign: "left",
           marginLeft: "0",
           marginBottom: ["1", "2"],
-          color: "#333",
+          color: "text",
         }}
       >
         Menu

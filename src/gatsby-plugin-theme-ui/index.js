@@ -10,8 +10,8 @@ const theme = {
       dark: {
         text: "#f7f7f7",
         background: "#262626",
-        primary: "#9FE5E5",
-        muted: "#59bfbf",
+        primary: "#40A5A5",
+        muted: "#9FE5E5",
         accent: "#FFC0E2",
         secondary: "#663399",
       },

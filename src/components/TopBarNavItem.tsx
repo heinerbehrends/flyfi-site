@@ -12,17 +12,15 @@ export default function TopBarNavItem({ text, location }: TopBarNavItemProps) {
   return (
     <Link
       activeStyle={{
-        color: "#fff",
         fontWeight: "500",
-        backgroundColor: "#3FA2A2",
       }}
       sx={{
         textDecoration: "none",
-        color: "#333",
+        color: "text",
         fontSize: ["2", "2", "3"],
         fontWeight: "thin",
         backgroundColor: "transparent",
-        "&:hover": { backgroundColor: "#c0eeee" },
+        "&:hover": { fontWeight: "500" },
         "&:focus": {
           outline: "none",
           boxShadow: "focus",

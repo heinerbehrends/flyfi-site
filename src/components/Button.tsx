@@ -20,7 +20,7 @@ export default function Button({ text, location }: ButtonProps) {
         paddingY: "3",
         fontFamily: "body",
         fontSize: ["2", "3"],
-        fontWeight: "bold",
+        fontWeight: "medium",
         textDecoration: "none",
         border: "none",
         borderRadius: "2",

@@ -17,6 +17,9 @@ export default function DarkModeSwitch() {
         border: "none",
         padding: ["2", "3"],
         cursor: "pointer",
+        svg: {
+          stroke: "text",
+        },
         "&:hover": { backgroundColor: "#c0eeee" },
         "&:focus": {
           outline: "none",
