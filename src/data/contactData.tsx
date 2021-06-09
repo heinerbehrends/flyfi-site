@@ -5,6 +5,7 @@ import LinkedInIcon from "../icons/linkedin.svg";
 import TwitterIcon from "../icons/twitter-logo.svg";
 import LocationIcon from "../icons/location_on-24px.svg";
 import GithubIcon from "../icons/Octicons-mark-github.svg";
+import KVKIcon from "../icons/work_outline-24px.svg";
 
 export type Contact = { text: string; location: string; icon: React.ReactNode };
 
@@ -39,5 +40,10 @@ export const contactInfo: Contact[] = [
     location:
       "https://www.google.com/maps/place/Travertijnstraat+12,+9743+SZ+Groningen/",
     icon: <LocationIcon />,
+  },
+  {
+    text: `KVK nummer: 	76282791 `,
+    location: `https://server.db.kvk.nl/TST-BIN/FU/TSWS001@?BUTT=762827910000`,
+    icon: <KVKIcon />,
   },
 ];
