@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer
       sx={{
-        color: "#333",
+        color: "text",
         width: "100%",
-        backgroundColor: "#eee",
+        backgroundColor: "background",
         paddingX: ["3", "3", "4"],
         paddingY: "5",
         marginTop: "5",

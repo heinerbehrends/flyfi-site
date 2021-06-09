@@ -15,7 +15,7 @@ function ContactItem({ icon, text, location }: ContactItemProps) {
     <a
       sx={{
         display: "block",
-        color: "#333",
+        color: "text",
         fontSize: "2",
         marginLeft: "-16px",
         textDecoration: "none",
@@ -42,6 +42,9 @@ export default function FooterContact() {
         marginX: ["0", "4"],
         marginTop: ["3", "4"],
         fontStyle: "normal",
+        svg: {
+          fill: "text",
+        },
       }}
     >
       <Link
@@ -57,7 +60,7 @@ export default function FooterContact() {
       >
         <Themed.h3
           sx={{
-            color: "#333",
+            color: "text",
             textAlign: "left",
             marginLeft: "0",
             marginBottom: ["1", "2"],
