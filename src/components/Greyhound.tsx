@@ -8,9 +8,7 @@ import greyhoundWebm from "../videos/greyhound-loop.webm";
 
 export default function Greyhound() {
   const { scrollPosition, isScrollingUp } = useScroll();
-  const isOutOfView = scrollPosition > 550;
-  const offset =
-    isScrollingUp || isOutOfView ? 0 : easeIn(scrollPosition, 100, 50, 4);
+  const offset = isScrollingUp ? 0 : easeIn(scrollPosition, 100, 50, 4);
   return (
     <div
       sx={{
