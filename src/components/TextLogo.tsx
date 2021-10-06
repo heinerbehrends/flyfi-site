@@ -24,6 +24,9 @@ export default function TextLogo() {
             boxShadow: "focus",
             textDecoration: "none",
           },
+          "&:hover": {
+            textDecoration: "none",
+          },
         }}
       >
         <h4
@@ -40,6 +43,7 @@ export default function TextLogo() {
             sx={{
               fontSize: "3",
               fontStyle: "normal",
+              fontWeight: "400",
               display: ["none", "none", "none", "none", "inline"],
             }}
           >
