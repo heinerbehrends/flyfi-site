@@ -39,7 +39,7 @@ export default function Card({ icon, heading, text, cta, ...rest }: CardProps) {
           sx={{
             marginBlockEnd: "0",
             marginBlockStart: "0",
-            marginTop: ["3", "4"],
+            marginTop: ["2", "3"],
             lineHeight: "body",
             color: "text",
             whiteSpace: "pre-line",
