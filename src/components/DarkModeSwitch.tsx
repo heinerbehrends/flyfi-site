@@ -20,7 +20,7 @@ export default function DarkModeSwitch() {
         svg: {
           stroke: "text",
         },
-        "&:hover": { backgroundColor: "#c0eeee" },
+        "&:hover": { backgroundColor: "muted", svg: { stroke: "background" } },
         "&:focus": {
           outline: "none",
           boxShadow: "focus",
@@ -28,7 +28,11 @@ export default function DarkModeSwitch() {
       }}
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
     >
-      {colorMode === "default" ? <Moon /> : <Sun />}
+      {colorMode === "default" ? (
+        <Moon sx={{ stroke: "background" }} />
+      ) : (
+        <Sun sx={{ color: "background" }} />
+      )}
     </button>
   );
 }
