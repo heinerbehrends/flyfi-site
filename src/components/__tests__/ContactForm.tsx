@@ -45,7 +45,7 @@ it("should have a data-netlify=true attribute and a hidden input", () => {
   expect(form.getAttribute("action")).toBe("/succes");
 
   const formName = form.getAttribute("name");
-  const hiddenInput = getByDisplayValue(formName);
+  const hiddenInput = getByDisplayValue(formName!);
   expect(hiddenInput.getAttribute("type")).toBe("hidden");
   expect(hiddenInput.getAttribute("name")).toBe("form-name");
 });

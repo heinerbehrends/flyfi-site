@@ -1,19 +1,18 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import React from "react";
+import { useScroll } from "../utils/useScroll";
+import { easeIn } from "../utils/easeIn";
 import greyhoundMp4 from "../videos/greyhound-loop.mp4";
 import greyhoundWebm from "../videos/greyhound-loop.webm";
-// import { useInView } from "react-intersection-observer"
 
-export default function Greyhound(props) {
-  // const [ref, inView] = useInView({
-  //   /* Optional options */
-  //   threshold: 1,
-  // })
+export default function Greyhound() {
+  const { scrollPosition, isScrollingUp } = useScroll();
+  const offset = isScrollingUp ? 0 : easeIn(scrollPosition, 100, 50, 4);
   return (
     <div
-      // ref={ref}
       sx={{
+        transform: `translate(${offset}px)`,
         display: "flex",
         position: "relative",
         flexDirection: "column",
@@ -24,15 +23,12 @@ export default function Greyhound(props) {
         width: ["200px", "250px", "300px"],
         height: ["200px", "250px", "300px"],
         overflow: "hidden",
-        // transform: `${inView ? "translate(0)" : "translate(100vw)"}`,
-        // transition: "transform 2s",
         "@keyframes slideIn": {
           from: { transform: "translate(-100vw)" },
           to: { transform: "translate(0)" },
         },
         animation: "slideIn 2s ease-out",
       }}
-      {...props}
     >
       <video
         sx={{

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
 import React from "react";
-import { Link } from "gatsby";
 import { contactInfo, Contact } from "../data/contactData";
 
 type ContactItemProps = {
@@ -47,28 +46,16 @@ export default function FooterContact() {
         },
       }}
     >
-      <Link
+      <Themed.h3
         sx={{
-          textDecoration: "none",
-          "&:hover": { textDecoration: "underline" },
-          "&:focus": {
-            outline: "none",
-            textDecoration: "underline",
-          },
+          color: "text",
+          textAlign: "left",
+          marginLeft: "0",
+          marginBottom: ["1", "2"],
         }}
-        to={"/contact"}
       >
-        <Themed.h3
-          sx={{
-            color: "text",
-            textAlign: "left",
-            marginLeft: "0",
-            marginBottom: ["1", "2"],
-          }}
-        >
-          Connect
-        </Themed.h3>
-      </Link>
+        Connect
+      </Themed.h3>
       {contactInfo.map((item: Contact) => (
         <ContactItem
           text={item.text}

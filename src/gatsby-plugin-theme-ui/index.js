@@ -9,7 +9,7 @@ const theme = {
     modes: {
       dark: {
         text: "#f7f7f7",
-        background: "#262626",
+        background: "hsl(249, 20%, 20%)",
         primary: "#40A5A5",
         muted: "#9FE5E5",
         accent: "#FFC0E2",
@@ -19,11 +19,11 @@ const theme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: "FiraGO",
-    heading: "FiraGO",
+    body: "FiraGO, Sans-Serif",
+    heading: "FiraGO, Sans-Serif",
   },
   fontWeights: {
-    thin: 200,
+    thin: 300,
     light: 300,
     body: 400,
     medium: 500,
@@ -38,9 +38,10 @@ const theme = {
   shadows: {
     big: "4px 4px 6px rgba(0, 0, 0, 0.25)",
     focus: "inset 0 0 3px 3px #FFC0E2",
+    noInset: "0 0 5px 5px #FFC0E2",
     text: "5px 5px 5px rgba(0, 0, 0, 0.2)",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 96],
+  fontSizes: [12, 14, 18, 20, 26, 32, 48, 96],
   breakpoints: ["480px", "576px", "768px", "860px"],
   styles: {
     root: {
@@ -58,6 +59,8 @@ const theme = {
         textDecoration: "none",
         "&:focus": {
           outline: "none",
+        },
+        "&:hover": {
           textDecoration: "underline",
         },
       },

@@ -42,7 +42,7 @@ export default function Main() {
         ref={ref2}
         sx={{
           backgroundColor: "muted",
-          color: "#fff",
+          color: "background",
           width: "100%",
           marginTop: ["5"],
           fontSize: ["4", "5"],

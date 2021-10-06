@@ -29,11 +29,13 @@ export default function Button({ text, location }: ButtonProps) {
         transitionDuration: "0.25s",
         "&:hover": {
           transform: "scale(1.05)",
+          textDecoration: "none",
         },
         "&:focus": {
           outline: "none",
-          boxShadow: "focus",
+          boxShadow: "noInset",
           textDecoration: "none",
+          transform: "scale(1.05)",
         },
         "&:active": {
           boxShadow: "inset 2px 2px 3px rgba(0, 0, 0, 0.25)",
