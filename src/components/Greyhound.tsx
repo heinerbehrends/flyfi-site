@@ -1,16 +1,20 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
-import { useScroll } from "../utils/useScroll";
-import { easeIn } from "../utils/easeIn";
+import React, { useEffect, useRef } from "react";
+import { getTopAndBottom, useScrollAnimation } from "../utils/useScroll";
 import greyhoundMp4 from "../videos/greyhound-loop.mp4";
 import greyhoundWebm from "../videos/greyhound-loop.webm";
 
 export default function Greyhound() {
-  const { scrollPosition, isScrollingUp } = useScroll();
-  const offset = isScrollingUp ? 0 : easeIn(scrollPosition, 100, 50, 4);
+  const greyhoundContainer = useRef<HTMLDivElement>(null);
+  const topBottom = useRef({ top: 0, bottom: 0 });
+  useEffect(() => {
+    topBottom.current = getTopAndBottom(greyhoundContainer.current);
+  }, []);
+  const offset = useScrollAnimation(topBottom.current);
   return (
     <div
+      ref={greyhoundContainer}
       sx={{
         transform: `translate(${offset}px)`,
         display: "flex",

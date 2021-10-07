@@ -23,13 +23,14 @@ export default function Hero() {
           justifyContent: "center",
           marginTop: "3",
           flexDirection: ["column", "column", "column", "row"],
+          // overflow: "hidden",
         }}
       >
         <Greyhound />
         <HeroParagraph />
       </section>
       <div sx={{ textAlign: "center", marginTop: ["3", "4"] }}>
-        <Button text="Nieuwsgierig?" location="/contact" />
+        <Button text="Koffie?" location="/contact" />
       </div>
     </div>
   );
