@@ -1,24 +1,17 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React, { useEffect, useRef } from "react";
-import { getTopAndBottom, useScrollAnimation } from "../utils/useScroll";
+import React from "react";
 import greyhoundMp4 from "../videos/greyhound-loop.mp4";
 import greyhoundWebm from "../videos/greyhound-loop.webm";
+import { useScrollAnimation } from "../greyhoundAnimation/useScrollAnimation";
 
 export default function Greyhound() {
-  const greyhoundContainer = useRef<HTMLDivElement>(null);
-  const topBottom = useRef({ top: 0, bottom: 0 });
-  useEffect(() => {
-    topBottom.current = getTopAndBottom(greyhoundContainer.current);
-  }, []);
-  const offset = useScrollAnimation(topBottom.current);
+  const greyhound = useScrollAnimation();
   return (
     <div
-      ref={greyhoundContainer}
+      ref={greyhound}
       sx={{
-        transform: `translate(${offset}px)`,
         display: "flex",
-        position: "relative",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
