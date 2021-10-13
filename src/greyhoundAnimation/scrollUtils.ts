@@ -1,4 +1,5 @@
 export function getScrollPosition() {
+  if (typeof window === "undefined") return 0;
   return window.scrollY;
 }
 

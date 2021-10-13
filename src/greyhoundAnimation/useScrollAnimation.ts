@@ -10,7 +10,6 @@ export function useScrollAnimation() {
   const topBottom = useRef({ top: 316, bottom: 616 });
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     topBottom.current = getTopAndBottom(greyhound.current);
     function handleScroll() {
       handleScrollDirection({ lastPosition, isScrollingUp });
