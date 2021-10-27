@@ -1,5 +1,5 @@
 import { MutableRefObject, RefObject } from "react";
-import { easeIn } from "./scrollUtils";
+import { easeIn, getScrollPosition } from "./scrollUtils";
 
 type MoveElementArgs = {
   greyhound: RefObject<HTMLElement>;
@@ -16,7 +16,7 @@ export function moveElement({
   isScrollingUp,
 }: MoveElementArgs) {
   if (greyhound.current === null) return;
-  const scrollPosition = window.scrollY;
+  const scrollPosition = getScrollPosition();
   const hasScrolledPast = scrollPosition > topBottom.current.bottom;
   const offset = easeIn({
     scrollPosition,
